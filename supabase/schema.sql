@@ -114,7 +114,7 @@ VALUES
     'full-stack-automation',
     'Next.js 16.4 ve Tailwind CSS v4 ile işletmeler için özel otomasyon botları, CRM entegrasyonları ve canlı izleme panelleri.',
     'Layers',
-    '["Next.js 16 + React 19 kontrol panelleri", "Tailwind CSS v4 & Motion interaktivitesi", "Zamanlanmış cron görevleri", "Telegram/Slack bot bildirimleri"]'::jsonb,
+    '["Next.js 16 + React 19 kontrol panelleri", "Tailwind CSS v4 & Motion interaktivitesi", "Zamanlanmış cron görevleri", "Telegram/E-Posta bot bildirimleri"]'::jsonb,
     3
 )
 ON CONFLICT (slug) DO NOTHING;

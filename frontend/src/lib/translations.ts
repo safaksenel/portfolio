@@ -104,7 +104,7 @@ export const translations = {
         {
           year: "Ocak 2026 – Ekim 2026",
           title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
-          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. YZTA Bootcamp bitirme projesinde Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple BlindHire (Yapay Zeka Destekli Anonim Sesli Mülakat Platformu) geliştirildi; Groq Llama 3.3, RAG ve Web Audio API entegrasyonu sağlandı. Ayrıca Scrum Master olarak 72 saatlik sprint'lerde Slack Chatbot'u (Cemil) teslim edildi.",
+          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. YZTA Bootcamp bitirme projesinde Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple BlindHire (Yapay Zeka Destekli Anonim Sesli Mülakat Platformu) geliştirildi; Groq Llama 3.3, LangChain RAG, Web Audio API ve Lip-Sync dudak senkronizasyonu entegrasyonu sağlandı.",
         },
         {
           year: "2026",
@@ -265,7 +265,7 @@ export const translations = {
         {
           year: "Jan 2026 – Oct 2026",
           title: "Google YZTA: AI & Data Science Graduate / Alumnus",
-          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Served as Product Owner & System Architect leading a 5-person team developing BlindHire (AI-Powered Anonymous Voice Interview Platform) combining Groq Llama 3.3, LangChain RAG, and Web Audio API. Also served as Scrum Master delivering automated Slack bot (Cemil).",
+          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Served as Product Owner & System Architect leading a 5-person team developing BlindHire (AI-Powered Anonymous Voice Interview Platform) combining Groq Llama 3.3, LangChain RAG, Web Audio API, and lip-sync avatar rendering.",
         },
         {
           year: "2026",

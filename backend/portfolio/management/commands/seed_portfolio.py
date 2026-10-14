@@ -63,12 +63,12 @@ class Command(BaseCommand):
             {
                 "title": "Süreç Otomasyonu & Entegrasyon Botları",
                 "slug": "process-automation-bots",
-                "description": "Tekrarlayan iş süreçlerini sıfıra indiren dosya sistemi daemon'ları, operasyonel Slack/Discord botları, webhook otomasyonları ve görev zamanlayıcılar.",
+                "description": "Tekrarlayan iş süreçlerini sıfıra indiren dosya sistemi daemon'ları, operasyonel bildirim servisleri, webhook otomasyonları ve görev zamanlayıcılar.",
                 "icon_name": "Zap",
                 "order": 4,
                 "deliverables": [
                     "Watchdog Tabanlı Gerçek Zamanlı Dosya Sistemi İzleyicileri",
-                    "Operasyonel Slack / Discord Chatbotları (Günlük 50+ Otomatik Yanıt)",
+                    "Gerçek Zamanlı E-Posta, Webhook ve Otomasyon Bildirim Sistemleri",
                     "PyInstaller ile Bağımlılıksız Taşınabilir (.exe) Dağıtımlar",
                     "Excel, CSV ve Raporlama Süreçlerinin Uçtan Uca Otomasyonu",
                     "Gerçek Zamanlı Webhook Dinleyicileri ve Kuyruk Yönetimi",
