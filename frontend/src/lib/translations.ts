@@ -112,7 +112,7 @@ export const translations = {
           desc: "56.000 satırlık regresyon veri setinde domain-driven feature engineering, Optuna Bayesian optimizasyonlu LightGBM, CatBoost ve RidgeCV Stacking Ensemble ile 0.1418 RMSE başarımı.",
         },
         {
-          year: "Mart 2024 – Temmuz 2024",
+          year: "Mart 2025 – Temmuz 2025",
           title: "FLO Grubu: İş Zekası ve Büyük Veri Stajyeri",
           desc: "11 ana neden için 22 adet iki katmanlı Türkçe BERT modeli eğitildi. OpenVINO ile CPU çıkarımı 4 kat hızlandırıldı, F1 skoru 0.89'a yükseltildi ve süreç %85 otomatikleştirildi.",
         },
@@ -273,7 +273,7 @@ export const translations = {
           desc: "Engineered domain-driven features on a 56,000-row regression dataset, tuning LightGBM, CatBoost, and RidgeCV Stacking Ensemble with Optuna Bayesian optimization.",
         },
         {
-          year: "Mar 2024 – Jul 2024",
+          year: "Mar 2025 – Jul 2025",
           title: "FLO Group: Business Intelligence & Big Data Intern",
           desc: "Trained 22 dual-tier Turkish BERT models for 11 root causes. Accelerated CPU inference 4x via OpenVINO, boosted F1 score to 0.89, and automated 85% of customer complaint analysis.",
         },
