@@ -1,9 +1,9 @@
-# ⚡ Ahmet Şafak Şenel — Developer & Automation Portfolio
+# ⚡ Ahmet Şafak Şenel — Data Scientist & Computer Engineer Portfolio
 
 [![Live Production](https://img.shields.io/badge/Live%20Website-portfolio--q663.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-q663.vercel.app)
 [![API Docs](https://img.shields.io/badge/Swagger%20API-portfolio--two--blush.vercel.app-06B6D4?style=for-the-badge&logo=fastapi&logoColor=white)](https://portfolio-two-blush-qly1y5rrlz.vercel.app/api/docs)
 
-Modern, high-aesthetic personal developer portfolio engineered with **Next.js 16.4**, **React 19.3**, **Python 3.14**, **Django 6.1**, **Tailwind CSS v4**, and **Supabase (PostgreSQL 17)**.
+Modern, high-aesthetic personal portfolio platform engineered with **Next.js 16.4**, **React 19.3**, **Python 3.14**, **PyTorch**, **Intel OpenVINO**, **DuckDB OLAP**, **Django 6.1**, **Tailwind CSS v4**, and **Supabase (PostgreSQL 17)**.
 
 ![Portfolio Banner](frontend/public/safak.jpeg)
 
@@ -13,10 +13,10 @@ Modern, high-aesthetic personal developer portfolio engineered with **Next.js 16
 
 - 🌍 **Bilingual Support (TR & EN):** Seamless runtime language switching across all sections, projects, and metadata.
 - 🌓 **Dark & Light Mode:** Theme switcher supporting deep space dark mode (`#060609`) and clean, modern light mode with glassmorphic cards.
-- 💻 **Interactive Python 3.14 Terminal:** Live simulation of Crawl4AI web scrapers, high-speed asyncio bots, and Django health checks.
-- 📐 **Bento Grid & Spotlight Cards:** Dynamic radial spotlight effects following mouse movement to showcase technical expertise.
-- 🚀 **Filterable Engineering Projects:** Categorized showcases (Scraping, Backend, Data Science, Full-Stack) with problem & architectural solution accordion deep-dives.
-- 📬 **Direct Contact & Bot Protection:** Personal contact form integrated with Django Ninja REST API and honeypot anti-spam protection.
+- 💻 **Interactive AI & ML Terminal:** Live simulation of FLO Group 22 Turkish BERT models with OpenVINO INT8 CPU inference (14.2ms), YZTA Datathon Stacking ML, and Agentic Copilot with DuckDB OLAP.
+- 📐 **Bento Grid & Spotlight Cards:** Dynamic radial spotlight effects highlighting Applied AI, NLP, Agentic Multi-Agent graphs, and MLOps.
+- 🚀 **Filterable Engineering Projects:** Categorized showcases (Data Science & AI, MLOps, Scraping, Full-Stack) with real-world metrics, architecture deep-dives, and GitHub repos.
+- 📬 **Direct Contact & Bot Protection:** Personal contact form integrated with Django Ninja REST API and Supabase with honeypot anti-spam protection.
 - 📄 **Curriculum Vitae (CV):** Direct access and download for both Turkish and English resumes.
 
 ---
