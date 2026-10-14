@@ -104,7 +104,7 @@ export const translations = {
         {
           year: "Ocak 2026 – Ekim 2026",
           title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
-          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. Yapay zeka, veri bilimi ve makine öğrenmesi mühendisliği alanlarında ileri seviye teorik ve pratik yetkinlik kazanıldı.",
+          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri başarıyla tamamlanarak mezun olundu. Program boyunca; Python ile Derin Öğrenme ve NLP mimarileri, FastAPI ile mikroservis geliştirme, Google BigQuery ve SQL ile büyük veri analitiği, Tableau ve Google Sheets ile iş zekası görselleştirmeleri, ileri düzey Prompt Mühendisliği ve Agile/Scrum odaklı profesyonel Proje Yönetimi yetkinlikleri kazanıldı.",
         },
         {
           year: "2026",
@@ -270,7 +270,7 @@ export const translations = {
         {
           year: "Jan 2026 – Oct 2026",
           title: "Google YZTA: AI & Data Science Graduate / Alumnus",
-          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Acquired advanced engineering competencies across applied AI, deep learning, and data science pipelines.",
+          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Mastered Deep Learning and NLP architectures in Python, FastAPI microservice development, large-scale SQL analytics on Google BigQuery, business intelligence visualizations in Tableau and Google Sheets, advanced Prompt Engineering, and end-to-end Agile/Scrum Project Management.",
         },
         {
           year: "2026",
