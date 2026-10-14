@@ -14,9 +14,9 @@ export default function ProjectShowcase() {
 
   const categories = [
     { id: "all", label: t.projects.filterAll },
-    { id: "scraping", label: t.projects.filterScraping },
-    { id: "backend", label: t.projects.filterBackend },
     { id: "data", label: t.projects.filterData },
+    { id: "backend", label: t.projects.filterBackend },
+    { id: "scraping", label: t.projects.filterScraping },
     { id: "fullstack", label: t.projects.filterFullstack },
   ];
 

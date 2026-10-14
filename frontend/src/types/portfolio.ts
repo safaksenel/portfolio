@@ -43,7 +43,7 @@ export interface ContactResponse {
 }
 
 export interface TerminalTabConfig {
-  id: "crawl4ai" | "asyncio" | "django";
+  id: string;
   title: string;
   badge: string;
   codeSnippet: string;

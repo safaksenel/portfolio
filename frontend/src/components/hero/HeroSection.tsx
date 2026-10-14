@@ -34,7 +34,7 @@ export default function HeroSection() {
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-700 dark:text-cyan-300 text-xs font-mono">
               <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
-              <span>Python 3.14 • Django 6.1 • Next.js 16</span>
+              <span>PyTorch • Scikit-learn • BERT NLP • DuckDB OLAP</span>
             </div>
           </div>
 
@@ -43,19 +43,19 @@ export default function HeroSection() {
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
               {lang === "tr" ? (
                 <>
-                  Veriyi Otonomlaştıran,{" "}
+                  Veriyi Değere Dönüştüren,{" "}
                   <span className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-indigo-500 bg-clip-text text-transparent">
-                    Akıllı Sistemler
+                    Yapay Zeka & ML
                   </span>{" "}
-                  ve Web Mimarileri
+                  Mimarileri
                 </>
               ) : (
                 <>
-                  Engineering Resilient{" "}
+                  Engineering Scalable{" "}
                   <span className="bg-gradient-to-r from-emerald-500 via-cyan-500 to-indigo-500 bg-clip-text text-transparent">
-                    Automation & APIs
+                    Data Science & AI
                   </span>{" "}
-                  for the Modern Web
+                  Pipelines
                 </>
               )}
             </h1>

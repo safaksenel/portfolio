@@ -2,160 +2,146 @@ import { Project, Service, TerminalTabConfig } from "@/types/portfolio";
 
 export const TERMINAL_TABS: TerminalTabConfig[] = [
   {
-    id: "crawl4ai",
-    title: "Crawl4AI Web Scraper",
-    badge: "Python 3.14 • Anti-Bot Bypass",
-    codeSnippet: `import asyncio
-from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
-from crawl4ai.extraction_strategy import LLMExtractionStrategy
+    id: "bert_nlp",
+    title: "FLO BERT NLP (22 Modeller)",
+    badge: "PyTorch • OpenVINO • F1: 0.892",
+    codeSnippet: `from transformers import AutoTokenizer
+import openvino as ov
+import numpy as np
 
-async def extract_target_market():
-    browser_cfg = BrowserConfig(
-        headless=True,
-        stealth=True,
-        use_persistent_context=True,
-        user_agent_mode="random"
-    )
-    run_cfg = CrawlerRunConfig(
-        bypass_cloudflare=True,
-        wait_for_selector="div.product-grid",
-        cache_mode="bypass"
-    )
-    async with AsyncWebCrawler(config=browser_cfg) as crawler:
-        result = await crawler.arun(
-            url="https://market-intel.internal/scrape",
-            config=run_cfg
-        )
-        return result.extracted_content
+# FLO Group 2-Kademeli 22 Türkçe BERT Mimarisi
+core = ov.Core()
+model_ir = core.read_model("models/flo_bert_tier2_openvino.xml")
+compiled_model = core.compile_model(model_ir, "CPU")
+tokenizer = AutoTokenizer.from_pretrained("dbmdz/bert-base-turkish-cased")
+
+def classify_customer_feedback(text: str):
+    tokens = tokenizer(text, padding=True, truncation=True, max_length=128, return_tensors="np")
+    logits = compiled_model(dict(tokens))[0]
+    pred_idx = np.argmax(logits, axis=-1)
+    confidence = float(np.max(softmax(logits)))
+    return {
+        "root_cause": CATEGORIES[pred_idx],
+        "confidence": round(confidence, 4),
+        "latency_ms": 14.2
+    }
 
 if __name__ == "__main__":
-    data = asyncio.run(extract_target_market())
-    print(f"[OK] Fetched and normalized records.")`,
+    sample = "Siparişim 5 gün gecikti, kargo paketlemesi hasarlıydı."
+    result = classify_customer_feedback(sample)
+    print(f"[PREDICTION] {result['root_cause']} ({result['confidence']*100:.1f}%)")`,
     executionLogs: [
-      "[INFO] Python 3.14.0 (main, Oct 2026) [Clang 18.1.0] on win32",
-      "[INFO] Initializing AsyncWebCrawler instance with stealth context...",
-      "[INFO] Emulating TLS ClientHello fingerprint (Chrome 130/JA3/JA4)...",
-      "[DEBUG] Cloudflare Turnstile token solved in 412ms.",
-      "[DEBUG] DOM hydrated, selector 'div.product-grid' located.",
-      "[SUCCESS] Extracted 48 product items with 100% schema compliance.",
-      "[PIPELINE] Payload sanitized and dispatched to Supabase PostgreSQL 17."
+      "[INFERENCE] Gelen müşteri yorumu: 'Siparişim 5 gün gecikti, kargo paketlemesi hasarlıydı.'",
+      "[TOKENIZER] Türkçe BERT WordPiece sözlüğü ile 18 token ayrıştırıldı.",
+      "[OPENVINO] INT8 optimize edilmiş model CPU'da yürütülüyor (AVX-512 aktif)...",
+      "[TIER-1 MODEL] Ana kök neden: 'Lojistik & Teslimat' (Güven: 0.984)",
+      "[TIER-2 MODEL] Alt kategori: 'Hasarlı Paket & Gecikme' (Güven: 0.941)",
+      "[SHAP] En etkili öznitelikler: ['gecikti', 'kargo', 'hasarlı', 'paketleme']",
+      "[METRICS] Çıkarım süresi: 14.2ms (%80 hız artışı) | F1 Skoru: 0.892",
+      "[DATABASE] Sınıflandırma sonucu Supabase PostgreSQL 17'ye kaydedildi."
     ],
     outputData: {
-      status: "SUCCESS",
-      engine: "Crawl4AI v0.4 + Playwright 1.48",
-      runtime: "Python 3.14 (GIL-Free)",
-      items_extracted: 48,
-      antibot_clearance: {
-        cloudflare_turnstile: "BYPASSED",
-        ja4_fingerprint: "t13d1516h2_8daaf6152771_0271d18f9e9e",
-        tls_handshake_ms: 38
-      },
-      sample_record: {
-        id: "SKU-99214",
-        title: "Enterprise NVMe Gen5 U.2 Server Drive",
-        live_price_usd: 849.99,
-        inventory_state: "IN_STOCK",
-        supplier_rating: 4.98
-      },
-      latency_ms: 540
+      status: "CLASSIFIED",
+      root_cause: "Lojistik & Teslimat",
+      sub_category: "Hasarlı Paket & Gecikme",
+      confidence: 0.984,
+      model_architecture: "İki Kademeli 22 Türkçe BERT Modeli",
+      inference_engine: "Intel OpenVINO 2026 (CPU Optimizasyonu)",
+      cpu_latency_ms: 14.2,
+      f1_score: 0.892,
+      monthly_volume: "10,000+ Müşteri Yorumu",
+      operational_time_saved: "85%"
     },
-    durationMs: 720,
+    durationMs: 700,
   },
   {
-    id: "asyncio",
-    title: "AsyncIO Yüksek Hızlı Bot",
-    badge: "1000+ Concurrency • Token Bucket",
-    codeSnippet: `import asyncio
-import aiohttp
-from asyncio import Semaphore
+    id: "datathon_ml",
+    title: "Datathon Stacking ML (Top %10)",
+    badge: "LightGBM • CatBoost • Optuna",
+    codeSnippet: `from sklearn.ensemble import StackingRegressor
+from lightgbm import LGBMRegressor
+from catboost import CatBoostRegressor
+from xgboost import XGBRegressor
+from sklearn.linear_model import RidgeCV
+import optuna
 
-LIMITER = Semaphore(50)  # Max concurrent workers
+# 56.000 Satırlık Regresyon & 5-Fold OOF CV
+estimators = [
+    ('lgb', LGBMRegressor(**best_lgb_params, random_state=42)),
+    ('cat', CatBoostRegressor(**best_cat_params, verbose=0, random_state=42)),
+    ('xgb', XGBRegressor(**best_xgb_params, random_state=42))
+]
 
-async def fetch_worker(session: aiohttp.ClientSession, endpoint_id: int):
-    async with LIMITER:
-        url = f"https://api.aggregator.internal/feed/{endpoint_id}"
-        async with session.get(url, timeout=aiohttp.ClientTimeout(total=4)) as resp:
-            data = await resp.json()
-            return {"feed_id": endpoint_id, "status": resp.status, "payload_len": len(data)}
+stacking_model = StackingRegressor(
+    estimators=estimators,
+    final_estimator=RidgeCV(alphas=[0.01, 0.1, 1.0, 10.0]),
+    cv=5,
+    n_jobs=-1
+)
+stacking_model.fit(X_train_oof, y_train)
+test_preds = stacking_model.predict(X_test)`,
+    executionLogs: [
+      "[DATASET] 56.000 satırlık kognitif performans veri kümesi yüklendi.",
+      "[FEATURE ENG] 38 etkileşimli öznitelik türetildi, OOF target encoding uygulandı.",
+      "[OPTUNA] 100 iterasyonluk Bayesian hiperparametre optimizasyonu tamamlandı.",
+      "[5-FOLD CV] LightGBM RMSE: 0.148 | CatBoost RMSE: 0.145 | XGBoost RMSE: 0.149",
+      "[STACKING] RidgeCV meta-model ağırlıkları: CatBoost=0.48, LightGBM=0.34, XGB=0.18",
+      "[PSEUDO-LABEL] Yüksek güvenli test tahminleriyle model genelleştirmesi artırıldı.",
+      "[SONUÇ] Nihai RMSE: 0.1418 — YZTA 5.0 Datathon Türkiye Üst %10 Derecesi!"
+    ],
+    outputData: {
+      competition: "YZTA 5.0 Datathon 2026",
+      standing: "Türkiye Üst %10 Derecesi",
+      ensemble_architecture: "5-Fold Stacking (LGBM + CatBoost + XGBoost + RidgeCV)",
+      dataset_rows: 56000,
+      engineered_features: 38,
+      hyperparameter_tuning: "Optuna Bayesian (100 Trials)",
+      cv_rmse: 0.1418,
+      validation_strategy: "5-Fold Out-Of-Fold (OOF) Target Encoding"
+    },
+    durationMs: 750,
+  },
+  {
+    id: "copilot_duckdb",
+    title: "Agentic Copilot & DuckDB OLAP",
+    badge: "LangGraph • DuckDB • 3.4ms",
+    codeSnippet: `from langgraph.graph import StateGraph
+import duckdb
+import ast
 
-async def run_pipeline():
-    conn = aiohttp.TCPConnector(limit_per_host=100, ttl_dns_cache=300)
-    async with aiohttp.ClientSession(connector=conn) as session:
-        tasks = [fetch_worker(session, i) for i in range(1, 1001)]
-        return await asyncio.gather(*tasks, return_exceptions=True)
+# 500.000 Satırlık Bellek-İçi DuckDB OLAP Analitiği
+con = duckdb.connect(database=':memory:')
+con.execute("CREATE TABLE analytics AS SELECT * FROM read_parquet('data/telecom_500k.parquet')")
+
+def run_agentic_pipeline(user_query: str):
+    # LangGraph: Router -> SQL Synthesizer -> DuckDB -> AST Verifier -> Explainer
+    graph = build_copilot_state_graph(con)
+    state = graph.invoke({"query": user_query})
+    return state["insights"]
 
 if __name__ == "__main__":
-    results = asyncio.run(run_pipeline())
-    print(f"Processed {len(results)} asynchronous streams.")`,
+    result = run_agentic_pipeline("Son çeyrek müşteri kaybı (churn) ve ARPU korelasyonu nedir?")
+    print(result)`,
     executionLogs: [
-      "[INITIALIZING] AsyncIO event loop (libuv backend, Python 3.14)...",
-      "[NETWORKING] Established connection pool with 100 keep-alive sockets.",
-      "[DISPATCH] Spawning 1,000 asynchronous fetch workers with Semaphore(50)...",
-      "[METRIC] 250 requests completed in 310ms (throughput ~806 req/s)...",
-      "[METRIC] 750 requests completed in 920ms...",
-      "[COMPLETE] 1,000/1,000 endpoints processed with 0 dropped packets.",
-      "[STORAGE] Ingested into Supabase batch buffer (Port 6543)."
+      "[ROUTER] Doğal dil sorgusu alındı: 'Müşteri kaybı ve ARPU korelasyonu'",
+      "[SQL SYNTHESIZER] 18ms içinde vektör hızlandırmalı DuckDB OLAP SQL üretildi.",
+      "[DUCKDB ENGINE] 500.000 satır 3.42ms içinde tarandı (Sıfır disk G/Ç süresi).",
+      "[AST SANDBOX] Python görselleştirme kodu AST ile denetlendi (Güvenli doğrulandı).",
+      "[EXPLAINER AGENT] İstatistiksel anlamlılık (p < 0.001) ile korelasyon raporlandı.",
+      "[STREAM] Canlı telemetri ve analitik grafiği FastAPI WebSocket üzerinden iletildi."
     ],
     outputData: {
       status: "COMPLETED",
-      total_requests: 1000,
-      successful_responses: 1000,
-      failed_responses: 0,
-      throughput_req_per_sec: 1086.4,
-      avg_latency_ms: 46.2,
-      p99_latency_ms: 112.8,
-      concurrency_peak: 50,
-      stream_bandwidth_mb: 28.4
+      runtime: "Python 3.14 + LangGraph",
+      olap_engine: "DuckDB In-Memory (Columnar)",
+      scanned_rows: 500000,
+      query_latency_ms: 3.42,
+      security_sandbox: "Python AST NodeVisitor (Güvenli)",
+      correlation: -0.684,
+      statistical_significance: "p < 0.001",
+      self_healing_retries: 0
     },
-    durationMs: 850,
-  },
-  {
-    id: "django",
-    title: "Django 6.1 API Health",
-    badge: "Django Ninja • PostgreSQL 17",
-    codeSnippet: `from ninja import NinjaAPI, Schema
-from django.db import connection
-from pydantic import BaseModel
-
-api = NinjaAPI(title="Şafak Engineering Core API", version="1.0.0")
-
-class HealthCheckOut(BaseModel):
-    status: str
-    django_version: str
-    db_latency_ms: float
-    pooler_mode: str
-    total_projects: int
-
-@api.get("/health", response=HealthCheckOut)
-def health_check(request):
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT 1;")
-    return {
-        "status": "HEALTHY",
-        "django_version": "6.1.0",
-        "db_latency_ms": 1.42,
-        "pooler_mode": "Supavisor Port 6543 (Transaction)",
-        "total_projects": 6
-    }`,
-    executionLogs: [
-      "[HTTP GET] /api/health -> 200 OK [Latency: 24ms]",
-      "[DJANGO] Running Django 6.1 with Django Ninja (Pydantic v2 validation)",
-      "[DATABASE] Supabase PostgreSQL 17 connected via Psycopg 3 (pool mode)",
-      "[ROUTER] Supavisor Transaction Pooler (Port 6543) active, CONN_MAX_AGE=0",
-      "[CACHE] Vercel Edge Cache hit ratio: 94.2%",
-      "[SECURITY] CORS policy restricted, Rate limiter 120 req/min verified."
-    ],
-    outputData: {
-      status: "HEALTHY",
-      framework: "Django 6.1 + Django Ninja",
-      python_runtime: "Python 3.14.0 Vercel Serverless",
-      database: "Supabase PostgreSQL 17 (Supavisor Transaction Pooler 6543)",
-      driver: "Psycopg 3.2.4 (Native binary)",
-      db_ping_ms: 1.42,
-      openapi_schema_endpoint: "/api/docs",
-      uptime_percent: 99.98
-    },
-    durationMs: 500,
+    durationMs: 650,
   },
 ];
 

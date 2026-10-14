@@ -10,7 +10,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function InteractiveTerminal() {
   const { lang } = useLanguage();
-  const [activeTabId, setActiveTabId] = useState<TerminalTabConfig["id"]>("crawl4ai");
+  const [activeTabId, setActiveTabId] = useState<string>("bert_nlp");
   const [isRunning, setIsRunning] = useState(false);
   const [activeView, setActiveView] = useState<"code" | "output">("output");
   const [copied, setCopied] = useState(false);
