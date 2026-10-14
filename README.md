@@ -1,5 +1,8 @@
 # ⚡ Ahmet Şafak Şenel — Developer & Automation Portfolio
 
+[![Live Production](https://img.shields.io/badge/Live%20Website-portfolio--q663.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-q663.vercel.app)
+[![API Docs](https://img.shields.io/badge/Swagger%20API-portfolio--two--blush.vercel.app-06B6D4?style=for-the-badge&logo=fastapi&logoColor=white)](https://portfolio-two-blush-qly1y5rrlz.vercel.app/api/docs)
+
 Modern, high-aesthetic personal developer portfolio engineered with **Next.js 16.4**, **React 19.3**, **Python 3.14**, **Django 6.1**, **Tailwind CSS v4**, and **Supabase (PostgreSQL 17)**.
 
 ![Portfolio Banner](frontend/public/safak.jpeg)
