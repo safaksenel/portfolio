@@ -87,7 +87,7 @@ export default function Navbar() {
                 Ahmet Şafak Şenel
               </span>
               <span className="text-[10px] text-slate-500 dark:text-zinc-400 tracking-wider font-mono">
-                SOFTWARE ENGINEER
+                {lang === "tr" ? "VERİ BİLİMCİSİ" : "DATA SCIENTIST"}
               </span>
             </div>
           </a>

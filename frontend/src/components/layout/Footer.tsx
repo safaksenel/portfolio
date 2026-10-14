@@ -34,7 +34,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-lg w-fit">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block" />
-              <span>Python 3.14 • Django 6.1 • Supabase PostgreSQL 17</span>
+              <span>PyTorch • Scikit-learn • BERT NLP • DuckDB OLAP</span>
             </div>
           </div>
 
