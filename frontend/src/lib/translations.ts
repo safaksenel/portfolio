@@ -40,8 +40,8 @@ export const translations = {
       exploreProjects: "Projelerimi İncele",
       contactMe: "İletişime Geç",
       stats: {
-        records: "Top %10",
-        recordsLabel: "YZTA 5.0 Datathon Derecesi",
+        records: "56K Satır",
+        recordsLabel: "Datathon Stacking Veri Seti",
         reduction: "0.892 F1",
         reductionLabel: "22 Türkçe BERT NLP Modeli",
         bypass: "4x Hızlanma",
@@ -53,7 +53,7 @@ export const translations = {
       subtitle: "Model çıkarımlarını, OLAP sorgularını ve ensemble tahminlerini canlı test edin",
       tabs: {
         scraper: "FLO BERT NLP (22 Modeller)",
-        asyncBot: "Datathon Stacking ML (Top %10)",
+        asyncBot: "Datathon Stacking ML (Optuna)",
         health: "Agentic Copilot & DuckDB",
       },
       statusRunning: "Yürütülüyor...",
@@ -66,7 +66,7 @@ export const translations = {
       card1: {
         badge: "Çekirdek Uzmanlık",
         title: "Uygulamalı Yapay Zeka, NLP & Derin Öğrenme",
-        desc: "22 Türkçe BERT modeliyle kurumsal metin sınıflandırma, Intel OpenVINO ile %80+ CPU çıkarım hızlandırması, SHAP açıklanabilirliği ve YZTA Datathon üst %10 dereceli Stacking Ensemble mimarileri.",
+        desc: "22 Türkçe BERT modeliyle kurumsal metin sınıflandırma, Intel OpenVINO ile %80+ CPU çıkarım hızlandırması, SHAP açıklanabilirliği ve YZTA Datathon çok modlu Stacking Ensemble mimarisi.",
       },
       card2: {
         badge: "Ajanik Yapay Zeka",
@@ -91,7 +91,7 @@ export const translations = {
       storyP1:
         "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, 3 Ağustos 2024'te başladığım Ecole 42 İstanbul Ana Eğitim programında C ve Python ile ileri seviye algoritmik derinlik kazanmak ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
       storyP2:
-        "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride Stacking Ensemble ile Türkiye genelinde üst %10'a girdim.",
+        "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride mentor metinleri ve tabüler veriyi Stacking Ensemble ile birleştiren uçtan uca regresyon boru hattı geliştirdim (RMSE: 0.1418).",
       storyP3:
         "Google YZTA bursiyeri olarak Scrum Master liderliğinde projeler teslim ettim. PyTorch, Scikit-learn, DuckDB, FastAPI, Docker ve Next.js ekosistemiyle modelleri yalnızca eğitmekle kalmıyor, uçtan uca ürünleştiriyorum.",
       highlightsTitle: "Önemli Kilometre Taşları & Deneyimler",
@@ -108,8 +108,8 @@ export const translations = {
         },
         {
           year: "2024",
-          title: "YZTA 5.0 Datathon — Türkiye İlk %10 Derecesi",
-          desc: "56.000 satırlık regresyon veri setinde domain-driven feature engineering, Optuna Bayesian optimizasyonlu LightGBM, CatBoost ve RidgeCV Stacking Ensemble ile üstün başarı.",
+          title: "YZTA 5.0 Datathon — Çok Modlu Stacking Çözümü",
+          desc: "56.000 satırlık regresyon veri setinde domain-driven feature engineering, Optuna Bayesian optimizasyonlu LightGBM, CatBoost ve RidgeCV Stacking Ensemble ile 0.1418 RMSE başarımı.",
         },
         {
           year: "Aralık 2023 – Günümüz",
@@ -201,8 +201,8 @@ export const translations = {
       exploreProjects: "Explore Projects",
       contactMe: "Get in Touch",
       stats: {
-        records: "Top 10%",
-        recordsLabel: "YZTA 5.0 Datathon Ranking",
+        records: "56K Rows",
+        recordsLabel: "Datathon Stacking Dataset",
         reduction: "0.892 F1",
         reductionLabel: "22 Turkish BERT Models",
         bypass: "4x Speedup",
@@ -214,7 +214,7 @@ export const translations = {
       subtitle: "Test real-time model inference, OLAP execution, and ensemble predictions",
       tabs: {
         scraper: "FLO BERT NLP (22 Models)",
-        asyncBot: "Datathon Stacking ML (Top 10%)",
+        asyncBot: "Datathon Stacking ML (Optuna)",
         health: "Agentic Copilot & DuckDB",
       },
       statusRunning: "Executing...",
@@ -227,7 +227,7 @@ export const translations = {
       card1: {
         badge: "Core Specialization",
         title: "Applied AI, NLP & Deep Learning",
-        desc: "Enterprise feedback classification with 22 Turkish BERT models, 4x CPU inference acceleration with Intel OpenVINO, SHAP interpretability, and Top 10% Stacking Ensemble architectures.",
+        desc: "Enterprise feedback classification with 22 Turkish BERT models, 4x CPU inference acceleration with Intel OpenVINO, SHAP interpretability, and multi-modal Stacking Ensemble architectures.",
       },
       card2: {
         badge: "Agentic AI",
@@ -252,7 +252,7 @@ export const translations = {
       storyP1:
         "Computer Engineering graduate from Nişantaşı University. My passion for data science and AI was forged through transforming real-world datasets into actionable models, deep algorithmic problem-solving in C & Python at Ecole 42 Istanbul (Core Curriculum starting Aug 3, 2024), and engineering production-grade ML pipelines.",
       storyP2:
-        "At FLO Group, I developed a feedback triage system powered by 22 Turkish BERT models optimized with Intel OpenVINO, cutting evaluation time by 85% with an F1 score of 0.89. In the nationwide YZTA 5.0 Datathon, my Stacking Ensemble achieved a Top 10% rank on a 56,000-row dataset.",
+        "At FLO Group, I developed a feedback triage system powered by 22 Turkish BERT models optimized with Intel OpenVINO, cutting evaluation time by 85% with an F1 score of 0.89. In the YZTA 5.0 Datathon, I engineered an end-to-end multi-modal Stacking Ensemble pipeline combining mentor NLP text and tabular features across 56,000 rows (RMSE: 0.1418).",
       storyP3:
         "As a Google YZTA fellow and Scrum Master, I led cross-functional teams delivering data products. Working across PyTorch, Scikit-learn, DuckDB, FastAPI, Docker, and Next.js, I don't just train models—I productionize them.",
       highlightsTitle: "Key Milestones & Experiences",
@@ -269,7 +269,7 @@ export const translations = {
         },
         {
           year: "2024",
-          title: "YZTA 5.0 Datathon — Top 10% Nationwide Ranking",
+          title: "YZTA 5.0 Datathon — Multi-Modal Stacking Solution",
           desc: "Engineered domain-driven features on a 56,000-row regression dataset, tuning LightGBM, CatBoost, and RidgeCV Stacking Ensemble with Optuna Bayesian optimization.",
         },
         {

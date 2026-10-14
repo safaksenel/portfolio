@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-q663.vercel.app"),
   title: "Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
   description:
-    "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi Portfolyosu. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
+    "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi Portfolyosu. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
   keywords: [
     "Şafak Şenel",
     "Safak Senel",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
     description:
-      "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
+      "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
     url: "https://portfolio-q663.vercel.app",
     siteName: "Şafak Şenel Portfolio",
     locale: "tr_TR",

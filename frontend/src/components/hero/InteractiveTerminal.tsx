@@ -153,7 +153,7 @@ export default function InteractiveTerminal() {
             tab.id === "bert_nlp"
               ? "BERT"
               : tab.id === "datathon_ml"
-              ? "Top %10"
+              ? "Stacking"
               : tab.id === "copilot_duckdb"
               ? "OLAP"
               : "AI";

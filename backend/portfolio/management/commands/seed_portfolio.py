@@ -311,7 +311,7 @@ class Command(BaseCommand):
                 "title": "YZTA 5.0 Datathon: Kognitif Performans Skoru Tahmini",
                 "slug": "yzta-cognitive-performance-prediction",
                 "category": ProjectCategory.DATA,
-                "short_description": "56.000 satırlık regresyon veri setinde Optuna optimizasyonlu Stacking Ensemble ve Pseudo-Labeling ile Türkiye geneli ilk %10 derecesi.",
+                "short_description": "56.000 satırlık regresyon veri setinde Optuna optimizasyonlu Stacking Ensemble ve Pseudo-Labeling ile uçtan uca makine öğrenimi çözümü.",
                 "problem_statement": (
                     "Büyük ölçekli ve yüksek gürültü içeren kognitif test verilerinde bireylerin performans skorlarının güvenilir "
                     "ve kararlı bir şekilde regresyon modeliyle tahmin edilmesi hedeflendi."
@@ -332,9 +332,9 @@ class Command(BaseCommand):
                     "NumPy",
                 ],
                 "metrics": {
-                    "standing": "Top %10 (Datathon)",
-                    "cv_score": "0.142 RMSE",
+                    "score": "0.142 RMSE",
                     "dataset_size": "56,000 rows",
+                    "architecture": "Stacking Ensemble",
                 },
                 "github_url": "https://github.com/safaksenel",
                 "live_url": "https://github.com/safaksenel",

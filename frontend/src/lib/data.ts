@@ -56,7 +56,7 @@ if __name__ == "__main__":
   },
   {
     id: "datathon_ml",
-    title: "Datathon Stacking ML (Top %10)",
+    title: "Datathon Stacking ML (Optuna)",
     badge: "LightGBM • CatBoost • Optuna",
     codeSnippet: `from sklearn.ensemble import StackingRegressor
 from lightgbm import LGBMRegressor
@@ -87,11 +87,11 @@ test_preds = stacking_model.predict(X_test)`,
       "[5-FOLD CV] LightGBM RMSE: 0.148 | CatBoost RMSE: 0.145 | XGBoost RMSE: 0.149",
       "[STACKING] RidgeCV meta-model ağırlıkları: CatBoost=0.48, LightGBM=0.34, XGB=0.18",
       "[PSEUDO-LABEL] Yüksek güvenli test tahminleriyle model genelleştirmesi artırıldı.",
-      "[SONUÇ] Nihai RMSE: 0.1418 — YZTA 5.0 Datathon Türkiye Üst %10 Derecesi!"
+      "[SONUÇ] Nihai Doğrulama RMSE: 0.1418 — 5-Fold Stacking Regresyon Başarıyla Tamamlandı!"
     ],
     outputData: {
       competition: "YZTA 5.0 Datathon 2026",
-      standing: "Türkiye Üst %10 Derecesi",
+      standing: "0.1418 RMSE (56K Satır)",
       ensemble_architecture: "5-Fold Stacking (LGBM + CatBoost + XGBoost + RidgeCV)",
       dataset_rows: 56000,
       engineered_features: 38,

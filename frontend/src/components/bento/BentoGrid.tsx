@@ -51,7 +51,7 @@ export default function BentoGrid() {
 
                 <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-600 dark:text-purple-300 text-xs font-mono font-medium">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>{lang === "tr" ? "F1: 0.892 • Top %10" : "F1: 0.892 • Top 10%"}</span>
+                  <span>{lang === "tr" ? "F1: 0.892 • RMSE: 0.1418" : "F1: 0.892 • RMSE: 0.1418"}</span>
                 </div>
               </div>
 
@@ -76,9 +76,9 @@ export default function BentoGrid() {
               </div>
               <div className="flex flex-col gap-1 p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200/60 dark:border-transparent">
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
-                  {lang === "tr" ? "Yarışma Derecesi" : "Datathon Standing"}
+                  {lang === "tr" ? "Datathon Çözümü" : "Datathon Solution"}
                 </span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Top %10 (56K Satır)</span>
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">56K Satır (Stacking ML)</span>
               </div>
             </div>
 

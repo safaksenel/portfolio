@@ -85,8 +85,8 @@ export const localizedProjects: LocalizedProject[] = [
       en: "Google & BTK Akademi Datathon 2026: Career Success Prediction",
     },
     shortDescription: {
-      tr: "Öğrenci profilleri ve mentor değerlendirme metinlerini işleyen çok modlu Stacking Regresyon mimarisiyle Türkiye geneli ilk %10 derecesi.",
-      en: "Top 10% nationwide ranking in Google & BTK Akademi Datathon with multi-modal tabular and NLP mentor text Stacking Regression.",
+      tr: "Öğrenci profilleri ve mentor değerlendirme metinlerini işleyen çok modlu Stacking Regresyon ve Optuna optimizasyonlu makine öğrenimi çözümü.",
+      en: "Multi-modal Stacking Regression pipeline processing student profiles and mentor text evaluation via Optuna Bayesian optimization.",
     },
     problemStatement: {
       tr: "Öğrencilerin akademik, teknik, staj ve serbest metin formatındaki mentor değerlendirmelerini birlikte analiz ederek sürekli kariyer başarı skorunun en düşük hata (MSE) ile tahmin edilmesi gerekiyordu.",
@@ -106,9 +106,9 @@ export const localizedProjects: LocalizedProject[] = [
       "Pandas",
     ],
     metrics: {
-      standing: "Top %10 Derecesi",
+      score: "0.1418 RMSE",
       validation: "5-Fold Stacking CV",
-      objective: "Minimum MSE",
+      dataset: "56.000 Satır",
       multiModal: "Tabular + Metin",
     },
     githubUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
