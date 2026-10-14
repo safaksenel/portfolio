@@ -124,6 +124,52 @@ export const localizedProjects: LocalizedProject[] = [
     order: 2,
   },
   {
+    id: "blindhire",
+    slug: "blindhire-ai-voice-interview-platform",
+    category: "data",
+    title: {
+      tr: "BlindHire: Yapay Zeka Destekli Anonim Sesli Mülakat & Değerlendirme Platformu",
+      en: "BlindHire: AI-Powered Anonymous Voice Interview & DEI Assessment Platform",
+    },
+    shortDescription: {
+      tr: "Google YZTA Bootcamp bitirme projesi; Groq (Llama 3.3), RAG ve Web Audio API ile adayın teknik ve durumsal yetkinliklerini önyargısız (DEI uyumlu) ölçen sesli mülakat ajanı ve otonom İK karnesi mimarisi.",
+      en: "Google YZTA Capstone project; a bias-free Conversational AI interview platform powered by Groq (Llama 3.3), RAG, and Web Audio API that conducts duplex voice interviews and auto-generates objective skill scorecards.",
+    },
+    problemStatement: {
+      tr: "Mevcut ATS (Aday Takip Sistemleri) anahtar kelime filtreleriyle yetenekli adayları elemekte; mülakatlardaki bilinçdışı önyargılar (cinsiyet, yaş, etnik köken) liyakat odaklı işe alımı ve çeşitliliği engellemektedir.",
+      en: "Traditional ATS keyword filters disqualify qualified talent arbitrarily, while unconscious interviewer bias hampers diversity, equity, and meritocratic hiring.",
+    },
+    solutionArchitecture: {
+      tr: "Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple kurgulandı. Groq Llama 3.3 ve LangChain RAG ile halüsinasyonsuz teknik soru setleri ve doğal söz kesme (interruptible) mimarisi kodlandı. Web Audio API ile adayın konuşma temposu ve duraksamaları analiz edildi; dudak senkronizasyonlu (Lip-Sync) yapay zeka avatarı, göz/odak takibi (Computer Vision) ve otomatik JSON yetkinlik karnesi (CV Scoring) FastAPI & Next.js üzerinde entegre edildi.",
+      en: "Served as Product Owner & System Architect leading a 5-person agile team. Integrated Groq Llama 3.3 and LangChain RAG for hallucination-free technical inquiries with natural interruption handling. Combined Web Audio analytics, mathematical lip-sync avatar rendering, eye-tracking attention metrics, and automated scorecard generation on FastAPI & Next.js.",
+    },
+    techStack: [
+      "Python (FastAPI)",
+      "LangChain & RAG",
+      "Groq (Llama 3.3)",
+      "Web Audio API",
+      "Computer Vision",
+      "Next.js & TypeScript",
+      "Prisma / PostgreSQL",
+      "Docker / Render",
+    ],
+    metrics: {
+      role: "Product Owner & Mimar",
+      latency: "<400ms Sesli Yanıt",
+      architecture: "LangChain RAG + Duplex Voice",
+      biasFree: "%100 DEI Uyumlu / Bias-Free",
+    },
+    githubUrl: "https://github.com/safaksenel/BlindHire",
+    liveUrl: "https://blindhire-pcym.onrender.com",
+    thumbnailUrl: "/projects/blindhire-interface.png",
+    images: [
+      "/projects/blindhire-interface.png",
+      "/projects/blindhire-avatar.png",
+    ],
+    isFeatured: true,
+    order: 3,
+  },
+  {
     id: "copilot",
     slug: "agentic-datascience-copilot",
     category: "data",
@@ -168,7 +214,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/agentic-copilot.svg",
     ],
     isFeatured: true,
-    order: 3,
+    order: 4,
   },
   {
     id: "4",
@@ -214,7 +260,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/telco-confusion-matrix.png",
     ],
     isFeatured: true,
-    order: 4,
+    order: 5,
   },
   {
     id: "vision-pipeline",
@@ -262,7 +308,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/vision-analytics-swagger.png",
     ],
     isFeatured: true,
-    order: 5,
+    order: 6,
   },
   {
     id: "1",
@@ -310,7 +356,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/yolunda-guardian.jpg",
     ],
     isFeatured: true,
-    order: 6,
+    order: 7,
   },
   {
     id: "2",
@@ -355,7 +401,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/mhrs-email-alert-real.png",
     ],
     isFeatured: true,
-    order: 7,
+    order: 8,
   },
   {
     id: "6",
@@ -397,7 +443,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/organizer-real-terminal.png",
     ],
     isFeatured: true,
-    order: 8,
+    order: 9,
   },
   {
     id: "7",
@@ -440,7 +486,7 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/django-ninja-swagger.png",
     ],
     isFeatured: true,
-    order: 9,
+    order: 10,
   },
   {
     id: "8",
@@ -482,6 +528,6 @@ export const localizedProjects: LocalizedProject[] = [
       "/projects/flight-deals.jpeg",
     ],
     isFeatured: false,
-    order: 10,
+    order: 11,
   },
 ];

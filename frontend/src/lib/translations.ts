@@ -93,7 +93,7 @@ export const translations = {
       storyP2:
         "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride mentor metinleri ve tabüler veriyi Stacking Ensemble ile birleştiren uçtan uca regresyon boru hattı geliştirdim (RMSE: 0.1418).",
       storyP3:
-        "Google YZTA mezunu ve bursiyeri olarak Scrum Master liderliğinde projeler teslim ettim. PyTorch, Scikit-learn, DuckDB, FastAPI, Docker ve Next.js ekosistemiyle modelleri yalnızca eğitmekle kalmıyor, uçtan uca ürünleştiriyorum.",
+        "Google YZTA mezunu ve bursiyeri olarak Scrum Master ve Product Owner liderliğinde yapay zeka projeleri teslim ettim. YZTA Bootcamp'inde geliştirdiğimiz BlindHire (Yapay Zeka Destekli Anonim Sesli Mülakat Platformu) ile adayın kimliğini gizleyerek yetkinlik odaklı liyakat sağlayan Conversational AI mimarisini kurdum. PyTorch, Scikit-learn, DuckDB, FastAPI, Docker ve Next.js ekosistemiyle modelleri yalnızca eğitmekle kalmıyor, uçtan uca ürünleştiriyorum.",
       highlightsTitle: "Önemli Kilometre Taşları & Deneyimler",
       milestones: [
         {
@@ -104,7 +104,7 @@ export const translations = {
         {
           year: "Ocak 2026 – Ekim 2026",
           title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
-          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. Scrum Master olarak 72 saatlik sprint'lerde 4 kişilik ekiple 2 ürün teslimi ve günlük 50+ otomatik yanıtlı Slack Chatbot'u (Cemil) geliştirmesi.",
+          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. YZTA Bootcamp bitirme projesinde Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple BlindHire (Yapay Zeka Destekli Anonim Sesli Mülakat Platformu) geliştirildi; Groq Llama 3.3, RAG ve Web Audio API entegrasyonu sağlandı. Ayrıca Scrum Master olarak 72 saatlik sprint'lerde Slack Chatbot'u (Cemil) teslim edildi.",
         },
         {
           year: "2026",
@@ -254,7 +254,7 @@ export const translations = {
       storyP2:
         "At FLO Group, I developed a feedback triage system powered by 22 Turkish BERT models optimized with Intel OpenVINO, cutting evaluation time by 85% with an F1 score of 0.89. In the YZTA 5.0 Datathon, I engineered an end-to-end multi-modal Stacking Ensemble pipeline combining mentor NLP text and tabular features across 56,000 rows (RMSE: 0.1418).",
       storyP3:
-        "As a Google YZTA graduate and fellow, I served as Scrum Master leading cross-functional teams delivering data products. Working across PyTorch, Scikit-learn, DuckDB, FastAPI, Docker, and Next.js, I don't just train models—I productionize them.",
+        "As a Google YZTA graduate and fellow, I served as Product Owner and Scrum Master leading cross-functional AI teams. In the YZTA Bootcamp, we developed BlindHire (AI-Powered Anonymous Voice Interview & DEI Assessment Platform), architecting duplex voice agent interactions that eliminate hiring bias. Working across PyTorch, Scikit-learn, DuckDB, FastAPI, Docker, and Next.js, I don't just train models—I productionize them.",
       highlightsTitle: "Key Milestones & Experiences",
       milestones: [
         {
@@ -265,7 +265,7 @@ export const translations = {
         {
           year: "Jan 2026 – Oct 2026",
           title: "Google YZTA: AI & Data Science Graduate / Alumnus",
-          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Led 4-person teams as Scrum Master during 72-hour sprints delivering 2 production projects and an automated Slack bot.",
+          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Served as Product Owner & System Architect leading a 5-person team developing BlindHire (AI-Powered Anonymous Voice Interview Platform) combining Groq Llama 3.3, LangChain RAG, and Web Audio API. Also served as Scrum Master delivering automated Slack bot (Cemil).",
         },
         {
           year: "2026",

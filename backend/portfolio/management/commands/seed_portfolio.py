@@ -89,6 +89,42 @@ class Command(BaseCommand):
         # ----------------------------------------------------
         projects_data = [
             {
+                "title": "BlindHire: Yapay Zeka Destekli Anonim Sesli Mülakat & Değerlendirme Platformu",
+                "slug": "blindhire-ai-voice-interview-platform",
+                "category": ProjectCategory.DATA,
+                "short_description": "Google YZTA Bootcamp bitirme projesi; Groq (Llama 3.3), RAG ve Web Audio API ile adayın teknik ve durumsal yetkinliklerini önyargısız (DEI uyumlu) ölçen sesli mülakat ajanı ve otonom İK karnesi mimarisi.",
+                "problem_statement": (
+                    "Mevcut ATS (Aday Takip Sistemleri) anahtar kelime filtreleriyle yetenekli adayları elemekte; "
+                    "mülakatlardaki bilinçdışı önyargılar (cinsiyet, yaş, etnik köken) liyakat odaklı işe alımı engellemektedir."
+                ),
+                "solution_architecture": (
+                    "Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple kurgulandı. Groq Llama 3.3 ve LangChain RAG ile halüsinasyonsuz teknik soru setleri "
+                    "ve doğal söz kesme (interruptible) mimarisi kodlandı. Web Audio API ile adayın konuşma temposu ölçüldü; dudak senkronizasyonlu yapay zeka avatarı, "
+                    "göz/odak takibi (Computer Vision) ve otomatik JSON yetkinlik karnesi (CV Scoring) FastAPI & Next.js üzerinde entegre edildi."
+                ),
+                "tech_stack": [
+                    "Python (FastAPI)",
+                    "LangChain & RAG",
+                    "Groq (Llama 3.3)",
+                    "Web Audio API",
+                    "Computer Vision",
+                    "Next.js & TypeScript",
+                    "Prisma / PostgreSQL",
+                    "Docker / Render",
+                ],
+                "metrics": {
+                    "role": "Product Owner & Mimar",
+                    "latency": "<400ms Sesli Yanıt",
+                    "architecture": "LangChain RAG + Duplex Voice",
+                    "biasFree": "%100 DEI Uyumlu / Bias-Free",
+                },
+                "github_url": "https://github.com/safaksenel/BlindHire",
+                "live_url": "https://blindhire-pcym.onrender.com",
+                "thumbnail_url": "/projects/blindhire-interface.png",
+                "is_featured": True,
+                "order": 1,
+            },
+            {
                 "title": "Agentic Copilot: Çok Ajanlı Veri Bilimi & Güvenli Kod Yürütme Motoru",
                 "slug": "agentic-datascience-copilot",
                 "category": ProjectCategory.DATA,
