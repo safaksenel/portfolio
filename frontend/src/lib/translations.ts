@@ -104,7 +104,12 @@ export const translations = {
         {
           year: "Ocak 2026 – Ekim 2026",
           title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
-          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. YZTA Bootcamp bitirme projesinde Product Owner ve Sistem Mimarı olarak 5 kişilik ekiple BlindHire (Yapay Zeka Destekli Anonim Sesli Mülakat Platformu) geliştirildi; Groq Llama 3.3, LangChain RAG, Web Audio API ve Lip-Sync dudak senkronizasyonu entegrasyonu sağlandı.",
+          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. Yapay zeka, veri bilimi ve makine öğrenmesi mühendisliği alanlarında ileri seviye teorik ve pratik yetkinlik kazanıldı.",
+        },
+        {
+          year: "2026",
+          title: "BlindHire — Yapay Zeka Destekli Anonim Sesli Mülakat Platformu",
+          desc: "Google YZTA Bootcamp bitirme projesi olarak 5 kişilik ekiple geliştirildi. Product Owner ve Sistem Mimarı olarak Groq (Llama 3.3) ve LangChain RAG mimarisini kurdum. Web Audio API ile adayın konuşma temposu ölçüldü; dudak senkronizasyonlu (Lip-Sync) yapay zeka avatarı, göz/odak takibi (Computer Vision) ve otomatik aday karnesi (CV Scoring) entegre edildi.",
         },
         {
           year: "2026",
@@ -265,7 +270,12 @@ export const translations = {
         {
           year: "Jan 2026 – Oct 2026",
           title: "Google YZTA: AI & Data Science Graduate / Alumnus",
-          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Served as Product Owner & System Architect leading a 5-person team developing BlindHire (AI-Powered Anonymous Voice Interview Platform) combining Groq Llama 3.3, LangChain RAG, Web Audio API, and lip-sync avatar rendering.",
+          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Acquired advanced engineering competencies across applied AI, deep learning, and data science pipelines.",
+        },
+        {
+          year: "2026",
+          title: "BlindHire — AI-Powered Anonymous Voice Interview Platform",
+          desc: "Engineered as the Google YZTA Bootcamp capstone with a 5-person agile team. Served as Product Owner & System Architect designing the Groq (Llama 3.3) and LangChain RAG pipeline with duplex voice interruption handling, Web Audio analytics, lip-sync avatar rendering, and automated candidate scorecards.",
         },
         {
           year: "2026",
