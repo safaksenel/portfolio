@@ -89,6 +89,82 @@ class Command(BaseCommand):
         # ----------------------------------------------------
         projects_data = [
             {
+                "title": "Agentic Copilot: Çok Ajanlı Veri Bilimi & Güvenli Kod Yürütme Motoru",
+                "slug": "agentic-datascience-copilot",
+                "category": ProjectCategory.DATA,
+                "short_description": "LangGraph durum grafiği, DuckDB bellek-içi OLAP motoru, AST-doğrulamalı güvenli Python çalıştırma ortamı ve kendi kendini onaran yansıma döngüleriyle çalışan otonom veri analisti.",
+                "problem_statement": (
+                    "Büyük kurumsal veri kümelerinde iş zekası sorgularını doğal dilden SQL'e çevirmek, güvenli Python kodu "
+                    "koşturmak ve syntax/runtime hatalarını insan müdahalesi olmadan gidermek karmaşık bir mimari gerektiriyordu."
+                ),
+                "solution_architecture": (
+                    "LangGraph ile Query Router, SQL Generator, DuckDB Executor, AST Kod Doğrulayıcı ve Explainer ajanları kurgulandı. "
+                    "DuckDB ile sıfır disk G/Ç süresi yakalandı; AST ziyaretçisiyle tehlikeli sistem çağrıları engellendi; "
+                    "hata durumunda yansıma döngüsüyle kod otomatik düzeltildi. FastAPI REST API ve Swagger UI ile sunuldu."
+                ),
+                "tech_stack": [
+                    "Python 3.14",
+                    "LangGraph",
+                    "DuckDB OLAP",
+                    "FastAPI",
+                    "Python AST Sandbox",
+                    "Pydantic v2",
+                    "Streamlit",
+                    "Docker Compose",
+                    "Pytest",
+                ],
+                "metrics": {
+                    "latency": "3.42ms DuckDB OLAP",
+                    "security": "AST Safe Sandbox",
+                    "resilience": "Self-Healing Reflection",
+                    "architecture": "LangGraph Multi-Agent",
+                },
+                "github_url": "https://github.com/safaksenel/agentic-datascience-copilot",
+                "live_url": "https://github.com/safaksenel/agentic-datascience-copilot",
+                "thumbnail_url": "/projects/agentic-copilot-swagger.png",
+                "is_featured": True,
+                "order": 1,
+            },
+            {
+                "title": "Edge Vision Analytics: Gerçek Zamanlı Computer Vision & Video Analitik Hattı",
+                "slug": "edge-vision-analytics-pipeline",
+                "category": ProjectCategory.DATA,
+                "short_description": "ByteTRACK 2-aşamalı IoU nesne takibi, poligon geofencing ihlal tespiti, EMA hız analitiği ve FastAPI WebSockets ile çalışan gerçek zamanlı uç video işleme hattı.",
+                "problem_statement": (
+                    "Canlı kamera akışlarında düşük gecikmeyle nesneleri kimliklendirmek, çokgen koruma bölgeleri (geofence) "
+                    "ihlallerini milisaniye hassasiyetinde tespit etmek ve harici GPU bağımlılığı olmadan hafif uç cihazlarda "
+                    "istikrarlı telemetri yayını sağlamak gerekiyordu."
+                ),
+                "solution_architecture": (
+                    "2-aşamalı ByteTRACK IoU eşleştirme algoritması, ışın döküm (ray-casting) poligon geofencing motoru, "
+                    "EMA (Üstel Hareketli Ortalama) hız tahmincisi ve OpenCV sentetik HD video üreteci kurgulandı. "
+                    "FastAPI ile 20 Hz WebSocket telemetrisi, çok parçalı MJPEG video akışı ve dark cyber-glassmorphic canlı dashboard inşa edildi."
+                ),
+                "tech_stack": [
+                    "Python 3.14",
+                    "Computer Vision",
+                    "ByteTRACK Algorithm",
+                    "FastAPI",
+                    "WebSockets",
+                    "OpenCV",
+                    "Geofencing / Ray-Casting",
+                    "Pydantic v2",
+                    "Docker & Compose",
+                    "Pytest",
+                ],
+                "metrics": {
+                    "fps": "30+ FPS Edge Stream",
+                    "latency": "<8ms Tracking Loop",
+                    "tracking": "ByteTRACK 2-Stage IoU",
+                    "telemetry": "20 Hz WebSockets",
+                },
+                "github_url": "https://github.com/safaksenel/edge-vision-analytics-pipeline",
+                "live_url": "http://127.0.0.1:8002/",
+                "thumbnail_url": "/projects/vision-analytics-dashboard.png",
+                "is_featured": True,
+                "order": 2,
+            },
+            {
                 "title": "FLO Group: BERT Tabanlı Müşteri Geri Bildirim Sınıflandırma Sistemi",
                 "slug": "bert-customer-feedback-classifier",
                 "category": ProjectCategory.DATA,
