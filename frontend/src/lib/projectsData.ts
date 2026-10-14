@@ -197,6 +197,86 @@ export const localizedProjects: LocalizedProject[] = [
   },
   {
     id: "5",
+    slug: "datathon-career-success-prediction",
+    category: "data",
+    title: {
+      tr: "Google & BTK Akademi Datathon 2026: Kariyer Başarı Skoru Tahmini",
+      en: "Google & BTK Akademi Datathon 2026: Career Success Prediction",
+    },
+    shortDescription: {
+      tr: "Öğrenci profilleri ve mentor değerlendirme metinlerini işleyen çok modlu Stacking Regresyon mimarisiyle Türkiye geneli ilk %10 derecesi.",
+      en: "Top 10% nationwide ranking in Google & BTK Akademi Datathon with multi-modal tabular and NLP mentor text Stacking Regression.",
+    },
+    problemStatement: {
+      tr: "Öğrencilerin akademik, teknik, staj ve serbest metin formatındaki mentor değerlendirmelerini birlikte analiz ederek sürekli kariyer başarı skorunun en düşük hata (MSE) ile tahmin edilmesi gerekiyordu.",
+      en: "Predicting continuous career performance metrics with minimum MSE by extracting signals from disparate tabular and free-form mentor feedback text.",
+    },
+    solutionArchitecture: {
+      tr: "TF-IDF ve SVD ile metin öznitelikleri çıkarıldı; OOF target encoding ve 5-Fold Cross Validation uygulandı. LightGBM ve CatBoost modelleri Optuna ile optimize edilerek Seviye-2 RidgeCV Stacking Ensemble ile birleştirildi.",
+      en: "Extracted NLP features via TF-IDF and SVD, engineered cross-domain ratios, optimized LightGBM and CatBoost via Optuna, and blended predictions using RidgeCV Stacking Ensemble.",
+    },
+    techStack: [
+      "Python 3.14",
+      "LightGBM",
+      "CatBoost",
+      "Scikit-learn",
+      "Optuna",
+      "TF-IDF / NLP",
+      "Pandas",
+    ],
+    metrics: {
+      standing: "Top %10 Derecesi",
+      validation: "5-Fold Stacking CV",
+      objective: "Minimum MSE",
+      multiModal: "Tabular + Metin",
+    },
+    githubUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
+    liveUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
+    thumbnailUrl: "/projects/telco-roc-curves.png",
+    isFeatured: true,
+    order: 5,
+  },
+  {
+    id: "6",
+    slug: "smart-file-organizer-daemon",
+    category: "scraping",
+    title: {
+      tr: "Akıllı Dosya Düzenleyici & Olay Güdümlü Daemon",
+      en: "Smart File Organizer & Event-Driven Daemon",
+    },
+    shortDescription: {
+      tr: "Watchdog dosya sistemi dinleyicisi ve Türkçe karakter temizleme filtresi ile plansız dosya yığılmalarını sıfıra indiren gerçek zamanlı masaüstü otomasyonu.",
+      en: "Real-time desktop daemon with Watchdog filesystem monitoring and unicode character sanitization, eliminating file disorder autonomously.",
+    },
+    problemStatement: {
+      tr: "Operasyonel iş akışlarında indirilen dosyaların düzensiz dağılması, Türkçe karakter uyumsuzlukları ve manuel arşivleme süreçleri ciddi zaman kaybına yol açmaktaydı.",
+      en: "Unorganized directory clutter, encoding conflicts, and manual archiving created significant productivity bottlenecks in daily operations.",
+    },
+    solutionArchitecture: {
+      tr: "Watchdog FileSystemEventHandler üzerine kurulu olay tabanlı gerçek zamanlı daemon geliştirildi. MIME tipi ve uzantıya göre sınıflandırma, Unicode normalizasyonu, dosya çakışma önleyici ve detaylı denetim raporlama eklendi.",
+      en: "Engineered an event-driven filesystem daemon with Watchdog. Automatic classification by MIME extension, unicode sanitization, collision-free renaming, and structured audit logs.",
+    },
+    techStack: [
+      "Python 3.14",
+      "Watchdog",
+      "Unicode Normalization",
+      "JSON Config",
+      "Logging",
+      "Pytest",
+    ],
+    metrics: {
+      latency: "<10ms Olay Tepkisi",
+      zeroLoss: "Çakışma Önleyici",
+      autoAudit: "JSON & Text Log",
+    },
+    githubUrl: "https://github.com/safaksenel/smart-file-organizer-daemon",
+    liveUrl: "https://github.com/safaksenel/smart-file-organizer-daemon",
+    thumbnailUrl: "/projects/yolunda-dashboard.jpg",
+    isFeatured: true,
+    order: 6,
+  },
+  {
+    id: "7",
     slug: "blindhire-ai-interviewer",
     category: "fullstack",
     title: {
@@ -232,11 +312,11 @@ export const localizedProjects: LocalizedProject[] = [
     githubUrl: "https://github.com/safaksenel/BlindHire",
     liveUrl: "https://github.com/safaksenel/BlindHire",
     thumbnailUrl: "/projects/blindhire-avatar.png",
-    isFeatured: true,
-    order: 5,
+    isFeatured: false,
+    order: 7,
   },
   {
-    id: "6",
+    id: "8",
     slug: "flight-deals-tracker",
     category: "scraping",
     title: {
@@ -272,6 +352,6 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/flight-deals",
     thumbnailUrl: "/projects/flight-deals.jpeg",
     isFeatured: false,
-    order: 6,
+    order: 8,
   },
 ];
