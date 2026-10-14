@@ -32,7 +32,7 @@ export const translations = {
     hero: {
       badge: "Veri Bilimcisi | Bilgisayar Mühendisi",
       greeting: "Merhaba, ben",
-      name: "Ahmet Şafak Şenel",
+      name: "Şafak Şenel",
       role: "Veri Bilimi, Makine Öğrenimi & NLP Sistemleri",
       description:
         "NLP, makine öğrenmesi ve model dağıtımı alanlarında deneyimli Bilgisayar Mühendisiyim. Python, PyTorch ve Scikit-learn ekosistemiyle uçtan uca ML pipeline'ları tasarlıyor, eğitiyor ve Intel OpenVINO & FastAPI ile ölçeklenebilir ürünlere dönüştürüyorum.",
@@ -173,7 +173,7 @@ export const translations = {
     footer: {
       tagline: "Veri Bilimi, Makine Öğrenimi, NLP & Uçtan Uca Yapay Zeka Mimarisi",
       rights: "Tüm hakları saklıdır.",
-      builtWith: "Ahmet Şafak Şenel tarafından Next.js 16.4, React 19, Django 6.1 ve Supabase ile geliştirildi.",
+      builtWith: "Şafak Şenel tarafından Next.js 16.4, React 19, Django 6.1 ve Supabase ile geliştirildi.",
       backToTop: "Yukarı Çık",
     },
   },
@@ -191,7 +191,7 @@ export const translations = {
     hero: {
       badge: "Data Scientist | Computer Engineer",
       greeting: "Hello, I am",
-      name: "Ahmet Şafak Şenel",
+      name: "Şafak Şenel",
       role: "Data Science, Machine Learning & NLP Systems",
       description:
         "Computer Engineer experienced in NLP, machine learning, and model deployment. I design, train, and productionize end-to-end ML pipelines with Python, PyTorch, and Scikit-learn, turning complex data into high-performance AI solutions.",
@@ -332,7 +332,7 @@ export const translations = {
     footer: {
       tagline: "Data Science, Machine Learning, NLP & End-to-End AI Architecture",
       rights: "All rights reserved.",
-      builtWith: "Engineered by Ahmet Şafak Şenel with Next.js 16.4, React 19, Django 6.1, and Supabase.",
+      builtWith: "Engineered by Şafak Şenel with Next.js 16.4, React 19, Django 6.1, and Supabase.",
       backToTop: "Back to Top",
     },
   },

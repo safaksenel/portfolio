@@ -21,10 +21,10 @@ export default function Footer() {
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 dark:text-cyan-400 font-mono font-bold text-xs">
-                AŞ
+                ŞŞ
               </div>
               <span className="font-bold text-base text-slate-900 dark:text-white tracking-tight">
-                Ahmet Şafak Şenel
+                Şafak Şenel
               </span>
             </div>
 
@@ -114,7 +114,7 @@ export default function Footer() {
         {/* Bottom Bar: Copyright & Back To Top */}
         <div className="pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500 dark:text-zinc-500">
           <div>
-            © {new Date().getFullYear()} Ahmet Şafak Şenel. {t.footer.rights}
+            © {new Date().getFullYear()} Şafak Şenel. {t.footer.rights}
           </div>
 
           <div className="flex items-center gap-4">

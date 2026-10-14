@@ -1,4 +1,4 @@
-# ⚡ Ahmet Şafak Şenel — Data Scientist & Computer Engineer Portfolio
+# ⚡ Şafak Şenel — Data Scientist & Computer Engineer Portfolio
 
 [![Live Production](https://img.shields.io/badge/Live%20Website-portfolio--q663.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-q663.vercel.app)
 [![API Docs](https://img.shields.io/badge/Swagger%20API-portfolio--two--blush.vercel.app-06B6D4?style=for-the-badge&logo=fastapi&logoColor=white)](https://portfolio-two-blush-qly1y5rrlz.vercel.app/api/docs)
@@ -70,6 +70,6 @@ Portfolio opens at `http://localhost:3000`.
 
 ## 📄 License & Author
 
-Developed by **Ahmet Şafak Şenel**  
+Developed by **Şafak Şenel**  
 - GitHub: [@safaksenel](https://github.com/safaksenel)  
 - LinkedIn: [in/safaksenel](https://linkedin.com/in/safaksenel)  

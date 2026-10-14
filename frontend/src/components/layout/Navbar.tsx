@@ -74,17 +74,17 @@ export default function Navbar() {
           <a
             href="#"
             className="flex items-center gap-2.5 group focus:outline-none"
-            aria-label="Ahmet Şafak Şenel Portfolio"
+            aria-label="Şafak Şenel Portfolio"
           >
             <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500/20 via-cyan-500/20 to-indigo-500/20 border border-cyan-500/40 group-hover:border-cyan-400 transition-colors shadow-sm">
               <span className="font-mono text-cyan-500 dark:text-cyan-400 font-bold text-xs tracking-tighter group-hover:scale-110 transition-transform">
-                AŞ
+                ŞŞ
               </span>
               <div className="absolute inset-0 rounded-lg bg-cyan-400/10 blur-sm group-hover:bg-cyan-400/20 transition-colors" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">
-                Ahmet Şafak Şenel
+                Şafak Şenel
               </span>
               <span className="text-[10px] text-slate-500 dark:text-zinc-400 tracking-wider font-mono">
                 {lang === "tr" ? "VERİ BİLİMCİSİ" : "DATA SCIENTIST"}

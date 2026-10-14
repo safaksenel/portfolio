@@ -35,11 +35,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-q663.vercel.app"),
-  title: "Ahmet Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
+  title: "Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
   description:
-    "Ahmet Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi Portfolyosu. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
+    "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi Portfolyosu. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
   keywords: [
-    "Ahmet Şafak Şenel",
+    "Şafak Şenel",
+    "Safak Senel",
     "Veri Bilimcisi",
     "Data Scientist",
     "Bilgisayar Mühendisi",
@@ -57,17 +58,17 @@ export const metadata: Metadata = {
     "FastAPI",
     "Python 3.14",
   ],
-  authors: [{ name: "Ahmet Şafak Şenel", url: "https://github.com/safaksenel" }],
-  creator: "Ahmet Şafak Şenel",
+  authors: [{ name: "Şafak Şenel", url: "https://github.com/safaksenel" }],
+  creator: "Şafak Şenel",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Ahmet Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
+    title: "Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
     description:
-      "Ahmet Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
+      "Şafak Şenel — Veri Bilimcisi & Bilgisayar Mühendisi. NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, Scikit-learn, YZTA Datathon Top %10 Stacking Ensemble, DuckDB OLAP ve Çok Ajanlı AI Çözümleri.",
     url: "https://portfolio-q663.vercel.app",
-    siteName: "Ahmet Şafak Şenel Portfolio",
+    siteName: "Şafak Şenel Portfolio",
     locale: "tr_TR",
     type: "website",
     images: [
@@ -75,13 +76,13 @@ export const metadata: Metadata = {
         url: "/safak.jpeg",
         width: 1200,
         height: 630,
-        alt: "Ahmet Şafak Şenel - Veri Bilimcisi & Bilgisayar Mühendisi",
+        alt: "Şafak Şenel - Veri Bilimcisi & Bilgisayar Mühendisi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ahmet Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
+    title: "Şafak Şenel | Veri Bilimcisi & Bilgisayar Mühendisi",
     description:
       "NLP (22 Türkçe BERT Modeli), Intel OpenVINO, PyTorch, DuckDB OLAP, Stacking ML & Python 3.14 Portfolyosu.",
     images: ["/safak.jpeg"],
@@ -105,8 +106,8 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://portfolio-q663.vercel.app/#person",
-      name: "Ahmet Şafak Şenel",
-      alternateName: "Şafak Şenel",
+      name: "Şafak Şenel",
+      alternateName: "Safak Senel",
       jobTitle: "Data Scientist & Computer Engineer",
       description:
         "Computer Engineer and Data Scientist specializing in NLP (Turkish BERT, OpenVINO), Machine Learning (Stacking Ensembles, LightGBM, CatBoost), Agentic AI (LangGraph, DuckDB OLAP), and scalable MLOps architectures.",
@@ -141,7 +142,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": "https://portfolio-q663.vercel.app/#website",
       url: "https://portfolio-q663.vercel.app",
-      name: "Ahmet Şafak Şenel Data Scientist & AI Portfolio",
+      name: "Şafak Şenel Data Scientist & AI Portfolio",
       publisher: {
         "@id": "https://portfolio-q663.vercel.app/#person",
       },
