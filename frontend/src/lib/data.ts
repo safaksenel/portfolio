@@ -172,8 +172,8 @@ export const FALLBACK_PROJECTS: Project[] = [
       "Anti-Bot Başarı Oranı": "%99.6",
       "Ortalama Yanıt Hızı": "380ms"
     },
-    github_url: "https://github.com/safak-dev/ecommerce-stealth-scraper",
-    live_url: "https://github.com/safak-dev/ecommerce-stealth-scraper",
+    github_url: "https://github.com/safaksenel/ecommerce-stealth-scraper",
+    live_url: "https://github.com/safaksenel/ecommerce-stealth-scraper",
     thumbnail_url: null,
     is_featured: true,
     order: 1,
@@ -204,7 +204,7 @@ export const FALLBACK_PROJECTS: Project[] = [
       "Veri Bütünlüğü": "%100",
       "Dönüşüm Süresi": "18ms / Kayıt"
     },
-    github_url: "https://github.com/safak-dev/real-estate-intel-pipeline",
+    github_url: "https://github.com/safaksenel/real-estate-intel-pipeline",
     live_url: null,
     thumbnail_url: null,
     is_featured: true,
@@ -237,8 +237,8 @@ export const FALLBACK_PROJECTS: Project[] = [
       "Test Kapsamı": "%98",
       "Cold Start": "180ms"
     },
-    github_url: "https://github.com/safak-dev/django-supavisor-saas-core",
-    live_url: "https://safak-dev.vercel.app/api/docs",
+    github_url: "https://github.com/safaksenel/django-supavisor-saas-core",
+    live_url: "https://safaksenel.vercel.app/api/docs",
     thumbnail_url: null,
     is_featured: true,
     order: 3,
@@ -270,7 +270,7 @@ export const FALLBACK_PROJECTS: Project[] = [
       "Hata Toleransı": "%0.0",
       "APA Format Uyumu": "%100"
     },
-    github_url: "https://github.com/safak-dev/academic-survey-stat-engine",
+    github_url: "https://github.com/safaksenel/academic-survey-stat-engine",
     live_url: null,
     thumbnail_url: null,
     is_featured: false,
@@ -303,7 +303,7 @@ export const FALLBACK_PROJECTS: Project[] = [
       "WebSocket Gecikmesi": "12ms",
       "Kullanıcı Memnuniyeti": "%97"
     },
-    github_url: "https://github.com/safak-dev/crypto-sentiment-feed",
+    github_url: "https://github.com/safaksenel/crypto-sentiment-feed",
     live_url: "https://crypto-intel-demo.vercel.app",
     thumbnail_url: null,
     is_featured: false,
@@ -335,7 +335,7 @@ export const FALLBACK_PROJECTS: Project[] = [
       "Bot Tespit Edilme": "%0",
       "Sorgu Süresi": "14ms"
     },
-    github_url: "https://github.com/safak-dev/talent-market-scraper",
+    github_url: "https://github.com/safaksenel/talent-market-scraper",
     live_url: null,
     thumbnail_url: null,
     is_featured: false,
