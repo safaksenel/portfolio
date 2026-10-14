@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Download, Terminal, Sparkles, CheckCircle2, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import InteractiveTerminal from "./InteractiveTerminal";
+import ErrorBoundary from "../ui/ErrorBoundary";
 import MagneticButton from "../ui/MagneticButton";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -162,7 +163,12 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-6 w-full flex justify-center"
         >
-          <InteractiveTerminal />
+          <ErrorBoundary
+            fallbackTitle="Terminal Simülasyonu"
+            fallbackMessage="Simülasyon bileşeni yenileniyor. Lütfen yeniden deneyin."
+          >
+            <InteractiveTerminal />
+          </ErrorBoundary>
         </motion.div>
       </div>
     </section>

@@ -273,8 +273,9 @@ export default function InteractiveTerminal() {
               >
                 {displayedLogs.map((log, index) => {
                   if (!log) return null;
-                  const isSuccess = log.includes("SUCCESS") || log.includes("200 OK") || log.includes("SONUÇ");
-                  const isStarting = log.includes("STARTING") || log.includes("INITIALIZING") || log.includes("ROUTER");
+                  const logStr = String(log);
+                  const isSuccess = logStr.includes("SUCCESS") || logStr.includes("200 OK") || logStr.includes("SONUÇ");
+                  const isStarting = logStr.includes("STARTING") || logStr.includes("INITIALIZING") || logStr.includes("ROUTER");
                   return (
                     <div key={index} className="flex items-start gap-2">
                       <span className="text-cyan-500 select-none">›</span>
