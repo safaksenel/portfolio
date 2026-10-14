@@ -75,7 +75,7 @@ export default function InteractiveTerminal() {
           <div className="flex items-center gap-2 pl-2 border-l border-white/10">
             <Terminal className="w-4 h-4 text-cyan-400" />
             <span className="font-mono text-xs text-zinc-300 font-medium">
-              safak@dev-node: ~/python3.14/automation
+              safak@ml-node: ~/mlops/nlp-pipeline
             </span>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default function InteractiveTerminal() {
             <span>
               {isRunning
                 ? lang === "tr"
-                  ? "ÇALIŞIYOR..."
-                  : "RUNNING..."
+                  ? "ÇIKARIM YAPILIYOR..."
+                  : "INFERRING..."
                 : "200 OK"}
             </span>
           </div>
@@ -123,8 +123,8 @@ export default function InteractiveTerminal() {
                   ? "Simüle Ediliyor"
                   : "Simulating"
                 : lang === "tr"
-                ? "Çalıştır (Run)"
-                : "Execute (Run)"}
+                ? "Modeli Çalıştır (Run)"
+                : "Run Inference"}
             </span>
           </button>
         </div>
@@ -135,17 +135,28 @@ export default function InteractiveTerminal() {
         {TERMINAL_TABS.map((tab) => {
           const isActive = tab.id === activeTabId;
           const tabLabel =
-            tab.id === "crawl4ai"
+            tab.id === "bert_nlp"
               ? lang === "tr"
-                ? "Crawl4AI Web Scraper"
-                : "Crawl4AI Web Scraper"
-              : tab.id === "asyncio"
+                ? "FLO BERT NLP (22 Model)"
+                : "FLO BERT NLP (22 Models)"
+              : tab.id === "datathon_ml"
               ? lang === "tr"
-                ? "AsyncIO Yüksek Hızlı Bot"
-                : "AsyncIO High-Speed Bot"
-              : lang === "tr"
-              ? "Django 6.1 API Health"
-              : "Django 6.1 API Health";
+                ? "Datathon Stacking ML"
+                : "Datathon Stacking ML"
+              : tab.id === "copilot_duckdb"
+              ? lang === "tr"
+                ? "Agentic Copilot & DuckDB"
+                : "Agentic Copilot & DuckDB"
+              : tab.title;
+
+          const tabBadge =
+            tab.id === "bert_nlp"
+              ? "BERT"
+              : tab.id === "datathon_ml"
+              ? "Top %10"
+              : tab.id === "copilot_duckdb"
+              ? "OLAP"
+              : "AI";
 
           return (
             <button
@@ -167,7 +178,7 @@ export default function InteractiveTerminal() {
                     : "bg-white/5 text-zinc-500"
                 )}
               >
-                {tab.id === "crawl4ai" ? "3.14" : tab.id === "asyncio" ? "RPS" : "API"}
+                {tabBadge}
               </span>
               {isActive && (
                 <motion.div
