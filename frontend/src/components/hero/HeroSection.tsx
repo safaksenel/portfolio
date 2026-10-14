@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Download, Terminal, Sparkles, CheckCircle2, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import InteractiveTerminal from "./InteractiveTerminal";
 import MagneticButton from "../ui/MagneticButton";
 import { useLanguage } from "@/context/LanguageContext";
@@ -92,18 +92,27 @@ export default function HeroSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
-                title="GitHub"
+                title="GitHub: safaksenel"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com/in/safaksenel"
+                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
-                title="LinkedIn"
+                title="LinkedIn: Şafak Şenel"
               >
                 <LinkedinIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.kaggle.com/afakenel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
+                title="Kaggle: afakenel"
+              >
+                <KaggleIcon className="w-4 h-4" />
               </a>
             </div>
           </div>

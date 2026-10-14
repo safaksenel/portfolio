@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Send, CheckCircle2, AlertCircle, Loader2, Mail, MessageSquare, User, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import confetti from "canvas-confetti";
 import { submitContactInquiry } from "@/lib/api";
 import { useLanguage } from "@/context/LanguageContext";
@@ -149,7 +149,7 @@ export default function ContactSection() {
               </a>
 
               <a
-                href="https://linkedin.com/in/safaksenel"
+                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-cyan-500/40 text-slate-800 dark:text-zinc-200 transition-all group"
@@ -160,7 +160,24 @@ export default function ContactSection() {
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-500 dark:text-zinc-400 font-mono">LinkedIn</span>
                   <span className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-cyan-500 transition-colors">
-                    linkedin.com/in/safaksenel
+                    Şafak Şenel
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.kaggle.com/afakenel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-cyan-500/40 text-slate-800 dark:text-zinc-200 transition-all group"
+              >
+                <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300 group-hover:text-cyan-500 transition-colors">
+                  <KaggleIcon className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs text-slate-500 dark:text-zinc-400 font-mono">Kaggle</span>
+                  <span className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-cyan-500 transition-colors">
+                    kaggle.com/afakenel
                   </span>
                 </div>
               </a>

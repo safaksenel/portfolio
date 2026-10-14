@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUp, Mail, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -83,13 +83,22 @@ export default function Footer() {
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com/in/safaksenel"
+                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-cyan-500 border border-slate-200 dark:border-white/5 transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.kaggle.com/afakenel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-cyan-500 border border-slate-200 dark:border-white/5 transition-colors"
+                aria-label="Kaggle"
+              >
+                <KaggleIcon className="w-4 h-4" />
               </a>
               <a
                 href="mailto:safaksenel@hotmail.com"

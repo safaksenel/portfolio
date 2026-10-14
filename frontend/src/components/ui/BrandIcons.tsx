@@ -30,6 +30,19 @@ export function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) 
   );
 }
 
+export function KaggleIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M18.825 23.859c-.022.086-.117.141-.216.141h-3.139c-.131 0-.247-.071-.309-.184l-4.985-9.11-2.174 2.07v6.94c0 .189-.153.342-.342.342H4.809c-.189 0-.342-.153-.342-.342V.342c0-.189.153-.342.342-.342h2.851c.189 0 .342.153.342.342v13.067l6.837-7.469a.349.349 0 0 1 .258-.112h3.298c.112 0 .209.062.247.162.039.1.01.213-.072.293l-6.843 6.643 7.026 10.298c.074.108.066.252-.027.336z" />
+    </svg>
+  );
+}
+
 export function XTwitterIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg

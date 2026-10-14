@@ -60,13 +60,38 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="group rounded-2xl glass-panel bg-white dark:bg-[#0c0d16]/80 p-6 sm:p-7 border border-slate-200 dark:border-white/10 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)]"
     >
       <div>
-        {/* Category & Links */}
-        <div className="flex items-center justify-between gap-3 mb-4">
-          <span className={cn("px-3 py-1 rounded-full text-xs font-mono font-medium border", cat.badge)}>
-            {cat[lang]}
-          </span>
+        {/* Project Real Screenshot Banner */}
+        {project.thumbnailUrl && (
+          <div className="relative aspect-[16/9] w-full mb-4.5 rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-950 group/img">
+            <img
+              src={project.thumbnailUrl}
+              alt={title}
+              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none" />
 
-          <div className="flex items-center gap-2">
+            {/* Category Pill Floating on Image */}
+            <div className="absolute bottom-2.5 left-2.5 flex items-center gap-2">
+              <span className={cn("px-2.5 py-0.5 rounded-md text-[10px] font-mono font-medium backdrop-blur-md border", cat.badge)}>
+                {cat[lang]}
+              </span>
+              <span className="px-2 py-0.5 rounded-md text-[10px] font-mono text-zinc-300 bg-black/60 backdrop-blur-md border border-white/10">
+                {lang === "tr" ? "Uygulama Görüntüsü" : "Live Screenshot"}
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* Action Header Row */}
+        <div className="flex items-center justify-between gap-3 mb-3">
+          {!project.thumbnailUrl && (
+            <span className={cn("px-3 py-1 rounded-full text-xs font-mono font-medium border", cat.badge)}>
+              {cat[lang]}
+            </span>
+          )}
+          <div className="flex items-center gap-2 ml-auto">
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
