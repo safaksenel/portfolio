@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import {
   User,
@@ -78,11 +79,16 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group focus:outline-none"
             aria-label="Şafak Şenel Portfolio"
           >
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500/20 via-cyan-500/20 to-indigo-500/20 border border-cyan-500/40 group-hover:border-cyan-400 transition-colors shadow-sm">
-              <span className="font-mono text-cyan-500 dark:text-cyan-400 font-bold text-xs tracking-tighter group-hover:scale-110 transition-transform">
-                ŞŞ
-              </span>
-              <div className="absolute inset-0 rounded-lg bg-cyan-400/10 blur-sm group-hover:bg-cyan-400/20 transition-colors" />
+            <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-cyan-500/40 group-hover:border-cyan-400 transition-all shadow-sm group-hover:shadow-[0_0_12px_rgba(6,182,212,0.4)] flex-shrink-0 bg-gradient-to-tr from-emerald-500/20 via-cyan-500/20 to-indigo-500/20">
+              <Image
+                src="/safak-profile.jpg"
+                alt="Şafak Şenel"
+                fill
+                sizes="36px"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                priority
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10 rounded-xl pointer-events-none" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors">

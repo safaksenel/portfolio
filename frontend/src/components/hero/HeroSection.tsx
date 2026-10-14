@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRight, Download, Terminal, Sparkles, CheckCircle2, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
@@ -23,8 +24,27 @@ export default function HeroSection() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-6 flex flex-col gap-6 z-10"
         >
-          {/* Availability Badge & Stack Pill */}
+          {/* Profile Avatar Pill, Availability Badge & Stack Pill */}
           <div className="flex flex-wrap items-center gap-2.5">
+            <a
+              href="#about"
+              className="group inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/80 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-cyan-500/40 shadow-sm transition-all"
+              title={lang === "tr" ? "Hakkımda ve deneyimlerimi incele" : "View about & experience"}
+            >
+              <div className="relative w-6 h-6 rounded-full overflow-hidden border border-cyan-500/50 shadow-sm flex-shrink-0 bg-gradient-to-tr from-emerald-500/20 via-cyan-500/20 to-indigo-500/20">
+                <Image
+                  src="/safak-profile.jpg"
+                  alt="Şafak Şenel"
+                  fill
+                  sizes="24px"
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <span className="text-xs font-mono font-medium text-slate-800 dark:text-zinc-200 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+                Şafak Şenel
+              </span>
+            </a>
+
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
