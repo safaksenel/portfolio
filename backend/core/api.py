@@ -39,7 +39,7 @@ class HealthCheckOut(Schema):
 
 # Initialize Django Ninja API
 api = NinjaAPI(
-    title="Ahmet Şafak Şenel Portfolio API",
+    title="Şafak Şenel Portfolio API",
     version="1.0.0",
     description="High-performance Serverless API built with Python 3.14 & Django 6.1 for Web Scraping, AI & Full-Stack Portfolio.",
     docs_url="/docs",

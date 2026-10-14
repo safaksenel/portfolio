@@ -89,7 +89,7 @@ export const translations = {
       subtitle: "Veri odaklı karar alma süreçlerini hızlandıran ve ölçeklenebilir yapay zeka çözümleri üreten Bilgisayar Mühendisi.",
       storyTitle: "Ben Kimim?",
       storyP1:
-        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, 3 Ağustos 2024'te başladığım Ecole 42 İstanbul Ana Eğitim programında C ve Python ile ileri seviye algoritmik derinlik kazanmak ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
+        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, 3 Ağustos 2026'da başladığım Ecole 42 İstanbul Ana Eğitim programında C ve Python ile ileri seviye algoritmik derinlik kazanmak ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
       storyP2:
         "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride mentor metinleri ve tabüler veriyi Stacking Ensemble ile birleştiren uçtan uca regresyon boru hattı geliştirdim (RMSE: 0.1418).",
       storyP3:
@@ -97,24 +97,24 @@ export const translations = {
       highlightsTitle: "Önemli Kilometre Taşları & Deneyimler",
       milestones: [
         {
-          year: "3 Ağustos 2024 – Günümüz",
+          year: "3 Ağustos 2026 – Günümüz",
           title: "Ecole 42 İstanbul: Yazılım Mühendisi (Ana Eğitim / Core Curriculum)",
-          desc: "Piscine başarıyla tamamlandıktan sonra 3 Ağustos 2024'te Ana Eğitime başlandı. Eşler arası (peer-to-peer) sistemde C ve Python dilleriyle ileri seviye algoritmalar, dinamik bellek yönetimi, veri yapıları ve sistem programlama uzmanlığı.",
+          desc: "Piscine başarıyla tamamlandıktan sonra 3 Ağustos 2026'da Ana Eğitime başlandı. Eşler arası (peer-to-peer) sistemde C ve Python dilleriyle ileri seviye algoritmalar, dinamik bellek yönetimi, veri yapıları ve sistem programlama uzmanlığı.",
+        },
+        {
+          year: "Ocak 2026 – Ekim 2026",
+          title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
+          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. Scrum Master olarak 72 saatlik sprint'lerde 4 kişilik ekiple 2 ürün teslimi ve günlük 50+ otomatik yanıtlı Slack Chatbot'u (Cemil) geliştirmesi.",
+        },
+        {
+          year: "2026",
+          title: "YZTA 5.0 Datathon — Çok Modlu Stacking Çözümü",
+          desc: "56.000 satırlık regresyon veri setinde domain-driven feature engineering, Optuna Bayesian optimizasyonlu LightGBM, CatBoost ve RidgeCV Stacking Ensemble ile 0.1418 RMSE başarımı.",
         },
         {
           year: "Mart 2024 – Temmuz 2024",
           title: "FLO Grubu: İş Zekası ve Büyük Veri Stajyeri",
           desc: "11 ana neden için 22 adet iki katmanlı Türkçe BERT modeli eğitildi. OpenVINO ile CPU çıkarımı 4 kat hızlandırıldı, F1 skoru 0.89'a yükseltildi ve süreç %85 otomatikleştirildi.",
-        },
-        {
-          year: "2024",
-          title: "YZTA 5.0 Datathon — Çok Modlu Stacking Çözümü",
-          desc: "56.000 satırlık regresyon veri setinde domain-driven feature engineering, Optuna Bayesian optimizasyonlu LightGBM, CatBoost ve RidgeCV Stacking Ensemble ile 0.1418 RMSE başarımı.",
-        },
-        {
-          year: "Aralık 2023 – Ekim 2024",
-          title: "Google YZTA: Yapay Zeka ve Veri Bilimi Programı Mezunu",
-          desc: "Bootcamp katılımı, 10/10 Coursera eğitimleri ve 17/17 Moodle modülleri eksiksiz tamamlanarak başarıyla mezun olundu. Scrum Master olarak 72 saatlik sprint'lerde 4 kişilik ekiple 2 ürün teslimi ve günlük 50+ otomatik yanıtlı Slack Chatbot'u (Cemil) geliştirmesi.",
         },
         {
           year: "2023 – 2025",
@@ -250,7 +250,7 @@ export const translations = {
       subtitle: "Computer Engineer accelerating data-driven decisions through scalable machine learning and automation.",
       storyTitle: "Who Am I?",
       storyP1:
-        "Computer Engineering graduate from Nişantaşı University. My passion for data science and AI was forged through transforming real-world datasets into actionable models, deep algorithmic problem-solving in C & Python at Ecole 42 Istanbul (Core Curriculum starting Aug 3, 2024), and engineering production-grade ML pipelines.",
+        "Computer Engineering graduate from Nişantaşı University. My passion for data science and AI was forged through transforming real-world datasets into actionable models, deep algorithmic problem-solving in C & Python at Ecole 42 Istanbul (Core Curriculum starting Aug 3, 2026), and engineering production-grade ML pipelines.",
       storyP2:
         "At FLO Group, I developed a feedback triage system powered by 22 Turkish BERT models optimized with Intel OpenVINO, cutting evaluation time by 85% with an F1 score of 0.89. In the YZTA 5.0 Datathon, I engineered an end-to-end multi-modal Stacking Ensemble pipeline combining mentor NLP text and tabular features across 56,000 rows (RMSE: 0.1418).",
       storyP3:
@@ -258,24 +258,24 @@ export const translations = {
       highlightsTitle: "Key Milestones & Experiences",
       milestones: [
         {
-          year: "Aug 3, 2024 – Present",
+          year: "Aug 3, 2026 – Present",
           title: "Ecole 42 Istanbul: Software Engineering (Core Curriculum)",
-          desc: "Admitted to the prestigious Common Core curriculum starting August 3, 2024 following Piscine success. Deep dive into algorithms, dynamic memory management, low-level architecture, and data structures in C and Python.",
+          desc: "Admitted to the prestigious Common Core curriculum starting August 3, 2026 following Piscine success. Deep dive into algorithms, dynamic memory management, low-level architecture, and data structures in C and Python.",
+        },
+        {
+          year: "Jan 2026 – Oct 2026",
+          title: "Google YZTA: AI & Data Science Graduate / Alumnus",
+          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Led 4-person teams as Scrum Master during 72-hour sprints delivering 2 production projects and an automated Slack bot.",
+        },
+        {
+          year: "2026",
+          title: "YZTA 5.0 Datathon — Multi-Modal Stacking Solution",
+          desc: "Engineered domain-driven features on a 56,000-row regression dataset, tuning LightGBM, CatBoost, and RidgeCV Stacking Ensemble with Optuna Bayesian optimization.",
         },
         {
           year: "Mar 2024 – Jul 2024",
           title: "FLO Group: Business Intelligence & Big Data Intern",
           desc: "Trained 22 dual-tier Turkish BERT models for 11 root causes. Accelerated CPU inference 4x via OpenVINO, boosted F1 score to 0.89, and automated 85% of customer complaint analysis.",
-        },
-        {
-          year: "2024",
-          title: "YZTA 5.0 Datathon — Multi-Modal Stacking Solution",
-          desc: "Engineered domain-driven features on a 56,000-row regression dataset, tuning LightGBM, CatBoost, and RidgeCV Stacking Ensemble with Optuna Bayesian optimization.",
-        },
-        {
-          year: "Dec 2023 – Oct 2024",
-          title: "Google YZTA: AI & Data Science Graduate / Alumnus",
-          desc: "Successfully graduated by completing Bootcamp, 10/10 Coursera professional certifications, and 17/17 Moodle modules. Led 4-person teams as Scrum Master during 72-hour sprints delivering 2 production projects and an automated Slack bot.",
         },
         {
           year: "2023 – 2025",

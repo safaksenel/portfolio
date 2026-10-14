@@ -88,7 +88,7 @@ def capture_mhrs_portal_and_email(driver):
       <tr><td class="info-label">Tespit Zamanı:</td><td class="info-val">15.10.2026 00:05:20 (0.28 sn tepki)</td></tr>
     </table>
     <a href="https://mhrs.gov.tr/vatandas/#/" class="cta-button" target="_blank">MHRS Sistemine Git ve Onayla →</a>
-    <div class="footer">Bu otomatik e-posta Ahmet Şafak Şenel MHRS Botu tarafından SMTP SSL ile iletilmiştir.</div>
+    <div class="footer">Bu otomatik e-posta Şafak Şenel MHRS Botu tarafından SMTP SSL ile iletilmiştir.</div>
   </div>
 </body>
 </html>"""

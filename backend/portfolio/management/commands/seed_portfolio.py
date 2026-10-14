@@ -1,7 +1,7 @@
 """
 Django Management Command: seed_portfolio
 Populates the database with real, production-grade projects and engineering services
-tailored to Ahmet Şafak Şenel's experience in Python 3.14, Web Scraping, AI/NLP, and Automation.
+tailored to Şafak Şenel's experience in Python 3.14, Web Scraping, AI/NLP, and Automation.
 """
 
 from django.core.management.base import BaseCommand

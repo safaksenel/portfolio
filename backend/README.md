@@ -1,4 +1,4 @@
-# Ahmet Şafak Şenel Portfolio - Python 3.14 & Django 6.1 Backend API
+# Şafak Şenel Portfolio - Python 3.14 & Django 6.1 Backend API
 
 Production-grade, asynchronous serverless REST API built with **Python 3.14**, **Django 6.1**, **Django Ninja 1.7+** (Pydantic v2), and **Psycopg 3**, ready for **Supabase PostgreSQL 17** and **Vercel Serverless Functions**.
 
