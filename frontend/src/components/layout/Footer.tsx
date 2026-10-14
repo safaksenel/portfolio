@@ -106,9 +106,10 @@ export default function Footer() {
                 <KaggleIcon className="w-4 h-4" />
               </a>
               <a
-                href="mailto:safaksenel@hotmail.com"
+                href="mailto:safaksenel61@gmail.com"
                 className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-emerald-500 border border-slate-200 dark:border-white/5 transition-colors"
-                aria-label="Email"
+                aria-label="Email (safaksenel61@gmail.com)"
+                title="Email: safaksenel61@gmail.com"
               >
                 <Mail className="w-4 h-4" />
               </a>

@@ -182,17 +182,20 @@ export default function ContactSection() {
                 </div>
               </a>
 
-              <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 text-slate-800 dark:text-zinc-200">
-                <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300">
+              <a
+                href="mailto:safaksenel61@gmail.com"
+                className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-emerald-500/40 text-slate-800 dark:text-zinc-200 transition-all group"
+              >
+                <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300 group-hover:text-emerald-500 transition-colors">
                   <Mail className="w-5 h-5 text-emerald-500" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-500 dark:text-zinc-400 font-mono">E-Mail</span>
-                  <span className="text-sm font-semibold text-slate-900 dark:text-white">
-                    safaksenel@hotmail.com
+                  <span className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
+                    safaksenel61@gmail.com
                   </span>
                 </div>
-              </div>
+              </a>
             </div>
 
             <p className="text-xs text-slate-500 dark:text-zinc-400 leading-relaxed pt-2 border-t border-slate-200 dark:border-white/10">

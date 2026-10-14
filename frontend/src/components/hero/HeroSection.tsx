@@ -114,6 +114,13 @@ export default function HeroSection() {
               >
                 <KaggleIcon className="w-4 h-4" />
               </a>
+              <a
+                href="mailto:safaksenel61@gmail.com"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-emerald-500 border border-slate-200 dark:border-white/10 transition-colors"
+                title="E-Mail: safaksenel61@gmail.com"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
