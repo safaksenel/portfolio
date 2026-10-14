@@ -22,6 +22,7 @@ export const translations = {
     nav: {
       about: "Hakkımda",
       skills: "Yetenekler",
+      certificates: "Sertifikalar",
       projects: "Projeler",
       contact: "İletişim",
       cv: "CV İndir",
@@ -181,6 +182,7 @@ export const translations = {
     nav: {
       about: "About",
       skills: "Skills",
+      certificates: "Certificates",
       projects: "Projects",
       contact: "Contact",
       cv: "Download CV",

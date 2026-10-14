@@ -55,6 +55,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#certificates" className="hover:text-cyan-500 transition-colors">
+                  {t.nav.certificates}
+                </a>
+              </li>
+              <li>
                 <a href="#projects" className="hover:text-cyan-500 transition-colors">
                   {t.nav.projects}
                 </a>

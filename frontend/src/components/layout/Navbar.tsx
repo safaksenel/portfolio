@@ -14,6 +14,7 @@ import {
   Globe,
   FileText,
   Download,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -31,6 +32,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "#about", label: t.nav.about, icon: User },
     { href: "#expertise", label: t.nav.skills, icon: Code2 },
+    { href: "#certificates", label: t.nav.certificates, icon: ShieldCheck },
     { href: "#projects", label: t.nav.projects, icon: FolderGit2 },
     { href: "#contact", label: t.nav.contact, icon: Mail },
   ];
@@ -39,7 +41,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["about", "expertise", "projects", "contact"];
+      const sections = ["about", "expertise", "certificates", "projects", "contact"];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {

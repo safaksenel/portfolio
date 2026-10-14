@@ -51,3 +51,23 @@ export interface TerminalTabConfig {
   outputData: Record<string, any>;
   durationMs: number;
 }
+
+export interface Certificate {
+  id: string;
+  title: {
+    tr: string;
+    en: string;
+  };
+  issuer: "DataCamp" | "Google" | "Coursera" | "Udemy" | "BTK Akademi";
+  issuerBadge: string;
+  credentialUrl?: string;
+  credentialId?: string;
+  issueDate: string;
+  image?: string;
+  description: {
+    tr: string;
+    en: string;
+  };
+  skills: string[];
+  isFeatured?: boolean;
+}

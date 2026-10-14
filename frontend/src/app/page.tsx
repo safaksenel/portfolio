@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import BentoGrid from "@/components/bento/BentoGrid";
 import AboutSection from "@/components/about/AboutSection";
+import CertificatesSection from "@/components/certificates/CertificatesSection";
 import ProjectShowcase from "@/components/projects/ProjectShowcase";
 import ContactSection from "@/components/contact/ContactSection";
 
@@ -17,10 +18,13 @@ export default function HomePage() {
       {/* 3. About Me & Engineering Journey */}
       <AboutSection />
 
-      {/* 4. Filterable Project Showcase */}
+      {/* 4. Official Certifications & Accreditations */}
+      <CertificatesSection />
+
+      {/* 5. Filterable Project Showcase */}
       <ProjectShowcase />
 
-      {/* 5. Direct Personal Contact Form */}
+      {/* 6. Direct Personal Contact Form */}
       <ContactSection />
     </div>
   );
