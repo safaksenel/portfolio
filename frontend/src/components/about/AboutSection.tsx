@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { User, Award, Milestone, Sparkles, CheckCircle2, Terminal, Code2, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -27,6 +28,55 @@ export default function AboutSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Personal Story & Technical Philosophy */}
         <div className="lg:col-span-5 flex flex-col gap-6">
+          {/* Profile Card with Photo */}
+          <div className="p-6 sm:p-7 rounded-2xl glass-panel bg-white dark:bg-[#0c0d16]/80 border-slate-200 dark:border-white/10 shadow-sm flex flex-col sm:flex-row items-center gap-5 sm:gap-6">
+            <div className="relative group shrink-0">
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-[0_0_25px_rgba(6,182,212,0.25)] group-hover:border-cyan-400 group-hover:shadow-[0_0_35px_rgba(6,182,212,0.4)] transition-all duration-300">
+                <Image
+                  src="/safak-profile.jpg"
+                  alt="Şafak Şenel"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </div>
+              <div
+                className="absolute -bottom-1 -right-1 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500 border-2 border-white dark:border-[#0c0d16] shadow-sm"
+                title={lang === "tr" ? "Fırsatlara Açık" : "Available for Opportunities"}
+              >
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+              </div>
+            </div>
+
+            <div className="flex flex-col text-center sm:text-left">
+              <div className="inline-flex items-center justify-center sm:justify-start gap-1.5 text-xs font-mono font-medium text-cyan-600 dark:text-cyan-400 mb-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <span>{lang === "tr" ? "VERİ BİLİMCİSİ & MÜHENDİS" : "DATA SCIENTIST & ENGINEER"}</span>
+              </div>
+              <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Şafak Şenel
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-zinc-400 mt-1 leading-relaxed">
+                {lang === "tr"
+                  ? "Nişantaşı Üniversitesi Bilgisayar Müh. • 42 İstanbul Ana Eğitim"
+                  : "Nişantaşı University Computer Eng. • 42 Istanbul Core"}
+              </p>
+
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mt-3">
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  Google YZTA Mezunu
+                </span>
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+                  Ecole 42 Core
+                </span>
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">
+                  DataCamp Certified
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="p-6 sm:p-8 rounded-2xl glass-panel bg-white dark:bg-[#0c0d16]/80 border-slate-200 dark:border-white/10 shadow-sm">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-cyan-500" />
