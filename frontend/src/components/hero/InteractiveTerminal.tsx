@@ -27,12 +27,15 @@ export default function InteractiveTerminal() {
     setDisplayedLogs([]);
     setActiveView("output");
 
-    const logs = activeConfig.executionLogs;
+    const logs = activeConfig.executionLogs || [];
     let currentIdx = 0;
 
     const interval = setInterval(() => {
       if (currentIdx < logs.length) {
-        setDisplayedLogs((prev) => [...prev, logs[currentIdx]]);
+        const nextLog = logs[currentIdx];
+        if (nextLog) {
+          setDisplayedLogs((prev) => [...prev, nextLog]);
+        }
         currentIdx++;
         if (logsContainerRef.current) {
           logsContainerRef.current.scrollTop = logsContainerRef.current.scrollHeight;
@@ -42,7 +45,7 @@ export default function InteractiveTerminal() {
         setIsRunning(false);
         setExecutionDone(true);
       }
-    }, activeConfig.durationMs / logs.length);
+    }, Math.max(50, activeConfig.durationMs / Math.max(1, logs.length)));
   };
 
   useEffect(() => {
@@ -268,23 +271,28 @@ export default function InteractiveTerminal() {
                 ref={logsContainerRef}
                 className="flex flex-col gap-1 text-zinc-400 border-b border-white/5 pb-3 max-h-[120px] overflow-y-auto"
               >
-                {displayedLogs.map((log, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <span className="text-cyan-500 select-none">›</span>
-                    <span
-                      className={cn(
-                        "leading-tight",
-                        log.includes("SUCCESS") || log.includes("200 OK")
-                          ? "text-emerald-400 font-semibold"
-                          : log.includes("STARTING") || log.includes("INITIALIZING")
-                          ? "text-cyan-300"
-                          : "text-zinc-300"
-                      )}
-                    >
-                      {log}
-                    </span>
-                  </div>
-                ))}
+                {displayedLogs.map((log, index) => {
+                  if (!log) return null;
+                  const isSuccess = log.includes("SUCCESS") || log.includes("200 OK") || log.includes("SONUÇ");
+                  const isStarting = log.includes("STARTING") || log.includes("INITIALIZING") || log.includes("ROUTER");
+                  return (
+                    <div key={index} className="flex items-start gap-2">
+                      <span className="text-cyan-500 select-none">›</span>
+                      <span
+                        className={cn(
+                          "leading-tight",
+                          isSuccess
+                            ? "text-emerald-400 font-semibold"
+                            : isStarting
+                            ? "text-cyan-300"
+                            : "text-zinc-300"
+                        )}
+                      >
+                        {log}
+                      </span>
+                    </div>
+                  );
+                })}
                 {isRunning && (
                   <div className="flex items-center gap-2 text-cyan-400 animate-pulse">
                     <span>›</span>
