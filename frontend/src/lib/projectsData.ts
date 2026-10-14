@@ -23,6 +23,7 @@ export interface LocalizedProject {
   githubUrl: string;
   liveUrl: string;
   thumbnailUrl: string;
+  images: string[];
   isFeatured: boolean;
   order: number;
 }
@@ -68,6 +69,10 @@ export const localizedProjects: LocalizedProject[] = [
     githubUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
     liveUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
     thumbnailUrl: "/projects/agentic-copilot.svg",
+    images: [
+      "/projects/agentic-copilot.svg",
+      "/projects/agentic-copilot-chart.png",
+    ],
     isFeatured: true,
     order: 1,
   },
@@ -110,6 +115,12 @@ export const localizedProjects: LocalizedProject[] = [
     githubUrl: "https://github.com/safaksenel",
     liveUrl: "https://github.com/safaksenel",
     thumbnailUrl: "/projects/yolunda-dashboard.jpg",
+    images: [
+      "/projects/yolunda-dashboard.jpg",
+      "/projects/yolunda-fleet.jpg",
+      "/projects/yolunda-driver.jpg",
+      "/projects/yolunda-guardian.jpg",
+    ],
     isFeatured: true,
     order: 2,
   },
@@ -150,7 +161,11 @@ export const localizedProjects: LocalizedProject[] = [
     },
     githubUrl: "https://github.com/safaksenel/mhrs-appointment-automation",
     liveUrl: "https://github.com/safaksenel/mhrs-appointment-automation",
-    thumbnailUrl: "/projects/yolunda-fleet.jpg",
+    thumbnailUrl: "/projects/mhrs-terminal.png",
+    images: [
+      "/projects/mhrs-terminal.png",
+      "/projects/mhrs-email-alert.png",
+    ],
     isFeatured: true,
     order: 3,
   },
@@ -192,7 +207,11 @@ export const localizedProjects: LocalizedProject[] = [
     },
     githubUrl: "https://github.com/safaksenel/NLP-BERT",
     liveUrl: "https://github.com/safaksenel/NLP-BERT",
-    thumbnailUrl: "/projects/telco-confusion-matrix.png",
+    thumbnailUrl: "/projects/flo-bert-confusion-matrix.png",
+    images: [
+      "/projects/flo-bert-confusion-matrix.png",
+      "/projects/flo-bert-benchmarks.png",
+    ],
     isFeatured: true,
     order: 4,
   },
@@ -235,6 +254,10 @@ export const localizedProjects: LocalizedProject[] = [
     githubUrl: "https://github.com/safaksenel/Telco-Customer-Churn",
     liveUrl: "https://github.com/safaksenel/Telco-Customer-Churn",
     thumbnailUrl: "/projects/telco-roc-curves.png",
+    images: [
+      "/projects/telco-roc-curves.png",
+      "/projects/telco-confusion-matrix.png",
+    ],
     isFeatured: true,
     order: 5,
   },
@@ -275,7 +298,11 @@ export const localizedProjects: LocalizedProject[] = [
     },
     githubUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
     liveUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
-    thumbnailUrl: "/projects/telco-roc-curves.png",
+    thumbnailUrl: "/projects/datathon-feature-importance.png",
+    images: [
+      "/projects/datathon-feature-importance.png",
+      "/projects/datathon-stacking-residuals.png",
+    ],
     isFeatured: true,
     order: 6,
   },
@@ -314,7 +341,11 @@ export const localizedProjects: LocalizedProject[] = [
     },
     githubUrl: "https://github.com/safaksenel/smart-file-organizer-daemon",
     liveUrl: "https://github.com/safaksenel/smart-file-organizer-daemon",
-    thumbnailUrl: "/projects/yolunda-dashboard.jpg",
+    thumbnailUrl: "/projects/file-organizer-daemon-cli.png",
+    images: [
+      "/projects/file-organizer-daemon-cli.png",
+      "/projects/file-organizer-stats.png",
+    ],
     isFeatured: true,
     order: 7,
   },
@@ -354,7 +385,11 @@ export const localizedProjects: LocalizedProject[] = [
     },
     githubUrl: "https://github.com/safaksenel/BlindHire",
     liveUrl: "https://github.com/safaksenel/BlindHire",
-    thumbnailUrl: "/projects/blindhire-avatar.png",
+    thumbnailUrl: "/projects/blindhire-interface.png",
+    images: [
+      "/projects/blindhire-interface.png",
+      "/projects/blindhire-avatar.png",
+    ],
     isFeatured: false,
     order: 8,
   },
@@ -394,7 +429,52 @@ export const localizedProjects: LocalizedProject[] = [
     githubUrl: "https://github.com/safaksenel/flight-deals",
     liveUrl: "https://github.com/safaksenel/flight-deals",
     thumbnailUrl: "/projects/flight-deals.jpeg",
+    images: [
+      "/projects/flight-deals.jpeg",
+      "/projects/flight-deals-matrix.png",
+    ],
     isFeatured: false,
     order: 9,
+  },
+  {
+    id: "9",
+    slug: "retro-snake-arcade",
+    category: "backend",
+    title: {
+      tr: "Retro Snake Arcade: Cyberpunk Edition & Yüksek Hızlı Motor",
+      en: "Retro Snake Arcade: Cyberpunk Edition & High-Speed Engine",
+    },
+    shortDescription: {
+      tr: "Kalıcı rekor skoru, dinamik hız eğrisi, süreli Altın Elma güçlendirmeleri ve WASD kontrolleriyle modernize edilmiş karanlık temalı atari oyunu.",
+      en: "Modern dark-themed Snake arcade with persistent high scores, dynamic speed scaling, timed Golden Apple power-ups, and WASD/Arrow bindings.",
+    },
+    problemStatement: {
+      tr: "Klasik konsol oyunlarının modern UI, esnek olay döngüsü, temiz OOP mimarisi ve test edilebilirlik standartlarına taşınması gerekiyordu.",
+      en: "Translating classic arcade loop fundamentals into modern modular OOP design, event-driven tick handling, and automated pytest coverage.",
+    },
+    solutionArchitecture: {
+      tr: "Python OOP (Snake, Food, Scoreboard modülleri) ile geliştirildi. Altın Elma ile +5 çarpanlı süreli ödüller, dosya tabanlı kalıcı yüksek skor yönetimi ve otomatik hızlanma algoritmaları entegre edildi.",
+      en: "Built with modular Python OOP architecture. Added timed golden food multipliers, local file persistent high-score ledger, and dynamic tick-rate difficulty scaling.",
+    },
+    techStack: [
+      "Python 3.14",
+      "Turtle Graphics",
+      "OOP Architecture",
+      "Event-Driven",
+      "Pytest",
+    ],
+    metrics: {
+      fps: "60 FPS Akıcı Oynanış",
+      powerups: "Süreli Altın Elma",
+      persistence: "Kalıcı En Yüksek Skor",
+    },
+    githubUrl: "https://github.com/safaksenel/retro-snake-arcade",
+    liveUrl: "https://github.com/safaksenel/retro-snake-arcade",
+    thumbnailUrl: "/projects/snake-arcade-cyberpunk.png",
+    images: [
+      "/projects/snake-arcade-cyberpunk.png",
+    ],
+    isFeatured: false,
+    order: 10,
   },
 ];
