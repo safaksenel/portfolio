@@ -117,10 +117,12 @@ if DATABASE_URL:
     }
 else:
     # Graceful fallback to SQLite for local development or when Supabase credentials are pending
+    # On Vercel Serverless, root is read-only, while /tmp is writable
+    sqlite_path = Path("/tmp/db.sqlite3") if os.getenv("VERCEL") else (BASE_DIR / "db.sqlite3")
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
+            "NAME": sqlite_path,
         }
     }
 
