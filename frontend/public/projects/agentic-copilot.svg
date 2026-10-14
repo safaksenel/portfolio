@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="50%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Subtle Tech Grid -->
+  <g stroke="#1e293b" stroke-width="0.8" opacity="0.35">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="375" x2="1200" y2="375"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    
+    <line x1="150" y1="0" x2="150" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="450" y1="0" x2="450" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="750" y1="0" x2="750" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+    <line x1="1050" y1="0" x2="1050" y2="675"/>
+  </g>
+
+  <!-- Window Frame -->
+  <rect x="50" y="35" width="1100" height="605" rx="14" fill="#0d1322" stroke="#1e293b" stroke-width="1.5" />
+  
+  <!-- Window Header Bar -->
+  <path d="M 50 49 Q 50 35 64 35 L 1136 35 Q 1150 35 1150 49 L 1150 78 L 50 78 Z" fill="#131b2e" />
+  <circle cx="75" cy="56" r="6" fill="#ef4444"/>
+  <circle cx="95" cy="56" r="6" fill="#f59e0b"/>
+  <circle cx="115" cy="56" r="6" fill="#10b981"/>
+  
+  <text x="550" y="61" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="13" font-weight="600" text-anchor="middle">
+    agentic-datascience-copilot // LangGraph State Graph &amp; DuckDB OLAP Engine
+  </text>
+  
+  <rect x="1040" y="46" width="90" height="22" rx="4" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="1085" y="61" fill="#22d3ee" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">● LIVE 200 OK</text>
+
+  <!-- Multi-Agent State Graph Flow Ribbon (Top Row) -->
+  <g transform="translate(75, 100)">
+    <!-- Stage 1: Router -->
+    <rect x="0" y="0" width="180" height="64" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="20" y="26" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11" font-weight="700">AGENT 01</text>
+    <text x="20" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Query Router</text>
+    <circle cx="160" cy="32" r="4" fill="#38bdf8"/>
+
+    <!-- Arrow 1 -->
+    <path d="M 185 32 L 210 32" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="212,32 205,28 205,36" fill="#06b6d4"/>
+
+    <!-- Stage 2: SQL Generator -->
+    <rect x="215" y="0" width="180" height="64" rx="8" fill="url(#cardGrad)" stroke="#22d3ee" stroke-width="1.2"/>
+    <text x="235" y="26" fill="#22d3ee" font-family="ui-monospace, monospace" font-size="11" font-weight="700">AGENT 02</text>
+    <text x="235" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">SQL Synthesizer</text>
+
+    <!-- Arrow 2 -->
+    <path d="M 400 32 L 425 32" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="427,32 420,28 420,36" fill="#06b6d4"/>
+
+    <!-- Stage 3: DuckDB Engine -->
+    <rect x="430" y="0" width="180" height="64" rx="8" fill="url(#cardGrad)" stroke="#eab308" stroke-width="1.2"/>
+    <text x="450" y="26" fill="#eab308" font-family="ui-monospace, monospace" font-size="11" font-weight="700">OLAP ENGINE</text>
+    <text x="450" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">DuckDB Execution</text>
+
+    <!-- Arrow 3 -->
+    <path d="M 615 32 L 640 32" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="642,32 635,28 635,36" fill="#10b981"/>
+
+    <!-- Stage 4: AST Python Sandbox -->
+    <rect x="645" y="0" width="195" height="64" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="665" y="26" fill="#34d399" font-family="ui-monospace, monospace" font-size="11" font-weight="700">AGENT 03 (SANDBOX)</text>
+    <text x="665" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Python AST Code Exec</text>
+
+    <!-- Arrow 4 -->
+    <path d="M 845 32 L 870 32" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="872,32 865,28 865,36" fill="#a855f7"/>
+
+    <!-- Stage 5: Self-Healing / Explainer -->
+    <rect x="875" y="0" width="175" height="64" rx="8" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1.2"/>
+    <text x="895" y="26" fill="#c084fc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">AGENT 04</text>
+    <text x="895" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Executive Insight</text>
+  </g>
+
+  <!-- Left Panel: Live Shell / Python AST Execution Console -->
+  <g transform="translate(75, 185)">
+    <rect x="0" y="0" width="570" height="425" rx="10" fill="#060913" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="0" y="0" width="570" height="34" rx="10" fill="#0a0f1d" />
+    <text x="20" y="22" fill="#64748b" font-family="ui-monospace, monospace" font-size="12" font-weight="600">Interactive Execution Console (FastAPI + LangGraph)</text>
+
+    <g font-family="ui-monospace, monospace" font-size="12" xml:space="preserve">
+      <!-- Query Prompt -->
+      <text x="20" y="65" fill="#38bdf8">&gt; USER QUERY:</text>
+      <text x="135" y="65" fill="#f8fafc">"Analyze conversion rate by traffic channel and plot chart"</text>
+
+      <!-- Routing Step -->
+      <text x="20" y="95" fill="#94a3b8">[14:20:01] <tspan fill="#a855f7">RouterAgent:</tspan> intent classified as <tspan fill="#22d3ee">HYBRID (SQL + PYTHON)</tspan></text>
+      
+      <!-- SQL Code Generation -->
+      <text x="20" y="125" fill="#94a3b8">[14:20:02] <tspan fill="#eab308">DuckDB Executor:</tspan> executing vector query:</text>
+      <rect x="20" y="135" width="530" height="52" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+      <text x="32" y="154" fill="#38bdf8">SELECT <tspan fill="#f1f5f9">channel, COUNT(*) AS sessions, SUM(is_converted) AS conv</tspan></text>
+      <text x="32" y="172" fill="#38bdf8">FROM <tspan fill="#f1f5f9">telemetry_events</tspan> GROUP BY <tspan fill="#f1f5f9">1</tspan> ORDER BY <tspan fill="#f1f5f9">conv DESC;</tspan></text>
+
+      <text x="20" y="212" fill="#10b981">✓ DuckDB processed 250 telemetry records in 3.42ms (Memory OLAP)</text>
+
+      <!-- Python AST Sandbox Step -->
+      <text x="20" y="242" fill="#94a3b8">[14:20:02] <tspan fill="#34d399">CodeInterpreter:</tspan> validating AST security ASTNodeVisitor...</text>
+      <text x="20" y="262" fill="#34d399">  ├─ Disallowed modules check: os, sys, subprocess, eval [CLEAN]</text>
+      <text x="20" y="280" fill="#34d399">  └─ Safe scope: pandas, numpy, matplotlib.pyplot, seaborn [ALLOWED]</text>
+
+      <!-- Generated Plot Output -->
+      <text x="20" y="310" fill="#94a3b8">[14:20:03] <tspan fill="#c084fc">ExplainerAgent:</tspan> synthesized executive summary:</text>
+      
+      <rect x="20" y="322" width="530" height="88" rx="6" fill="#0f172a" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="32" y="344" fill="#e2e8f0" font-weight="600">Executive Synthesis:</text>
+      <text x="32" y="364" fill="#94a3b8">• Organic Search dominates conversions (42.8% conv rate, 45 orders).</text>
+      <text x="32" y="382" fill="#94a3b8">• Paid Ads yields highest AOV ($148.20) despite lower volume.</text>
+      <text x="32" y="400" fill="#38bdf8">✓ Telemetry visualization rendered to data_visualization.png</text>
+    </g>
+  </g>
+
+  <!-- Right Panel: Data Science Chart & Telemetry Metrics -->
+  <g transform="translate(665, 185)">
+    <rect x="0" y="0" width="460" height="425" rx="10" fill="#060913" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="0" y="0" width="460" height="34" rx="10" fill="#0a0f1d" />
+    <text x="20" y="22" fill="#64748b" font-family="ui-monospace, monospace" font-size="12" font-weight="600">DuckDB OLAP Analytics &amp; Visual Output</text>
+
+    <!-- Synthetic Chart Graphic -->
+    <g transform="translate(25, 55)">
+      <!-- Chart Frame -->
+      <rect x="0" y="0" width="410" height="195" rx="8" fill="#0d1424" stroke="#1e293b" stroke-width="1"/>
+      <text x="15" y="24" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Conversion Rate by Traffic Acquisition Channel (%)</text>
+      
+      <!-- Bar 1: Organic -->
+      <text x="15" y="62" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">Organic</text>
+      <rect x="85" y="50" width="230" height="16" rx="3" fill="#06b6d4"/>
+      <text x="325" y="63" fill="#22d3ee" font-family="ui-monospace, monospace" font-size="11" font-weight="600">42.8%</text>
+
+      <!-- Bar 2: Paid Ads -->
+      <text x="15" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">Paid Ads</text>
+      <rect x="85" y="82" width="185" height="16" rx="3" fill="#3b82f6"/>
+      <text x="280" y="95" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="11" font-weight="600">34.2%</text>
+
+      <!-- Bar 3: Referral -->
+      <text x="15" y="126" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">Referral</text>
+      <rect x="85" y="114" width="145" height="16" rx="3" fill="#10b981"/>
+      <text x="240" y="127" fill="#34d399" font-family="ui-monospace, monospace" font-size="11" font-weight="600">27.0%</text>
+
+      <!-- Bar 4: Direct -->
+      <text x="15" y="158" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="11">Direct</text>
+      <rect x="85" y="146" width="105" height="16" rx="3" fill="#8b5cf6"/>
+      <text x="200" y="159" fill="#a78bfa" font-family="ui-monospace, monospace" font-size="11" font-weight="600">19.5%</text>
+
+      <line x1="85" y1="172" x2="385" y2="172" stroke="#334155" stroke-width="1"/>
+    </g>
+
+    <!-- Telemetry Cards Grid -->
+    <g transform="translate(25, 270)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="195" height="65" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="15" y="24" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Query Execution Latency</text>
+      <text x="15" y="48" fill="#22d3ee" font-family="ui-monospace, monospace" font-size="18" font-weight="700">3.42 ms</text>
+
+      <!-- Card 2 -->
+      <rect x="215" y="0" width="195" height="65" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="230" y="24" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">DuckDB Memory OLAP</text>
+      <text x="230" y="48" fill="#10b981" font-family="ui-monospace, monospace" font-size="18" font-weight="700">Zero-Disk</text>
+
+      <!-- Card 3 -->
+      <rect x="0" y="75" width="195" height="65" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="15" y="99" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Self-Healing Reflection</text>
+      <text x="15" y="123" fill="#a855f7" font-family="ui-monospace, monospace" font-size="18" font-weight="700">Auto-Repair</text>
+
+      <!-- Card 4 -->
+      <rect x="215" y="75" width="195" height="65" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+      <text x="230" y="99" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Code Security Sandbox</text>
+      <text x="230" y="123" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="18" font-weight="700">AST Guard</text>
+    </g>
+  </g>
+</svg>

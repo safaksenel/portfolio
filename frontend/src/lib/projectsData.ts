@@ -29,6 +29,49 @@ export interface LocalizedProject {
 
 export const localizedProjects: LocalizedProject[] = [
   {
+    id: "copilot",
+    slug: "agentic-datascience-copilot",
+    category: "data",
+    title: {
+      tr: "Agentic Copilot: Çok Ajanlı Veri Bilimi & Güvenli Kod Yürütme Motoru",
+      en: "Agentic Copilot: Multi-Agent Data Science & Sandboxed Code Interpreter",
+    },
+    shortDescription: {
+      tr: "LangGraph durum grafiği, DuckDB bellek-içi OLAP motoru, AST-doğrulamalı güvenli Python çalıştırma ortamı ve kendi kendini onaran yansıma döngüleriyle çalışan otonom veri analisti.",
+      en: "Autonomous data science copilot powered by LangGraph state graphs, DuckDB in-memory OLAP analytics, AST-verified sandboxed Python code execution, and self-healing reflection loops.",
+    },
+    problemStatement: {
+      tr: "Büyük kurumsal veri kümelerinde iş zekası sorgularını doğal dilden SQL'e çevirmek, güvenli Python kodu koşturmak ve syntax/runtime hatalarını insan müdahalesi olmadan gidermek karmaşık bir mimari gerektiriyordu.",
+      en: "Translating natural language queries into accurate OLAP SQL, running untrusted Python data analytics securely, and recovering from syntax/runtime errors without human intervention required a stateful, resilient multi-agent architecture.",
+    },
+    solutionArchitecture: {
+      tr: "LangGraph ile Query Router, SQL Generator, DuckDB Executor, AST Kod Doğrulayıcı ve Explainer ajanları kurgulandı. DuckDB ile sıfır disk G/Ç süresi yakalandı; AST ziyaretçisiyle tehlikeli sistem çağrıları engellendi; hata durumunda yansıma (reflection) döngüsüyle kod otomatik düzeltildi. FastAPI REST API ve karanlık temalı Streamlit arayüzü ile sunuldu.",
+      en: "Engineered a stateful LangGraph multi-agent graph with Query Router, SQL Synthesizer, DuckDB OLAP engine, AST Node Visitor security sandbox, and Explainer Agent. Implemented self-healing reflection loops that autonomously debug Python/SQL errors, served via FastAPI REST endpoints and dark-mode Streamlit dashboard.",
+    },
+    techStack: [
+      "Python 3.14",
+      "LangGraph",
+      "DuckDB OLAP",
+      "FastAPI",
+      "Python AST Sandbox",
+      "Pydantic v2",
+      "Streamlit",
+      "Docker Compose",
+      "Pytest",
+    ],
+    metrics: {
+      latency: "3.42ms DuckDB OLAP",
+      security: "AST Safe Sandbox",
+      resilience: "Self-Healing Reflection",
+      architecture: "LangGraph Multi-Agent",
+    },
+    githubUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
+    liveUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
+    thumbnailUrl: "/projects/agentic-copilot.svg",
+    isFeatured: true,
+    order: 1,
+  },
+  {
     id: "1",
     slug: "yolunda-fleet-management-platform",
     category: "fullstack",
@@ -68,7 +111,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel",
     thumbnailUrl: "/projects/yolunda-dashboard.jpg",
     isFeatured: true,
-    order: 1,
+    order: 2,
   },
   {
     id: "2",
@@ -109,7 +152,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/mhrs-appointment-automation",
     thumbnailUrl: "/projects/yolunda-fleet.jpg",
     isFeatured: true,
-    order: 2,
+    order: 3,
   },
   {
     id: "3",
@@ -151,7 +194,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/NLP-BERT",
     thumbnailUrl: "/projects/telco-confusion-matrix.png",
     isFeatured: true,
-    order: 3,
+    order: 4,
   },
   {
     id: "4",
@@ -193,7 +236,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/Telco-Customer-Churn",
     thumbnailUrl: "/projects/telco-roc-curves.png",
     isFeatured: true,
-    order: 4,
+    order: 5,
   },
   {
     id: "5",
@@ -234,7 +277,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
     thumbnailUrl: "/projects/telco-roc-curves.png",
     isFeatured: true,
-    order: 5,
+    order: 6,
   },
   {
     id: "6",
@@ -273,7 +316,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/smart-file-organizer-daemon",
     thumbnailUrl: "/projects/yolunda-dashboard.jpg",
     isFeatured: true,
-    order: 6,
+    order: 7,
   },
   {
     id: "7",
@@ -313,7 +356,7 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/BlindHire",
     thumbnailUrl: "/projects/blindhire-avatar.png",
     isFeatured: false,
-    order: 7,
+    order: 8,
   },
   {
     id: "8",
@@ -352,6 +395,6 @@ export const localizedProjects: LocalizedProject[] = [
     liveUrl: "https://github.com/safaksenel/flight-deals",
     thumbnailUrl: "/projects/flight-deals.jpeg",
     isFeatured: false,
-    order: 8,
+    order: 9,
   },
 ];
