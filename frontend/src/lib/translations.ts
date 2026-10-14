@@ -89,13 +89,18 @@ export const translations = {
       subtitle: "Veri odaklı karar alma süreçlerini hızlandıran ve ölçeklenebilir yapay zeka çözümleri üreten Bilgisayar Mühendisi.",
       storyTitle: "Ben Kimim?",
       storyP1:
-        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, algoritmik derinlik kazanmak (Ecole 42 Piscine) ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
+        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, 3 Ağustos 2024'te başladığım Ecole 42 İstanbul Ana Eğitim programında C ve Python ile ileri seviye algoritmik derinlik kazanmak ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
       storyP2:
         "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride Stacking Ensemble ile Türkiye genelinde üst %10'a girdim.",
       storyP3:
         "Google YZTA bursiyeri olarak Scrum Master liderliğinde projeler teslim ettim. PyTorch, Scikit-learn, DuckDB, FastAPI, Docker ve Next.js ekosistemiyle modelleri yalnızca eğitmekle kalmıyor, uçtan uca ürünleştiriyorum.",
       highlightsTitle: "Önemli Kilometre Taşları & Deneyimler",
       milestones: [
+        {
+          year: "3 Ağustos 2024 – Günümüz",
+          title: "Ecole 42 İstanbul: Yazılım Mühendisi (Ana Eğitim / Core Curriculum)",
+          desc: "Piscine başarıyla tamamlandıktan sonra 3 Ağustos 2024'te Ana Eğitime başlandı. Eşler arası (peer-to-peer) sistemde C ve Python dilleriyle ileri seviye algoritmalar, dinamik bellek yönetimi, veri yapıları ve sistem programlama uzmanlığı.",
+        },
         {
           year: "Mart 2024 – Temmuz 2024",
           title: "FLO Grubu: İş Zekası ve Büyük Veri Stajyeri",
@@ -112,18 +117,14 @@ export const translations = {
           desc: "Scrum Master olarak 72 saatlik sprint'lerde 4 kişilik ekiple 2 ürün teslimi, Google Veri Analizi sertifikaları ve günlük 50+ otomatik yanıtlı Slack Chatbot'u (Cemil) geliştirmesi.",
         },
         {
-          year: "Nisan 2024 – Mayıs 2024",
-          title: "Ecole 42 İstanbul: Yazılım Geliştirici (Piscine)",
-          desc: "Haftada 50+ saat yoğun C programlama kampında 150+ algoritmik problem çözümü, dinamik bellek yönetimi ve veri yapıları yetkinliği.",
-        },
-        {
           year: "2023 – 2025",
           title: "Nişantaşı Üniversitesi: Bilgisayar Mühendisliği (Lisans)",
           desc: "Bilgisayar Mühendisliği lisans programı ve Bilgisayar Programcılığı önlisans programından başarıyla mezuniyet.",
         },
       ],
       skillsSummary: [
-        "Python & SQL",
+        "Python & C",
+        "SQL & Veri Mimarisi",
         "PyTorch & Scikit-learn",
         "BERT & HuggingFace NLP",
         "LightGBM & CatBoost",
@@ -249,13 +250,18 @@ export const translations = {
       subtitle: "Computer Engineer accelerating data-driven decisions through scalable machine learning and automation.",
       storyTitle: "Who Am I?",
       storyP1:
-        "Computer Engineering graduate from Nişantaşı University. My passion for data science and AI was forged through transforming messy real-world datasets into actionable models, algorithmic problem-solving (Ecole 42 Piscine), and engineering production-grade ML pipelines.",
+        "Computer Engineering graduate from Nişantaşı University. My passion for data science and AI was forged through transforming real-world datasets into actionable models, deep algorithmic problem-solving in C & Python at Ecole 42 Istanbul (Core Curriculum starting Aug 3, 2024), and engineering production-grade ML pipelines.",
       storyP2:
         "At FLO Group, I developed a feedback triage system powered by 22 Turkish BERT models optimized with Intel OpenVINO, cutting evaluation time by 85% with an F1 score of 0.89. In the nationwide YZTA 5.0 Datathon, my Stacking Ensemble achieved a Top 10% rank on a 56,000-row dataset.",
       storyP3:
         "As a Google YZTA fellow and Scrum Master, I led cross-functional teams delivering data products. Working across PyTorch, Scikit-learn, DuckDB, FastAPI, Docker, and Next.js, I don't just train models—I productionize them.",
       highlightsTitle: "Key Milestones & Experiences",
       milestones: [
+        {
+          year: "Aug 3, 2024 – Present",
+          title: "Ecole 42 Istanbul: Software Engineering (Core Curriculum)",
+          desc: "Admitted to the prestigious Common Core curriculum starting August 3, 2024 following Piscine success. Deep dive into algorithms, dynamic memory management, low-level architecture, and data structures in C and Python.",
+        },
         {
           year: "Mar 2024 – Jul 2024",
           title: "FLO Group: Business Intelligence & Big Data Intern",
@@ -272,18 +278,14 @@ export const translations = {
           desc: "Coordinated 4-person teams as Scrum Master during 72-hour sprints, completed Google Advanced Data Analytics certifications, and developed an automated Slack chatbot.",
         },
         {
-          year: "Apr 2024 – May 2024",
-          title: "Ecole 42 Istanbul: Software Developer (Piscine)",
-          desc: "Intensive 50+ hours/week C programming bootcamp solving 150+ algorithmic challenges with custom pointers and dynamic memory management.",
-        },
-        {
           year: "2023 – 2025",
           title: "Nişantaşı University: Computer Engineering (B.S.)",
           desc: "Graduated with B.S. in Computer Engineering and Associate Degree in Computer Programming.",
         },
       ],
       skillsSummary: [
-        "Python & SQL",
+        "Python & C",
+        "SQL & Data Architecture",
         "PyTorch & Scikit-learn",
         "BERT & HuggingFace NLP",
         "LightGBM & CatBoost",
