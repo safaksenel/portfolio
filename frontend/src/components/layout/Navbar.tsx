@@ -16,6 +16,7 @@ import {
   FileText,
   Download,
   ShieldCheck,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -197,23 +198,21 @@ export default function Navbar() {
                       href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      download="Ahmet_Safak_Senel_CV_TR_Web.pdf"
                       onClick={() => setCvMenuOpen(false)}
-                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                      className="group flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
-                      <span>{t.nav.cvTr}</span>
-                      <Download className="w-3.5 h-3.5 text-cyan-500" />
+                      <span className="group-hover:text-cyan-500 transition-colors">{t.nav.cvTr}</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-cyan-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                     <a
                       href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      download="Ahmet_Safak_Senel_CV_EN_Web.pdf"
                       onClick={() => setCvMenuOpen(false)}
-                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                      className="group flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
-                      <span>{t.nav.cvEn}</span>
-                      <Download className="w-3.5 h-3.5 text-cyan-500" />
+                      <span className="group-hover:text-cyan-500 transition-colors">{t.nav.cvEn}</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-cyan-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                   </motion.div>
                 )}
@@ -277,21 +276,19 @@ export default function Navbar() {
                 href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Ahmet_Safak_Senel_CV_TR_Web.pdf"
-                className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-medium"
+                className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 hover:underline font-medium"
               >
-                <Download className="w-3.5 h-3.5" />
-                {t.nav.cvTr}
+                <span>{t.nav.cvTr}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <a
                 href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Ahmet_Safak_Senel_CV_EN_Web.pdf"
-                className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-medium"
+                className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 hover:underline font-medium"
               >
-                <Download className="w-3.5 h-3.5" />
-                {t.nav.cvEn}
+                <span>{t.nav.cvEn}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
           </motion.div>
