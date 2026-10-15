@@ -1,4 +1,5 @@
 import { Project, Service, TerminalTabConfig } from "@/types/portfolio";
+import { localizedProjects } from "./projectsData";
 
 export const TERMINAL_TABS: TerminalTabConfig[] = [
   {
@@ -145,204 +146,23 @@ if __name__ == "__main__":
   },
 ];
 
-export const FALLBACK_PROJECTS: Project[] = [
-  {
-    id: 1,
-    title: "Autonomous E-Commerce Arbitrage & Real-Time Price Scraper",
-    slug: "autonomous-ecommerce-price-scraper",
-    category: "scraping",
-    short_description:
-      "10+ popüler e-ticaret platformunu (Amazon, Trendyol, Hepsiburada) Cloudflare ve Datadome bot duvarlarını aşarak saatlik tarayan, dinamik fiyat değişimlerini tespit eden otonom bot.",
-    problem_statement:
-      "Fiyat değişimlerini dakikalar içinde yakalamak isteyen perakende yatırımcısı, agresif Cloudflare Turnstile ve dinamik JavaScript şifrelemesi yüzünden standart kütüphanelerle (Requests/BeautifulSoup) anında 403 ve 429 engellerine takılıyordu.",
-    solution_architecture:
-      "Crawl4AI ve Playwright tabanlı stealth tarayıcı kümesi inşa edildi. TLS parmak izi maskeleme (JA4), rastgele konfigürasyon rotasyonu ve akıllı bekleme algoritmaları entegre edildi. Elde edilen veri Django 6.1 API üzerinden PostgreSQL 17'ye aktarılarak Redis ile anlık fiyat düşüş sinyali üreten webhook sistemine bağlandı.",
-    tech_stack: [
-      "Python 3.14",
-      "Crawl4AI",
-      "Playwright",
-      "Django 6.1",
-      "Redis",
-      "Supabase PostgreSQL 17",
-      "Anti-Bot Stealth"
-    ],
-    metrics: {
-      "Hafıza/İş Parçacığı": "120MB / Worker",
-      "Günlük Kazınan Ürün": "150,000+",
-      "Anti-Bot Başarı Oranı": "%99.6",
-      "Ortalama Yanıt Hızı": "380ms"
-    },
-    github_url: "https://github.com/safaksenel/ecommerce-stealth-scraper",
-    live_url: "https://github.com/safaksenel/ecommerce-stealth-scraper",
-    thumbnail_url: null,
-    is_featured: true,
-    order: 1,
-    created_at: "2026-03-01T10:00:00Z",
-  },
-  {
-    id: 2,
-    title: "High-Frequency Real Estate Intel & Anti-Bot Bypass Pipeline",
-    slug: "high-frequency-real-estate-pipeline",
-    category: "scraping",
-    short_description:
-      "Gayrimenkul portallarından binlerce emlak ilanını, coğrafi koordinatları ve fiyat geçmişini otomatik toplayıp coğrafi veri tabanına işleyen asenkron veri boru hattı.",
-    problem_statement:
-      "Emlak portallarının katı IP engelleri, reCAPTCHA v3 puanlama mekanizmaları ve aşırı zengin dinamik DOM hiyerarşisi nedeniyle veri kaybı ve oturum sonlanması yaşanıyordu.",
-    solution_architecture:
-      "AsyncIO ve Undetected Chromedriver entegrasyonuyla residential proxy havuzu kuruldu. Sayfa DOM'u yerine arka plandaki dahili XHR/GraphQL JSON çağrıları tersine mühendislikle yakalandı; ağ trafiği %80 azaltılarak sunucu yükü minimuma indirildi.",
-    tech_stack: [
-      "Python 3.14",
-      "AsyncIO",
-      "Aiohttp",
-      "BeautifulSoup4",
-      "Reverse Engineering",
-      "PostgreSQL 17"
-    ],
-    metrics: {
-      "Taranan İlan": "450,000+",
-      "Trafik Tasarrufu": "%82",
-      "Veri Bütünlüğü": "%100",
-      "Dönüşüm Süresi": "18ms / Kayıt"
-    },
-    github_url: "https://github.com/safaksenel/real-estate-intel-pipeline",
-    live_url: null,
-    thumbnail_url: null,
-    is_featured: true,
-    order: 2,
-    created_at: "2026-02-15T12:00:00Z",
-  },
-  {
-    id: 3,
-    title: "Django 6.1 Enterprise Multi-Tenant SaaS & Supavisor Engine",
-    slug: "django-multitenant-saas-engine",
-    category: "backend",
-    short_description:
-      "Vercel Serverless mimarisi üzerinde koşan, Supabase Supavisor Port 6543 bağlantı havuzlayıcısıyla optimize edilmiş, Django Ninja tabanlı yüksek performanslı API mimarisi.",
-    problem_statement:
-      "Klasik Django ORM yapısı serverless ortamlarda her istekte yeni veritabanı bağlantısı açtığından PostgreSQL bağlantı sınırlarını tüketmekte ve 'Max Client Connections Reached' hatası vermekteydi.",
-    solution_architecture:
-      "Django 6.1 ve Psycopg 3 ile Supavisor Transaction Pooler (Port 6543) entegre edildi. CONN_MAX_AGE = 0 ve DISABLE_SERVER_SIDE_CURSORS = True yapılandırmasıyla stateless serverless uyumu sağlandı. Django Ninja ile Pydantic v2 tip güvenliği ve otomatik OpenAPI dökümantasyonu üretildi.",
-    tech_stack: [
-      "Django 6.1",
-      "Django Ninja",
-      "Python 3.14",
-      "Psycopg 3",
-      "Supabase (Port 6543)",
-      "Next.js 16.4",
-      "Vercel Serverless"
-    ],
-    metrics: {
-      "P99 API Latency": "< 45ms",
-      "Eşzamanlı İstek": "1,200 req/s",
-      "Test Kapsamı": "%98",
-      "Cold Start": "180ms"
-    },
-    github_url: "https://github.com/safaksenel/django-supavisor-saas-core",
-    live_url: "https://safaksenel.vercel.app/api/docs",
-    thumbnail_url: null,
-    is_featured: true,
-    order: 3,
-    created_at: "2026-01-20T14:30:00Z",
-  },
-  {
-    id: 4,
-    title: "Large-Scale Academic Survey & Statistical Intelligence Engine",
-    slug: "survey-statistical-intelligence-engine",
-    category: "data",
-    short_description:
-      "SPSS, Pandas, SciPy ve Statsmodels entegrasyonuyla büyük ölçekli anket verilerini otomatik temizleyen, ANOVA, Regresyon ve Faktör Analizi raporları üreten analitik motor.",
-    problem_statement:
-      "Manuel SPSS veri girişi ve normallik/güvenilirlik testleri haftalar sürmekte, insan hatası riski ve eksik veri yönetimi araştırma sonuçlarının güvenilirliğini zedelemekteydi.",
-    solution_architecture:
-      "Otomatik Cronbach Alfa, Shapiro-Wilk normallik testi ve çok değişkenli regresyon hesaplayan Python motoru kodlandı. Ham Excel/CSV anket çıktıları tek tıkla APA formatında tablolar ve görselleştirilmiş grafiklerle PDF/HTML formatına dönüştürüldü.",
-    tech_stack: [
-      "Python 3.14",
-      "Pandas",
-      "NumPy",
-      "SciPy",
-      "Statsmodels",
-      "SPSS Parser",
-      "Matplotlib / Seaborn"
-    ],
-    metrics: {
-      "Analiz Edilen Yanıt": "85,000+",
-      "Raporlama Süresi": "3.2 Saniye",
-      "Hata Toleransı": "%0.0",
-      "APA Format Uyumu": "%100"
-    },
-    github_url: "https://github.com/safaksenel/academic-survey-stat-engine",
-    live_url: null,
-    thumbnail_url: null,
-    is_featured: false,
-    order: 4,
-    created_at: "2025-12-10T09:00:00Z",
-  },
-  {
-    id: 5,
-    title: "Real-Time Crypto Sentiment & News Scraping Engine",
-    slug: "crypto-sentiment-news-engine",
-    category: "fullstack",
-    short_description:
-      "Reddit, Twitter/X ve finansal haber kaynaklarından anlık veri akışı toplayan, NLP ile duygu analizi skorlayan ve Next.js panosunda canlı ısı haritası sunan tam yığın platform.",
-    problem_statement:
-      "Kripto piyasasındaki volatilite haber kaynaklarının dakikalar içinde taranmasını gerektiriyordu; ancak API maliyetleri çok yüksekti ve rate-limit engelleri aşırı dar boğaz yaratıyordu.",
-    solution_architecture:
-      "Asyncio ve aiohttp ile mikro-scraper'lar oluşturularak açık RSS ve haber feed'leri birleştirildi. Metinler spaCy ve NLTK pipeline'ından geçirilerek duygu skoru (-1 ile +1) hesaplandı. Next.js 16 ve WebSocket üzerinden son kullanıcılara canlı grafik olarak iletildi.",
-    tech_stack: [
-      "Next.js 16.4",
-      "React 19.3",
-      "Python 3.14",
-      "Django 6.1",
-      "Tailwind CSS v4",
-      "NLP Sentiment",
-      "WebSockets"
-    ],
-    metrics: {
-      "Anlık Feed Akışı": "300 msg/sec",
-      "Duygu Doğruluğu": "%89.4",
-      "WebSocket Gecikmesi": "12ms",
-      "Kullanıcı Memnuniyeti": "%97"
-    },
-    github_url: "https://github.com/safaksenel/crypto-sentiment-feed",
-    live_url: "https://crypto-intel-demo.vercel.app",
-    thumbnail_url: null,
-    is_featured: false,
-    order: 5,
-    created_at: "2025-11-05T16:20:00Z",
-  },
-  {
-    id: 6,
-    title: "Automated Job Market Intelligence & Talent Aggregator",
-    slug: "job-market-intelligence-aggregator",
-    category: "scraping",
-    short_description:
-      "LinkedIn, Kariyer.net ve remote iş ilanı portallarını tarayarak en çok talep edilen teknoloji yığınlarını ve maaş trendlerini çıkaran otonom iş zekası botu.",
-    problem_statement:
-      "İş piyasasında teknoloji trendlerini takip etmek onlarca farklı platformda manuel arama gerektiriyordu; ayrıca LinkedIn dinamik oturum zorunluluğu nedeniyle klasik botları engelliyordu.",
-    solution_architecture:
-      "Playwright ile oturum çerezlerini yöneten ve kullanıcı davranışlarını (mouse scroll, bekleme varyasyonları) insanlaştıran bir mimari kurgulandı. İlan metinlerinden regex ve NLP ile yetenek etiketleri ayrıştırılarak PostgreSQL 17 JSONB indekslerine kaydedildi.",
-    tech_stack: [
-      "Python 3.14",
-      "Playwright",
-      "BeautifulSoup",
-      "Django Ninja",
-      "PostgreSQL 17",
-      "Docker"
-    ],
-    metrics: {
-      "Haftalık Taranan İlan": "25,000+",
-      "Yetenek Ayrıştırma": "%94 Hassasiyet",
-      "Bot Tespit Edilme": "%0",
-      "Sorgu Süresi": "14ms"
-    },
-    github_url: "https://github.com/safaksenel/talent-market-scraper",
-    live_url: null,
-    thumbnail_url: null,
-    is_featured: false,
-    order: 6,
-    created_at: "2025-10-18T11:45:00Z",
-  },
-];
+export const FALLBACK_PROJECTS: Project[] = localizedProjects.map((p, index) => ({
+  id: index + 1,
+  title: p.title.tr,
+  slug: p.slug,
+  category: p.category,
+  short_description: p.shortDescription.tr,
+  problem_statement: p.problemStatement.tr,
+  solution_architecture: p.solutionArchitecture.tr,
+  tech_stack: p.techStack,
+  metrics: p.metrics,
+  github_url: p.githubUrl,
+  live_url: p.liveUrl,
+  thumbnail_url: p.thumbnailUrl,
+  is_featured: p.isFeatured,
+  order: p.order,
+  created_at: "2026-03-01T10:00:00Z",
+}));
 
 export const FALLBACK_SERVICES: Service[] = [
   {

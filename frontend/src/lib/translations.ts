@@ -21,7 +21,7 @@ export const translations = {
   tr: {
     nav: {
       about: "Hakkımda",
-      skills: "Yetenekler",
+      skills: "Uzmanlıklar",
       certificates: "Sertifikalar",
       projects: "Projeler",
       contact: "İletişim",
@@ -61,27 +61,27 @@ export const translations = {
       clickToRun: "Farklı bir model senaryosunu çalıştırmak için sekmelere tıklayın",
     },
     bento: {
-      title: "Uzmanlık Alanlarım",
-      subtitle: "Uçtan uca makine öğrenmesi, büyük veri analitiği ve yapay zeka sistemleri",
+      title: "Mühendislik Uzmanlıklarım",
+      subtitle: "Ham veriden üretim ortamına uzanan uçtan uca makine öğrenmesi, analitik mimariler ve yapay zeka sistemleri",
       card1: {
         badge: "Çekirdek Uzmanlık",
         title: "Uygulamalı Yapay Zeka, NLP & Derin Öğrenme",
-        desc: "22 Türkçe BERT modeliyle kurumsal metin sınıflandırma, Intel OpenVINO ile %80+ CPU çıkarım hızlandırması, SHAP açıklanabilirliği ve YZTA Datathon çok modlu Stacking Ensemble mimarisi.",
+        desc: "Kurumsal transformatör mimarileri (BERT/HuggingFace), Intel OpenVINO INT8 kuantizasyonu ile CPU üzerinde 4 kata varan çıkarım hızlandırması, SHAP model açıklanabilirliği ve Bayesian optimizasyonlu çok katmanlı Stacking Ensemble algoritmaları.",
       },
       card2: {
         badge: "Ajanik Yapay Zeka",
         title: "Çok Ajanlı AI & Bellek-İçi DuckDB OLAP",
-        desc: "LangGraph durum grafikleri, DuckDB ile 500K+ satırda milisaniyelik analitik SQL sorgulama, AST-doğrulamalı güvenli kod yürütme ve kendi kendini onaran yansıma döngüleri.",
+        desc: "LangGraph durum grafikleri, DuckDB bellek-içi sütunsal OLAP motoruyla 500K+ satırda milisaniyelik analitik sorgulama, Python AST denetimli güvenli kod yürütme ortamı ve kendi kendini düzelten yansıma döngüleri.",
       },
       card3: {
-        badge: "Veri Madenciliği",
-        title: "Büyük Ölçekli Veri Toplama & Otomasyon",
-        desc: "Veri bilimi modellerini beslemek için Cloudflare ve Turnstile korumalarını aşabilen; Crawl4AI, Playwright ve dinamik TLS parmak izi rotasyonuyla kesintisiz veri çıkarma hatları.",
+        badge: "Veri Mühendisliği",
+        title: "Büyük Ölçekli Veri Çıkarma & Otomasyon",
+        desc: "Makine öğrenmesi modellerini besleyen dayanıklı veri hatları; dinamik DOM manipülasyonu, anti-bot engellerini aşabilen Playwright & Selenium otomasyonları, e-Devlet oturum akışları ve Watchdog ile 7/24 çalışan olay güdümlü arka plan daemon mimarileri.",
       },
       card4: {
-        badge: "MLOps & Dağıtım",
+        badge: "MLOps & Üretim",
         title: "FastAPI, Docker & Model Ürünleştirme",
-        desc: "Eğitilen modelleri mikrosaniye gecikmeli REST API uçlarına dönüştürme, Docker konteynerizasyon, Supabase PostgreSQL 17 ve Next.js interaktif karar destek panelleri.",
+        desc: "Eğitilen makine öğrenmesi modellerini mikrosaniye gecikmeli asenkron FastAPI uçlarına dönüştürme, Docker konteynerizasyonu, Supabase PostgreSQL 17 bağlantı havuzu yönetimi ve Next.js interaktif karar destek panelleri.",
       },
     },
     about: {
@@ -187,7 +187,7 @@ export const translations = {
   en: {
     nav: {
       about: "About",
-      skills: "Skills",
+      skills: "Expertise",
       certificates: "Certificates",
       projects: "Projects",
       contact: "Contact",
@@ -227,27 +227,27 @@ export const translations = {
       clickToRun: "Click tabs above to simulate different AI & data scenarios",
     },
     bento: {
-      title: "Core Expertise",
-      subtitle: "End-to-end machine learning, high-velocity analytics, and agentic AI systems",
+      title: "Engineering Expertise",
+      subtitle: "Production-grade machine learning, high-velocity analytical architectures, and autonomous AI systems",
       card1: {
         badge: "Core Specialization",
         title: "Applied AI, NLP & Deep Learning",
-        desc: "Enterprise feedback classification with 22 Turkish BERT models, 4x CPU inference acceleration with Intel OpenVINO, SHAP interpretability, and multi-modal Stacking Ensemble architectures.",
+        desc: "Enterprise transformer architectures (BERT/HuggingFace), inference optimization via Intel OpenVINO INT8 quantization for 4x CPU speedups, SHAP explainability, and Bayesian-tuned multi-tier Stacking Ensembles.",
       },
       card2: {
         badge: "Agentic AI",
         title: "Multi-Agent AI & In-Memory DuckDB OLAP",
-        desc: "Stateful LangGraph agentic workflows, sub-4ms analytical SQL querying over 500K+ rows with DuckDB, AST-verified Python sandbox execution, and self-healing reflection loops.",
+        desc: "Stateful LangGraph agentic workflows, sub-4ms analytical columnar querying over 500K+ rows with DuckDB, AST-verified sandboxed Python code execution, and self-healing reflection loops.",
       },
       card3: {
-        badge: "Data Mining",
-        title: "Large-Scale Data Ingestion & Crawling",
-        desc: "Resilient data collection pipelines bypassing Cloudflare Turnstile with Crawl4AI, Playwright, and dynamic TLS fingerprint rotation to fuel machine learning models.",
+        badge: "Data Engineering",
+        title: "Large-Scale Data Ingestion & Automation",
+        desc: "Resilient data collection pipelines fueling ML models: dynamic DOM manipulation, anti-bot mitigation with Playwright & Selenium, session handling, and 24/7 event-driven background daemons.",
       },
       card4: {
-        badge: "MLOps & Deployment",
-        title: "FastAPI, Docker & Model Productionization",
-        desc: "Transforming trained models into micro-second latency REST API endpoints with FastAPI, Docker containerization, Supabase PostgreSQL 17, and interactive Next.js dashboards.",
+        badge: "MLOps & Production",
+        title: "FastAPI, Docker & Model Deployment",
+        desc: "Transforming trained models into micro-second latency asynchronous FastAPI endpoints, Docker containerization, Supabase PostgreSQL 17 connection pooling, and interactive Next.js dashboards.",
       },
     },
     about: {

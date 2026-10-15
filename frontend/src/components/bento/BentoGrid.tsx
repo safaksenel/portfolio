@@ -44,7 +44,7 @@ export default function BentoGrid() {
                       {t.bento.card1.title}
                     </h3>
                     <p className="text-xs text-slate-500 dark:text-zinc-400 font-mono">
-                      PyTorch • 22 Türkçe BERT • Intel OpenVINO • Optuna
+                      PyTorch • HuggingFace • Intel OpenVINO • Optuna
                     </p>
                   </div>
                 </div>
@@ -64,21 +64,21 @@ export default function BentoGrid() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-xl bg-slate-50 dark:bg-[#07080f]/90 border border-slate-200/80 dark:border-white/5 font-mono text-xs">
               <div className="flex flex-col gap-1 p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200/60 dark:border-transparent">
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
-                  {lang === "tr" ? "NLP Mimarisi" : "NLP Architecture"}
+                  {lang === "tr" ? "Transformatör & NLP" : "Transformer & NLP"}
                 </span>
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">22 Türkçe BERT Modeli</span>
+                <span className="text-purple-600 dark:text-purple-400 font-semibold">22 İki Kademeli Model</span>
               </div>
               <div className="flex flex-col gap-1 p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200/60 dark:border-transparent">
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
-                  {lang === "tr" ? "Çıkarım Motoru" : "Inference Engine"}
+                  {lang === "tr" ? "Model Sıkıştırma" : "Model Compression"}
                 </span>
                 <span className="text-cyan-600 dark:text-cyan-400 font-semibold">Intel OpenVINO (4x CPU)</span>
               </div>
               <div className="flex flex-col gap-1 p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200/60 dark:border-transparent">
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
-                  {lang === "tr" ? "Datathon Çözümü" : "Datathon Solution"}
+                  {lang === "tr" ? "Topluluk Öğrenmesi" : "Ensemble Strategy"}
                 </span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">56K Satır (Stacking ML)</span>
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">5-Fold Stacking ML</span>
               </div>
             </div>
 
@@ -176,7 +176,7 @@ export default function BentoGrid() {
                     {t.bento.card3.title}
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-zinc-400 font-mono">
-                    Crawl4AI • Playwright • WAF Bypass
+                    Selenium 4 • Watchdog • e-Devlet Gateway • SMTP
                   </p>
                 </div>
               </div>
@@ -188,17 +188,25 @@ export default function BentoGrid() {
 
             <div className="space-y-2 p-3 rounded-xl bg-slate-50 dark:bg-[#07080f]/90 border border-slate-200/80 dark:border-white/5 font-mono text-xs">
               <div className="flex justify-between items-center text-slate-600 dark:text-zinc-300">
-                <span>Bot Geçiş Oranı:</span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">%99.4 Başarı</span>
+                <span>{lang === "tr" ? "Otomasyon & İzleme:" : "Automation & Daemons:"}</span>
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">7/24 Daemon & Watchdog</span>
               </div>
               <div className="flex justify-between items-center text-slate-600 dark:text-zinc-300">
-                <span>Korumalar:</span>
-                <span className="text-cyan-600 dark:text-cyan-400">Cloudflare Turnstile</span>
+                <span>{lang === "tr" ? "Oturum & DOM:" : "Session & DOM:"}</span>
+                <span className="text-cyan-600 dark:text-cyan-400">e-Devlet 2FA & Dynamic DOM</span>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-200 dark:border-white/5">
-              {["Crawl4AI", "Playwright Stealth", "Selenium 4", "TLS JA4", "Proxy Rotation"].map((tag) => (
+              {[
+                "Selenium 4",
+                "Playwright",
+                "Watchdog Daemons",
+                "BeautifulSoup4",
+                "Dynamic DOM",
+                "e-Devlet Gateway",
+                "SMTP Alerts",
+              ].map((tag) => (
                 <span
                   key={tag}
                   className="px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300 border border-slate-200 dark:border-white/5 hover:border-emerald-500/40 hover:text-emerald-500 transition-colors"
@@ -245,15 +253,21 @@ export default function BentoGrid() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#07080f]/90 border border-slate-200/80 dark:border-white/5 font-mono text-xs">
               <div className="flex flex-col gap-0.5">
-                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">API Gecikmesi</span>
+                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">
+                  {lang === "tr" ? "API Gecikmesi" : "API Latency"}
+                </span>
                 <span className="text-indigo-600 dark:text-indigo-300 font-semibold">&lt;15ms REST API</span>
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">Veritabanı</span>
+                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">
+                  {lang === "tr" ? "Veritabanı" : "Database"}
+                </span>
                 <span className="text-cyan-600 dark:text-cyan-300 font-semibold">PostgreSQL 17 (Pooler)</span>
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">Konteyner & Cloud</span>
+                <span className="text-slate-500 dark:text-zinc-400 text-[10px]">
+                  {lang === "tr" ? "Konteyner & Cloud" : "Containers & Cloud"}
+                </span>
                 <span className="text-emerald-600 dark:text-emerald-300 font-semibold">Docker & Vercel Edge</span>
               </div>
             </div>
