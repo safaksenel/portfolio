@@ -194,9 +194,10 @@ export default function Navbar() {
                     className="absolute right-0 mt-2 w-40 p-1.5 rounded-xl bg-white dark:bg-[#121320] border border-slate-200 dark:border-white/10 shadow-xl z-50 flex flex-col gap-1"
                   >
                     <a
-                      href="/cv/safak_cv_tr.pdf"
+                      href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
+                      download="Ahmet_Safak_Senel_CV_TR_Web.pdf"
                       onClick={() => setCvMenuOpen(false)}
                       className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
@@ -204,9 +205,10 @@ export default function Navbar() {
                       <Download className="w-3.5 h-3.5 text-cyan-500" />
                     </a>
                     <a
-                      href="/cv/safak_cv_en.pdf"
+                      href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
+                      download="Ahmet_Safak_Senel_CV_EN_Web.pdf"
                       onClick={() => setCvMenuOpen(false)}
                       className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
@@ -272,18 +274,20 @@ export default function Navbar() {
             <div className="h-px bg-slate-200 dark:bg-white/10 my-1" />
             <div className="flex items-center justify-between px-4 py-2 text-xs text-slate-500 dark:text-zinc-400">
               <a
-                href="/cv/safak_cv_tr.pdf"
+                href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Ahmet_Safak_Senel_CV_TR_Web.pdf"
                 className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-medium"
               >
                 <Download className="w-3.5 h-3.5" />
                 {t.nav.cvTr}
               </a>
               <a
-                href="/cv/safak_cv_en.pdf"
+                href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Ahmet_Safak_Senel_CV_EN_Web.pdf"
                 className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 font-medium"
               >
                 <Download className="w-3.5 h-3.5" />
