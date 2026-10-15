@@ -65,7 +65,7 @@ export default function AboutSection() {
 
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mt-3">
                 <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                  Google YZTA Mezunu
+                  {lang === "tr" ? "Google YZTA Mezunu" : "Google YZTA Graduate"}
                 </span>
                 <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
                   Ecole 42 Core

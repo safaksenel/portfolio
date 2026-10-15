@@ -66,7 +66,7 @@ export const localizedProjects: LocalizedProject[] = [
       engine: "OpenVINO 4x Hızlanma",
     },
     githubUrl: "https://github.com/safaksenel/NLP-BERT",
-    liveUrl: "https://github.com/safaksenel/NLP-BERT",
+    liveUrl: "",
     thumbnailUrl: "/projects/flo-bert-altr-plot-1.png",
     images: [
       "/projects/flo-bert-altr-plot-1.png",
@@ -112,7 +112,7 @@ export const localizedProjects: LocalizedProject[] = [
       multiModal: "Tabular + Metin",
     },
     githubUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
-    liveUrl: "https://github.com/safaksenel/datathon-career-success-prediction",
+    liveUrl: "",
     thumbnailUrl: "/projects/datathon-feature-importance.png",
     images: [
       "/projects/datathon-feature-importance.png",
@@ -160,7 +160,7 @@ export const localizedProjects: LocalizedProject[] = [
       biasFree: "%100 DEI Uyumlu / Bias-Free",
     },
     githubUrl: "https://github.com/safaksenel/BlindHire",
-    liveUrl: "https://blindhire-pcym.onrender.com",
+    liveUrl: "",
     thumbnailUrl: "/projects/blindhire-interface.png",
     images: [
       "/projects/blindhire-interface.png",
@@ -207,7 +207,7 @@ export const localizedProjects: LocalizedProject[] = [
       architecture: "LangGraph Multi-Agent",
     },
     githubUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
-    liveUrl: "https://github.com/safaksenel/agentic-datascience-copilot",
+    liveUrl: "",
     thumbnailUrl: "/projects/agentic-copilot-swagger.png",
     images: [
       "/projects/agentic-copilot-swagger.png",
@@ -253,7 +253,7 @@ export const localizedProjects: LocalizedProject[] = [
       models: "10 Model Ensemble",
     },
     githubUrl: "https://github.com/safaksenel/Telco-Customer-Churn",
-    liveUrl: "https://github.com/safaksenel/Telco-Customer-Churn",
+    liveUrl: "",
     thumbnailUrl: "/projects/telco-roc-curves.png",
     images: [
       "/projects/telco-roc-curves.png",
@@ -301,7 +301,7 @@ export const localizedProjects: LocalizedProject[] = [
       telemetry: "20 Hz WebSockets",
     },
     githubUrl: "https://github.com/safaksenel/edge-vision-analytics-pipeline",
-    liveUrl: "https://github.com/safaksenel/edge-vision-analytics-pipeline",
+    liveUrl: "",
     thumbnailUrl: "/projects/vision-analytics-dashboard.png",
     images: [
       "/projects/vision-analytics-dashboard.png",
@@ -341,13 +341,13 @@ export const localizedProjects: LocalizedProject[] = [
       "Docker",
     ],
     metrics: {
+      nda: "Kurumsal Çözüm / NDA",
       activeStudents: "500+ Öğrenci / Students",
-      telemetry: "<500ms Canlı Konum / Live GPS",
-      uptime: "%99.8 Güvenilirlik / Uptime",
-      multiTenant: "4 Rol / Multi-Tenant",
+      telemetry: "<500ms Canlı Konum",
+      uptime: "%99.8 Güvenilirlik",
     },
-    githubUrl: "https://github.com/safaksenel",
-    liveUrl: "https://github.com/safaksenel",
+    githubUrl: "",
+    liveUrl: "",
     thumbnailUrl: "/projects/yolunda-dashboard.jpg",
     images: [
       "/projects/yolunda-dashboard.jpg",

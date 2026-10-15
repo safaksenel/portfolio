@@ -3,9 +3,11 @@
 import { ArrowUp, Mail, Sparkles } from "lucide-react";
 import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEmailModal } from "@/context/EmailModalContext";
 
 export default function Footer() {
   const { lang, t } = useLanguage();
+  const { openEmailModal } = useEmailModal();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -88,7 +90,7 @@ export default function Footer() {
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
+                href="https://linkedin.com/in/safaksenel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-cyan-500 border border-slate-200 dark:border-white/5 transition-colors"
@@ -107,9 +109,13 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:safaksenel61@gmail.com"
-                className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-emerald-500 border border-slate-200 dark:border-white/5 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openEmailModal();
+                }}
+                className="p-2.5 rounded-xl bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-emerald-500 border border-slate-200 dark:border-white/5 transition-colors cursor-pointer"
                 aria-label="Email (safaksenel61@gmail.com)"
-                title="Email: safaksenel61@gmail.com"
+                title="Email: safaksenel61@gmail.com (Gmail & İletişim)"
               >
                 <Mail className="w-4 h-4" />
               </a>

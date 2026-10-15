@@ -31,6 +31,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
+
   const setLang = (newLang: Language) => {
     setLangState(newLang);
     try {

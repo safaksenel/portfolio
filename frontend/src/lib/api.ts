@@ -88,43 +88,43 @@ export async function submitContactInquiry(
     console.warn("Backend API not reachable, falling back to direct Supabase insertion:", error);
   }
 
-  // 2. Direct Supabase REST API Fallback (Guaranteed Delivery)
-  try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://knopzvuvzyrtksyjuvlu.supabase.co";
-    const supabaseKey =
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtub3B6dnV2enlydGtzeWp1dmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5OTk0NjAsImV4cCI6MjEwNzU3NTQ2MH0.ZyfiFUWkx7-T-AfBlJrnmEKk2WvL_dzWs3JR1bva7fI";
+  // 2. Direct Supabase REST API Fallback (if environment variables configured)
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    const sbResp = await fetch(`${supabaseUrl}/rest/v1/inquiries_contactinquiry`, {
-      method: "POST",
-      headers: {
-        apikey: supabaseKey,
-        Authorization: `Bearer ${supabaseKey}`,
-        "Content-Type": "application/json",
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify({
-        full_name: payload.full_name.trim(),
-        email: payload.email.trim().toLowerCase(),
-        service_type: payload.service_type || "Genel İletişim",
-        budget_range: payload.budget_range || "N/A",
-        message: payload.message.trim(),
-      }),
-    });
+  if (supabaseUrl && supabaseKey) {
+    try {
+      const sbResp = await fetch(`${supabaseUrl}/rest/v1/inquiries_contactinquiry`, {
+        method: "POST",
+        headers: {
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({
+          full_name: payload.full_name.trim(),
+          email: payload.email.trim().toLowerCase(),
+          service_type: payload.service_type || "Genel İletişim",
+          budget_range: payload.budget_range || "N/A",
+          message: payload.message.trim(),
+        }),
+      });
 
-    if (sbResp.ok || sbResp.status === 201) {
-      return {
-        success: true,
-        message: "Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapacağım!",
-      };
+      if (sbResp.ok || sbResp.status === 201) {
+        return {
+          success: true,
+          message: "Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapacağım!",
+        };
+      }
+    } catch (sbError) {
+      console.warn("Direct Supabase fallback failed:", sbError);
     }
-  } catch (sbError) {
-    console.error("Direct Supabase fallback failed:", sbError);
   }
 
-  // 3. Graceful offline acknowledgement
+  // 3. Failed delivery - report real failure so user can use direct email
   return {
-    success: true,
-    message: "Mesajınız başarıyla alındı. Teşekkürler!",
+    success: false,
+    message: "Mesaj iletim servisine ulaşılamadı. Lütfen doğrudan safaksenel61@gmail.com adresine yazın.",
   };
 }

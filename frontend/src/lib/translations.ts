@@ -20,6 +20,7 @@ export interface ProjectData {
 export const translations = {
   tr: {
     nav: {
+      skipToContent: "Ana İçeriğe Atla",
       about: "Hakkımda",
       skills: "Uzmanlıklar",
       certificates: "Sertifikalar",
@@ -32,12 +33,14 @@ export const translations = {
     },
     hero: {
       badge: "Veri Bilimcisi | Bilgisayar Mühendisi",
+      location: "İstanbul • Hibrit / Remote",
       greeting: "Merhaba, ben",
       name: "Şafak Şenel",
       role: "Veri Bilimi, Makine Öğrenimi & NLP Sistemleri",
       description:
         "NLP, makine öğrenmesi ve model dağıtımı alanlarında deneyimli Bilgisayar Mühendisiyim. Python, PyTorch ve Scikit-learn ekosistemiyle uçtan uca ML pipeline'ları tasarlıyor, eğitiyor ve Intel OpenVINO & FastAPI ile ölçeklenebilir ürünlere dönüştürüyorum.",
       exploreProjects: "Projelerimi İncele",
+      viewCv: "CV Görüntüle",
       contactMe: "İletişime Geç",
       stats: {
         records: "56K Satır",
@@ -52,7 +55,7 @@ export const translations = {
       title: "Veri Bilimi & Yapay Zeka Hattı",
       subtitle: "Model çıkarımlarını, OLAP sorgularını ve ensemble tahminlerini canlı test edin",
       tabs: {
-        scraper: "FLO BERT NLP (22 Modeller)",
+        scraper: "FLO BERT NLP (22 Model)",
         asyncBot: "Datathon Stacking ML (Optuna)",
         health: "Agentic Copilot & DuckDB",
       },
@@ -89,7 +92,7 @@ export const translations = {
       subtitle: "Veri odaklı karar alma süreçlerini hızlandıran ve ölçeklenebilir yapay zeka çözümleri üreten Bilgisayar Mühendisi.",
       storyTitle: "Ben Kimim?",
       storyP1:
-        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkum; ham veriyi anlamlı içgörülere dönüştürmek, 3 Ağustos 2026'da başladığım Ecole 42 İstanbul Ana Eğitim programında C ve Python ile ileri seviye algoritmik derinlik kazanmak ve üretim seviyesinde yapay zeka çözümleri geliştirmekle şekillendi.",
+        "Nişantaşı Üniversitesi Bilgisayar Mühendisliği mezunuyum. Veri bilimi ve makine öğrenmesi tutkumu; Ecole 42 İstanbul Ana Eğitim programında (C ve Python) edindiğim algoritmik sistem derinliği ve üretim seviyesinde yapay zeka çözümleri geliştirme disipliniyle birleştiriyorum.",
       storyP2:
         "FLO Group bünyesinde ayda 10.000+ müşteri geri bildirimini OpenVINO ile 4 kat hızlandırılmış 22 Türkçe BERT modeliyle sınıflandıran NLP sistemini kurarak operasyonel süreci %85 kısalttım (F1: 0.89). YZTA 5.0 Datathon'unda 56.000 satırlık veride mentor metinleri ve tabüler veriyi Stacking Ensemble ile birleştiren uçtan uca regresyon boru hattı geliştirdim (RMSE: 0.1418).",
       storyP3:
@@ -172,10 +175,28 @@ export const translations = {
       sendingButton: "Gönderiliyor...",
       successTitle: "Mesajınız Alındı!",
       successDesc: "Geri bildiriminiz için teşekkürler. En kısa sürede e-posta adresinize dönüş yapacağım.",
+      errorTitle: "Mesaj İletilemedi",
+      errorDesc: "Bağlantı veya sunucu kaynaklı bir sorun oluştu. Lütfen safaksenel61@gmail.com adresine doğrudan e-posta iletin.",
+      errorEmailDirect: "Doğrudan E-Posta Gönder",
       closeButton: "Kapat",
       directEmail: "Doğrudan E-Posta Gönderin",
       githubProfile: "GitHub Profilimi İnceleyin",
       linkedinProfile: "LinkedIn'de Bağlantı Kurun",
+    },
+    emailModal: {
+      badge: "Doğrudan İletişim",
+      title: "Şafak Şenel ile İletişime Geçin",
+      subtitle: "safaksenel61@gmail.com adresine doğrudan e-posta gönderebilir veya aşağıdaki hızlı seçenekleri kullanabilirsiniz.",
+      copiedToast: "safaksenel61@gmail.com panoya kopyalandı! ✓",
+      openGmail: "Gmail Web ile Gönder",
+      openGmailDesc: "Tarayıcıda Gmail oluşturucuyu açar (Önerilen)",
+      openMailto: "Varsayılan E-Posta Uygulaması",
+      openMailtoDesc: "Outlook, Apple Mail, Thunderbird veya Windows Mail ile açar",
+      copyAddress: "E-Posta Adresini Kopyala",
+      copied: "Kopyalandı!",
+      useContactForm: "Sayfadaki İletişim Formunu Kullan",
+      useContactFormDesc: "Formu doldurarak siteden anında mesaj gönderin",
+      close: "Kapat",
     },
     footer: {
       tagline: "Veri Bilimi, Makine Öğrenimi, NLP & Uçtan Uca Yapay Zeka Mimarisi",
@@ -186,6 +207,7 @@ export const translations = {
   },
   en: {
     nav: {
+      skipToContent: "Skip to Main Content",
       about: "About",
       skills: "Expertise",
       certificates: "Certificates",
@@ -198,12 +220,14 @@ export const translations = {
     },
     hero: {
       badge: "Data Scientist | Computer Engineer",
+      location: "Istanbul • Hybrid / Remote",
       greeting: "Hello, I am",
       name: "Şafak Şenel",
       role: "Data Science, Machine Learning & NLP Systems",
       description:
         "Computer Engineer experienced in NLP, machine learning, and model deployment. I design, train, and productionize end-to-end ML pipelines with Python, PyTorch, and Scikit-learn, turning complex data into high-performance AI solutions.",
       exploreProjects: "Explore Projects",
+      viewCv: "View Resume (CV)",
       contactMe: "Get in Touch",
       stats: {
         records: "56K Rows",
@@ -338,10 +362,28 @@ export const translations = {
       sendingButton: "Sending...",
       successTitle: "Message Received!",
       successDesc: "Thank you for reaching out. I will get back to your email as soon as possible.",
+      errorTitle: "Message Could Not Be Sent",
+      errorDesc: "A network or server issue occurred. Please email me directly at safaksenel61@gmail.com.",
+      errorEmailDirect: "Send Direct Email",
       closeButton: "Close",
       directEmail: "Direct Email",
       githubProfile: "Explore GitHub Profile",
       linkedinProfile: "Connect on LinkedIn",
+    },
+    emailModal: {
+      badge: "Direct Contact",
+      title: "Get in Touch with Şafak Şenel",
+      subtitle: "Send a direct email to safaksenel61@gmail.com or choose one of the quick options below.",
+      copiedToast: "safaksenel61@gmail.com copied to clipboard! ✓",
+      openGmail: "Send with Gmail Web",
+      openGmailDesc: "Opens Gmail compose in your browser (Recommended)",
+      openMailto: "Default Email App",
+      openMailtoDesc: "Opens Outlook, Apple Mail or Windows Mail",
+      copyAddress: "Copy Email Address",
+      copied: "Copied!",
+      useContactForm: "Use On-Site Contact Form",
+      useContactFormDesc: "Fill out the contact form and send a message directly",
+      close: "Close",
     },
     footer: {
       tagline: "Data Science, Machine Learning, NLP & End-to-End AI Architecture",

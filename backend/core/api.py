@@ -182,40 +182,47 @@ async def submit_contact_inquiry(request, payload: ContactInquiryIn):
             message=payload.message.strip(),
         )
 
+    db_success = False
     try:
         await sync_to_async(create_inquiry)()
+        db_success = True
     except Exception as db_err:
         logger.warning("Django DB save failed (%s), initiating Supabase REST fallback...", db_err)
-        try:
-            supabase_url = os.getenv("SUPABASE_URL", "https://knopzvuvzyrtksyjuvlu.supabase.co").rstrip("/")
-            supabase_key = os.getenv(
-                "SUPABASE_ANON_KEY",
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtub3B6dnV2enlydGtzeWp1dmx1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5OTk0NjAsImV4cCI6MjEwNzU3NTQ2MH0.ZyfiFUWkx7-T-AfBlJrnmEKk2WvL_dzWs3JR1bva7fI"
-            )
-            data = json.dumps({
-                "full_name": payload.full_name.strip(),
-                "email": str(payload.email).strip().lower(),
-                "service_type": payload.service_type.strip(),
-                "budget_range": payload.budget_range.strip(),
-                "message": payload.message.strip(),
-            }).encode("utf-8")
-            req = urllib.request.Request(
-                f"{supabase_url}/rest/v1/inquiries_contactinquiry",
-                data=data,
-                headers={
-                    "apikey": supabase_key,
-                    "Authorization": f"Bearer {supabase_key}",
-                    "Content-Type": "application/json",
-                    "Prefer": "return=minimal",
-                },
-                method="POST"
-            )
-            with urllib.request.urlopen(req, timeout=5) as resp:
-                logger.info("Inquiry successfully saved to Supabase via REST fallback (status %s)", resp.status)
-        except Exception as sb_err:
-            logger.error("Supabase REST fallback also failed: %s", sb_err)
+        supabase_url = os.getenv("SUPABASE_URL", "").rstrip("/")
+        supabase_key = os.getenv("SUPABASE_ANON_KEY", "")
+        if supabase_url and supabase_key:
+            try:
+                data = json.dumps({
+                    "full_name": payload.full_name.strip(),
+                    "email": str(payload.email).strip().lower(),
+                    "service_type": payload.service_type.strip(),
+                    "budget_range": payload.budget_range.strip(),
+                    "message": payload.message.strip(),
+                }).encode("utf-8")
+                req = urllib.request.Request(
+                    f"{supabase_url}/rest/v1/inquiries_contactinquiry",
+                    data=data,
+                    headers={
+                        "apikey": supabase_key,
+                        "Authorization": f"Bearer {supabase_key}",
+                        "Content-Type": "application/json",
+                        "Prefer": "return=minimal",
+                    },
+                    method="POST"
+                )
+                with urllib.request.urlopen(req, timeout=5) as resp:
+                    if resp.status in (200, 201):
+                        db_success = True
+                        logger.info("Inquiry successfully saved to Supabase via REST fallback (status %s)", resp.status)
+            except Exception as sb_err:
+                logger.error("Supabase REST fallback also failed: %s", sb_err)
 
+    if db_success:
+        return {
+            "success": True,
+            "message": "Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapılacaktır.",
+        }
     return {
-        "success": True,
-        "message": "Mesajınız başarıyla iletildi. En kısa sürede geri dönüş yapılacaktır.",
+        "success": False,
+        "message": "Mesaj kaydedilemedi. Lütfen doğrudan safaksenel61@gmail.com adresine e-posta gönderin.",
     }

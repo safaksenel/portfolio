@@ -164,20 +164,21 @@ export default function CertificatesSection() {
                     </button>
                   )}
 
-                  {cert.credentialUrl ? (
+                  {cert.credentialUrl && cert.credentialId ? (
                     <a
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 transition-all font-mono font-semibold cursor-pointer"
+                      aria-label={`${cert.title[lang]} ${lang === "tr" ? "Doğrula" : "Verify"}`}
                     >
                       <span>{lang === "tr" ? "Doğrula" : "Verify"}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   ) : (
-                    <span className="ml-auto text-[11px] font-mono text-slate-400 dark:text-zinc-500 flex items-center gap-1">
+                    <span className="ml-auto text-[11px] font-mono text-slate-500 dark:text-zinc-400 flex items-center gap-1.5 bg-slate-100 dark:bg-white/5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-white/5">
                       <FileCheck2 className="w-3.5 h-3.5 text-emerald-500" />
-                      <span>{lang === "tr" ? "Doğrulanmış" : "Verified"}</span>
+                      <span>{lang === "tr" ? "Tamamlandı" : "Completed"}</span>
                     </span>
                   )}
                 </div>

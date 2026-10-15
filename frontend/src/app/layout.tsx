@@ -3,11 +3,13 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { EmailModalProvider } from "@/context/EmailModalContext";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import EmailModal from "@/components/common/EmailModal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -147,6 +149,52 @@ const jsonLd = {
         "@id": "https://portfolio-q663.vercel.app/#person",
       },
     },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://portfolio-q663.vercel.app/#service",
+      name: "Şafak Şenel - Data Science & AI Engineering",
+      url: "https://portfolio-q663.vercel.app",
+      telephone: "+905000000000",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Istanbul",
+        addressCountry: "TR",
+      },
+      provider: {
+        "@id": "https://portfolio-q663.vercel.app/#person",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "AI & Engineering Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Natural Language Processing (NLP) & BERT Models",
+              description: "Custom Turkish BERT transformer architectures, intent classification, and OpenVINO quantization.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Machine Learning & Stacking Ensembles",
+              description: "Tabular ML pipelines, LightGBM, CatBoost, and Optuna Bayesian optimization.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Multi-Agent AI & In-Memory DuckDB OLAP",
+              description: "LangGraph stateful agent systems and sub-millisecond analytical query engines.",
+            },
+          },
+        ],
+      },
+    },
   ],
 };
 
@@ -167,16 +215,28 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen relative transition-colors duration-300">
+      <body suppressHydrationWarning className="font-sans antialiased min-h-screen relative transition-colors duration-300">
         <ThemeProvider>
           <LanguageProvider>
-            <SmoothScroll>
-              <ScrollProgressBar />
-              <BackgroundGrid />
-              <Navbar />
-              <main className="relative z-10 flex flex-col">{children}</main>
-              <Footer />
-            </SmoothScroll>
+            <EmailModalProvider>
+              <SmoothScroll>
+                {/* WCAG 2.2 AA Skip-to-Content Link */}
+                <a
+                  href="#main-content"
+                  className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-slate-950 focus:font-semibold focus:rounded-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-white"
+                >
+                  Ana İçeriğe Atla / Skip to Content
+                </a>
+                <ScrollProgressBar />
+                <BackgroundGrid />
+                <Navbar />
+                <main id="main-content" tabIndex={-1} className="relative z-10 flex flex-col focus:outline-none">
+                  {children}
+                </main>
+                <Footer />
+                <EmailModal />
+              </SmoothScroll>
+            </EmailModalProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

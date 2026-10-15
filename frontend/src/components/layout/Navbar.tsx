@@ -179,6 +179,9 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setCvMenuOpen(!cvMenuOpen)}
+                aria-expanded={cvMenuOpen}
+                aria-haspopup="true"
+                aria-label={t.nav.cv}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-gradient-to-r from-emerald-500/10 via-cyan-500/15 to-indigo-500/10 hover:from-emerald-500/20 hover:to-indigo-500/20 text-slate-800 dark:text-zinc-200 border border-cyan-500/30 hover:border-cyan-400 transition-all shadow-sm cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5 text-cyan-500" />
@@ -192,12 +195,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 8, scale: 0.95 }}
                     transition={{ duration: 0.15 }}
+                    role="menu"
                     className="absolute right-0 mt-2 w-40 p-1.5 rounded-xl bg-white dark:bg-[#121320] border border-slate-200 dark:border-white/10 shadow-xl z-50 flex flex-col gap-1"
                   >
                     <a
                       href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf?v=20261016"
                       target="_blank"
                       rel="noopener noreferrer"
+                      role="menuitem"
                       onClick={() => setCvMenuOpen(false)}
                       className="group flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
@@ -208,6 +213,7 @@ export default function Navbar() {
                       href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf?v=20261016"
                       target="_blank"
                       rel="noopener noreferrer"
+                      role="menuitem"
                       onClick={() => setCvMenuOpen(false)}
                       className="group flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
@@ -220,8 +226,19 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle & Direct CV Button */}
           <div className="flex sm:hidden items-center gap-1.5">
+            {/* Direct Mobile 1-Tap CV Access (HR-001 / UX-001) */}
+            <a
+              href={lang === "tr" ? "/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf" : "/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-mono font-semibold bg-cyan-500/15 text-cyan-600 dark:text-cyan-300 border border-cyan-500/30"
+              aria-label={t.nav.cv}
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>CV</span>
+            </a>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300 border border-slate-200 dark:border-white/10"
@@ -232,13 +249,15 @@ export default function Navbar() {
             <button
               onClick={toggleLang}
               className="px-2 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-100 dark:bg-white/5 text-cyan-600 dark:text-cyan-400 border border-slate-200 dark:border-white/10"
+              aria-label="Toggle language"
             >
               {lang.toUpperCase()}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10"
-              aria-label="Open mobile menu"
+              aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

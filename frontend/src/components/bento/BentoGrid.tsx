@@ -66,7 +66,9 @@ export default function BentoGrid() {
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
                   {lang === "tr" ? "Transformatör & NLP" : "Transformer & NLP"}
                 </span>
-                <span className="text-purple-600 dark:text-purple-400 font-semibold">22 İki Kademeli Model</span>
+                <span className="text-purple-600 dark:text-purple-400 font-semibold">
+                  {lang === "tr" ? "22 İki Kademeli Model" : "22 Dual-Tier Models"}
+                </span>
               </div>
               <div className="flex flex-col gap-1 p-2 rounded-lg bg-white dark:bg-white/5 border border-slate-200/60 dark:border-transparent">
                 <span className="text-slate-500 dark:text-zinc-400 text-[11px]">
@@ -106,9 +108,9 @@ export default function BentoGrid() {
           </div>
         </SpotlightCard>
 
-        {/* BOX 2: Multi-Agent AI & In-Memory DuckDB OLAP (4 cols) */}
+        {/* BOX 2: Multi-Agent AI & In-Memory DuckDB OLAP (4 cols, 6 on tablet) */}
         <SpotlightCard
-          className="col-span-12 lg:col-span-4 p-6 sm:p-8 bg-white dark:bg-gradient-to-br dark:from-[#0e101c] dark:via-[#0b0c14] dark:to-[#080910] border-slate-200 dark:border-cyan-500/20 shadow-sm dark:shadow-none"
+          className="col-span-12 md:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white dark:bg-gradient-to-br dark:from-[#0e101c] dark:via-[#0b0c14] dark:to-[#080910] border-slate-200 dark:border-cyan-500/20 shadow-sm dark:shadow-none"
           spotlightColor="rgba(6, 182, 212, 0.16)"
         >
           <div className="flex flex-col h-full justify-between gap-6">
@@ -134,15 +136,15 @@ export default function BentoGrid() {
 
             <div className="space-y-2 p-3 rounded-xl bg-slate-50 dark:bg-[#07080f]/90 border border-slate-200/80 dark:border-white/5 font-mono text-xs">
               <div className="flex justify-between items-center text-slate-600 dark:text-zinc-300">
-                <span>OLAP Hızı:</span>
-                <span className="text-cyan-600 dark:text-cyan-400 font-semibold">3.42ms (500K Satır)</span>
+                <span>{lang === "tr" ? "OLAP Hızı:" : "OLAP Speed:"}</span>
+                <span className="text-cyan-600 dark:text-cyan-400 font-semibold">{lang === "tr" ? "3.42ms (500K Satır)" : "3.42ms (500K Rows)"}</span>
               </div>
               <div className="flex justify-between items-center text-slate-600 dark:text-zinc-300">
-                <span>Ajan Mimarisi:</span>
+                <span>{lang === "tr" ? "Ajan Mimarisi:" : "Agent Architecture:"}</span>
                 <span className="text-emerald-600 dark:text-emerald-400">LangGraph Router</span>
               </div>
               <div className="flex justify-between items-center text-slate-600 dark:text-zinc-300">
-                <span>Güvenlik:</span>
+                <span>{lang === "tr" ? "Güvenlik:" : "Sandbox Security:"}</span>
                 <span className="text-indigo-600 dark:text-indigo-400">Python AST Sandbox</span>
               </div>
             </div>
@@ -160,9 +162,9 @@ export default function BentoGrid() {
           </div>
         </SpotlightCard>
 
-        {/* BOX 3: Large-Scale Data Mining & Web Scraping (4 cols) */}
+        {/* BOX 3: Large-Scale Data Mining & Web Scraping (4 cols, 6 on tablet) */}
         <SpotlightCard
-          className="col-span-12 lg:col-span-4 p-6 sm:p-8 bg-white dark:bg-gradient-to-br dark:from-[#0e101c] dark:via-[#0b0c14] dark:to-[#080910] border-slate-200 dark:border-emerald-500/20 shadow-sm dark:shadow-none"
+          className="col-span-12 md:col-span-6 lg:col-span-4 p-6 sm:p-8 bg-white dark:bg-gradient-to-br dark:from-[#0e101c] dark:via-[#0b0c14] dark:to-[#080910] border-slate-200 dark:border-emerald-500/20 shadow-sm dark:shadow-none"
           spotlightColor="rgba(16, 185, 129, 0.16)"
         >
           <div className="flex flex-col h-full justify-between gap-6">

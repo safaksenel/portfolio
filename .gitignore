@@ -60,6 +60,8 @@ frontend/.env.local
 .vscode/
 *.swp
 *.swo
+*.tsbuildinfo
+scripts/*.png
 .DS_Store
 Thumbs.db
 

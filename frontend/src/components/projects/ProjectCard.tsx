@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ExternalLink,
@@ -118,10 +119,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="relative aspect-[16/9] w-full mb-4.5 rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-950 group/img cursor-zoom-in select-none"
               title={lang === "tr" ? "Büyütmek için tıklayın" : "Click to view full image"}
             >
-              <img
+              <Image
                 src={currentImage}
                 alt={`${title} - screenshot ${activeImageIndex + 1}`}
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                 loading="lazy"
               />
 
@@ -216,6 +219,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               </span>
             )}
             <div className="flex items-center gap-2 ml-auto">
+              {!project.githubUrl && !project.liveUrl && (
+                <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-medium bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                  {lang === "tr" ? "Kurumsal Çözüm (NDA)" : "Enterprise Solution (NDA)"}
+                </span>
+              )}
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
@@ -223,19 +231,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-400 hover:text-cyan-500 dark:hover:text-white transition-colors"
                   title={t.projects.viewCode}
-                  aria-label="GitHub Repository"
+                  aria-label={`${title} - ${t.projects.viewCode}`}
                 >
                   <GithubIcon className="w-4 h-4" />
                 </a>
               )}
-              {project.liveUrl && (
+              {Boolean(project.liveUrl) && project.liveUrl !== project.githubUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 hover:text-cyan-500 border border-cyan-500/20 transition-colors"
                   title={t.projects.viewDemo}
-                  aria-label="Live Demo Link"
+                  aria-label={`${title} - ${t.projects.viewDemo}`}
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -282,7 +290,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="w-full flex items-center justify-between text-xs font-mono font-medium text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors py-1 cursor-pointer focus:outline-none"
+              aria-expanded={expanded}
+              aria-controls={`project-details-${project.id}`}
+              className="w-full flex items-center justify-between text-xs font-mono font-medium text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors py-1 cursor-pointer focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-lg"
             >
               <span>{expanded ? (lang === "tr" ? "Detayları Gizle" : "Hide Details") : t.projects.architectureSummary}</span>
               {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -291,6 +301,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <AnimatePresence>
               {expanded && (
                 <motion.div
+                  id={`project-details-${project.id}`}
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}

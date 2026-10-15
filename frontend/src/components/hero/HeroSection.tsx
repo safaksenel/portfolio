@@ -3,15 +3,21 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowRight, Download, Terminal, Sparkles, CheckCircle2, Mail } from "lucide-react";
+import { ArrowRight, Download, Terminal, Sparkles, CheckCircle2, Mail, FileText, MapPin, ExternalLink } from "lucide-react";
 import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons";
 import InteractiveTerminal from "./InteractiveTerminal";
 import ErrorBoundary from "../ui/ErrorBoundary";
 import MagneticButton from "../ui/MagneticButton";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEmailModal } from "@/context/EmailModalContext";
 
 export default function HeroSection() {
   const { lang, t } = useLanguage();
+  const { openEmailModal } = useEmailModal();
+  const cvPath =
+    lang === "tr"
+      ? "/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf?v=20261016"
+      : "/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf?v=20261016";
 
   return (
     <section className="relative min-h-[90vh] pt-32 pb-16 px-4 sm:px-6 max-w-7xl mx-auto flex flex-col justify-center overflow-hidden">
@@ -24,7 +30,7 @@ export default function HeroSection() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-6 flex flex-col gap-6 z-10"
         >
-          {/* Profile Avatar Pill, Availability Badge & Stack Pill */}
+          {/* Profile Avatar Pill, Availability Badge, Location & Stack Pill */}
           <div className="flex flex-wrap items-center gap-2.5">
             <a
               href="#about"
@@ -51,6 +57,11 @@ export default function HeroSection() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
               <span>{t.nav.status}</span>
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 text-xs font-mono">
+              <MapPin className="w-3.5 h-3.5 text-cyan-500" />
+              <span>{t.hero.location}</span>
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-700 dark:text-cyan-300 text-xs font-mono">
@@ -85,44 +96,64 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-3.5 pt-2">
-            <MagneticButton strength={0.3}>
-              <a
-                href="#projects"
-                className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 via-cyan-400 to-indigo-500 text-slate-950 shadow-[0_0_25px_rgba(6,182,212,0.35)] hover:shadow-[0_0_35px_rgba(6,182,212,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
-              >
-                <span>{t.hero.exploreProjects}</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </MagneticButton>
+          {/* Action Buttons & Social Connections */}
+          <div className="flex flex-col gap-3.5 pt-2">
+            <div className="flex flex-wrap items-center gap-3">
+              <MagneticButton strength={0.3}>
+                <a
+                  href="#projects"
+                  className="group relative inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 via-cyan-400 to-indigo-500 text-slate-950 shadow-[0_0_25px_rgba(6,182,212,0.35)] hover:shadow-[0_0_35px_rgba(6,182,212,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                >
+                  <span>{t.hero.exploreProjects}</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </MagneticButton>
 
-            <MagneticButton strength={0.3}>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-800 dark:text-zinc-200 border border-slate-300/80 dark:border-white/10 hover:border-cyan-500/40 transition-all cursor-pointer"
-              >
-                <span>{t.hero.contactMe}</span>
-              </a>
-            </MagneticButton>
+              {/* Direct CV Button for HR / Recruiters */}
+              <MagneticButton strength={0.3}>
+                <a
+                  href={cvPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 hover:border-emerald-400 transition-all cursor-pointer shadow-sm"
+                  title={lang === "tr" ? "Özgeçmişimi (CV) yeni sekmede aç" : "Open Resume (CV) in a new tab"}
+                  aria-label={t.hero.viewCv}
+                >
+                  <FileText className="w-4 h-4 text-emerald-500" />
+                  <span>{t.hero.viewCv}</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </MagneticButton>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-2 pl-2">
+              <MagneticButton strength={0.3}>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-800 dark:text-zinc-200 border border-slate-300/80 dark:border-white/10 hover:border-cyan-500/40 transition-all cursor-pointer"
+                >
+                  <span>{t.hero.contactMe}</span>
+                </a>
+              </MagneticButton>
+            </div>
+
+            {/* Social Icons Bar */}
+            <div className="flex items-center gap-2 pt-1">
               <a
                 href="https://github.com/safaksenel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
                 title="GitHub: safaksenel"
+                aria-label="GitHub Profile"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
+                href="https://linkedin.com/in/safaksenel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
                 title="LinkedIn: Şafak Şenel"
+                aria-label="LinkedIn Profile"
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
@@ -131,14 +162,20 @@ export default function HeroSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-cyan-500 border border-slate-200 dark:border-white/10 transition-colors"
-                title="Kaggle: afakenel"
+                title="Kaggle: Şafak Şenel (afakenel)"
+                aria-label="Kaggle Profile"
               >
                 <KaggleIcon className="w-4 h-4" />
               </a>
               <a
                 href="mailto:safaksenel61@gmail.com"
-                className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-emerald-500 border border-slate-200 dark:border-white/10 transition-colors"
-                title="E-Mail: safaksenel61@gmail.com"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openEmailModal();
+                }}
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-700 dark:text-zinc-300 hover:text-emerald-500 border border-slate-200 dark:border-white/10 transition-colors cursor-pointer"
+                title="E-Mail: safaksenel61@gmail.com (Gmail & İletişim)"
+                aria-label="Email Contact (safaksenel61@gmail.com)"
               >
                 <Mail className="w-4 h-4" />
               </a>

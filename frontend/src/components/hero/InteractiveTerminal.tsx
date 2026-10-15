@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Terminal, Play, RotateCw, Check, Copy, Code, FileJson, Sparkles } from "lucide-react";
+import { Terminal, Play, RotateCw, Check, Copy, Code, FileJson, Sparkles, ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/ui/BrandIcons";
 import { TERMINAL_TABS } from "@/lib/data";
 import { TerminalTabConfig } from "@/types/portfolio";
 import { cn } from "@/lib/utils";
@@ -83,8 +84,53 @@ export default function InteractiveTerminal() {
           </div>
         </div>
 
-        {/* Status Chip & Run Button */}
+        {/* Status Chip, Source Code Link & Run Button */}
         <div className="flex items-center gap-2">
+          {activeTabId === "bert_nlp" && (
+            <a
+              href="https://github.com/safaksenel/NLP-BERT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/40 text-zinc-300 hover:text-cyan-300 text-xs font-mono transition-colors"
+              title={lang === "tr" ? "FLO BERT Reposunu İncele" : "View FLO BERT Repo"}
+              aria-label="View FLO BERT Repo"
+            >
+              <GithubIcon className="w-3.5 h-3.5 text-cyan-400" />
+              <span>{lang === "tr" ? "Kaynak Kod" : "Source Code"}</span>
+              <ExternalLink className="w-3 h-3 opacity-60" />
+            </a>
+          )}
+
+          {activeTabId === "datathon_ml" && (
+            <a
+              href="https://github.com/safaksenel/datathon-career-success-prediction"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/40 text-zinc-300 hover:text-cyan-300 text-xs font-mono transition-colors"
+              title={lang === "tr" ? "Datathon Stacking ML Reposunu İncele" : "View Datathon ML Repo"}
+              aria-label="View Datathon ML Repo"
+            >
+              <GithubIcon className="w-3.5 h-3.5 text-cyan-400" />
+              <span>{lang === "tr" ? "Kaynak Kod" : "Source Code"}</span>
+              <ExternalLink className="w-3 h-3 opacity-60" />
+            </a>
+          )}
+
+          {activeTabId === "copilot_duckdb" && (
+            <a
+              href="https://github.com/safaksenel/agentic-datascience-copilot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-cyan-500/40 text-zinc-300 hover:text-cyan-300 text-xs font-mono transition-colors"
+              title={lang === "tr" ? "Agentic Copilot & DuckDB Reposunu İncele" : "View Agentic Copilot Repo"}
+              aria-label="View Agentic Copilot Repo"
+            >
+              <GithubIcon className="w-3.5 h-3.5 text-cyan-400" />
+              <span>{lang === "tr" ? "Kaynak Kod" : "Source Code"}</span>
+              <ExternalLink className="w-3 h-3 opacity-60" />
+            </a>
+          )}
+
           <div
             className={cn(
               "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono border transition-colors",
@@ -307,7 +353,7 @@ export default function InteractiveTerminal() {
                 <div className="rounded-xl bg-[#0b0c16] p-3 border border-white/5 overflow-x-auto">
                   <div className="flex items-center justify-between mb-2 text-[11px] text-zinc-400 border-b border-white/5 pb-1">
                     <span className="font-semibold text-cyan-300">
-                      {lang === "tr" ? "// Ayıklanmış Veri (Formatted JSON)" : "// Extracted Data (Formatted JSON)"}
+                      {lang === "tr" ? "// Model & OLAP Çıkarım Sonucu (JSON Output)" : "// Model & OLAP Inference Result (JSON Output)"}
                     </span>
                     <span className="text-emerald-400">status: 200 OK</span>
                   </div>
@@ -325,7 +371,7 @@ export default function InteractiveTerminal() {
       <div className="flex items-center justify-between px-4 py-2 bg-[#090a12] border-t border-white/5 text-[11px] font-mono text-zinc-400">
         <span className="flex items-center gap-1.5">
           <Sparkles className="w-3 h-3 text-cyan-400" />
-          <span>Python 3.14 PEP 649 Concurrency Engine</span>
+          <span>Python 3.14 • Async Inference & OLAP Engine</span>
         </span>
         <span className="hidden sm:inline text-zinc-400">
           {lang === "tr" ? "Canlı Simülasyon" : "Live Simulation"}

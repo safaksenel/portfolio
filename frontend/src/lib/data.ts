@@ -4,7 +4,7 @@ import { localizedProjects } from "./projectsData";
 export const TERMINAL_TABS: TerminalTabConfig[] = [
   {
     id: "bert_nlp",
-    title: "FLO BERT NLP (22 Modeller)",
+    title: "FLO BERT NLP (22 Model)",
     badge: "PyTorch • OpenVINO • F1: 0.892",
     codeSnippet: `from transformers import AutoTokenizer
 import openvino as ov

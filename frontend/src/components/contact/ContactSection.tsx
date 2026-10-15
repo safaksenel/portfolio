@@ -7,9 +7,11 @@ import { GithubIcon, LinkedinIcon, KaggleIcon } from "@/components/ui/BrandIcons
 import confetti from "canvas-confetti";
 import { submitContactInquiry } from "@/lib/api";
 import { useLanguage } from "@/context/LanguageContext";
+import { useEmailModal } from "@/context/EmailModalContext";
 
 export default function ContactSection() {
   const { lang, t } = useLanguage();
+  const { openEmailModal } = useEmailModal();
 
   const [formData, setFormData] = useState({
     full_name: "",
@@ -67,28 +69,30 @@ export default function ContactSection() {
 
       if (response.success) {
         setSuccess(true);
-        try {
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ["#10b981", "#06b6d4", "#6366f1", "#a855f7"],
-          });
-        } catch {}
+        setTimeout(() => {
+          try {
+            confetti({
+              particleCount: 100,
+              spread: 70,
+              origin: { y: 0.6 },
+              colors: ["#10b981", "#06b6d4", "#6366f1", "#a855f7"],
+            });
+          } catch {}
+        }, 120);
       } else {
-        setErrorMsg(response.message || (lang === "tr" ? "Gönderim sırasında hata oluştu." : "Failed to send message."));
+        setErrorMsg(
+          response.message ||
+            (lang === "tr"
+              ? "Gönderim sırasında hata oluştu. Lütfen safaksenel61@gmail.com adresine doğrudan e-posta iletin."
+              : "Failed to send message. Please email safaksenel61@gmail.com directly.")
+        );
       }
     } catch {
-      // Fallback success for graceful resilience
-      setSuccess(true);
-      try {
-        confetti({
-          particleCount: 80,
-          spread: 60,
-          origin: { y: 0.6 },
-          colors: ["#10b981", "#06b6d4"],
-        });
-      } catch {}
+      setErrorMsg(
+        lang === "tr"
+          ? "Sunucu bağlantısı sağlanamadı. Lütfen safaksenel61@gmail.com adresine doğrudan e-posta iletin."
+          : "Server connection failed. Please email safaksenel61@gmail.com directly."
+      );
     } finally {
       setLoading(false);
     }
@@ -149,7 +153,7 @@ export default function ContactSection() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/%C5%9Fafak-%C5%9Fenel-70a633319/"
+                href="https://linkedin.com/in/safaksenel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-cyan-500/40 text-slate-800 dark:text-zinc-200 transition-all group"
@@ -184,7 +188,12 @@ export default function ContactSection() {
 
               <a
                 href="mailto:safaksenel61@gmail.com"
-                className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-emerald-500/40 text-slate-800 dark:text-zinc-200 transition-all group"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openEmailModal();
+                }}
+                className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/80 dark:border-white/5 hover:border-emerald-500/40 text-slate-800 dark:text-zinc-200 transition-all group cursor-pointer"
+                title="safaksenel61@gmail.com (Gmail & İletişim)"
               >
                 <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-zinc-300 group-hover:text-emerald-500 transition-colors">
                   <Mail className="w-5 h-5 text-emerald-500" />
@@ -243,31 +252,48 @@ export default function ContactSection() {
                   exit={{ opacity: 0 }}
                   className="flex flex-col gap-5"
                 >
-                  {/* Honeypot hidden input */}
+                  {/* Honeypot hidden input (off-screen, not display:none for bot resistance) */}
                   <input
                     type="text"
+                    id="contact-honeypot"
                     name="honeypot"
                     value={formData.honeypot}
                     onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
-                    className="hidden"
+                    className="absolute -left-[9999px] opacity-0 w-1 h-1 pointer-events-none"
                     tabIndex={-1}
+                    aria-hidden="true"
                     autoComplete="off"
                   />
 
                   {errorMsg && (
-                    <div className="p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs flex items-center gap-2">
-                      <AlertCircle className="w-4 h-4 shrink-0" />
-                      <span>{errorMsg}</span>
+                    <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+                      <div className="flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4 shrink-0" />
+                        <span>{errorMsg}</span>
+                      </div>
+                      <a
+                        href="mailto:safaksenel61@gmail.com?subject=Portfolyo%20Iletisimi"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openEmailModal();
+                        }}
+                        className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-700 dark:text-rose-300 font-medium transition-colors shrink-0 cursor-pointer"
+                        title="safaksenel61@gmail.com (Gmail & İletişim)"
+                      >
+                        <Mail className="w-3.5 h-3.5" />
+                        <span>safaksenel61@gmail.com</span>
+                      </a>
                     </div>
                   )}
 
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
+                      <label htmlFor="contact-name" className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
                         {t.contact.nameLabel} *
                       </label>
                       <input
+                        id="contact-name"
                         type="text"
                         required
                         value={formData.full_name}
@@ -278,10 +304,11 @@ export default function ContactSection() {
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
+                      <label htmlFor="contact-email" className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
                         {t.contact.emailLabel} *
                       </label>
                       <input
+                        id="contact-email"
                         type="email"
                         required
                         value={formData.email}
@@ -294,10 +321,11 @@ export default function ContactSection() {
 
                   {/* Subject */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
+                    <label htmlFor="contact-subject" className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
                       {t.contact.subjectLabel}
                     </label>
                     <input
+                      id="contact-subject"
                       type="text"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -308,10 +336,11 @@ export default function ContactSection() {
 
                   {/* Message */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
+                    <label htmlFor="contact-message" className="text-xs font-mono font-medium text-slate-700 dark:text-zinc-300">
                       {t.contact.messageLabel} *
                     </label>
                     <textarea
+                      id="contact-message"
                       required
                       rows={5}
                       value={formData.message}
