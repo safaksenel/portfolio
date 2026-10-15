@@ -195,7 +195,7 @@ export default function Navbar() {
                     className="absolute right-0 mt-2 w-40 p-1.5 rounded-xl bg-white dark:bg-[#121320] border border-slate-200 dark:border-white/10 shadow-xl z-50 flex flex-col gap-1"
                   >
                     <a
-                      href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
+                      href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf?v=20261016"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setCvMenuOpen(false)}
@@ -205,7 +205,7 @@ export default function Navbar() {
                       <ExternalLink className="w-3.5 h-3.5 text-cyan-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                     <a
-                      href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
+                      href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf?v=20261016"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setCvMenuOpen(false)}
@@ -273,7 +273,7 @@ export default function Navbar() {
             <div className="h-px bg-slate-200 dark:bg-white/10 my-1" />
             <div className="flex items-center justify-between px-4 py-2 text-xs text-slate-500 dark:text-zinc-400">
               <a
-                href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf"
+                href="/cv/Ahmet_Safak_Senel_CV_TR_Web.pdf?v=20261016"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 hover:underline font-medium"
@@ -282,7 +282,7 @@ export default function Navbar() {
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
               <a
-                href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf"
+                href="/cv/Ahmet_Safak_Senel_CV_EN_Web.pdf?v=20261016"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-cyan-600 dark:text-cyan-400 hover:underline font-medium"
